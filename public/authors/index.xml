@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors | Jonghyun Yun</title>
+    <link>//jonghyun-yun.github.io/authors/</link>
+      <atom:link href="//jonghyun-yun.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 03 May 2017 00:00:00 -0500</lastBuildDate>
+    <image>
+      <url>//jonghyun-yun.github.io/img/icon-192.png</url>
+      <title>Authors</title>
+      <link>//jonghyun-yun.github.io/authors/</link>
+    </image>
+    
+    <item>
+      <title>Jonghyun Yun</title>
+      <link>//jonghyun-yun.github.io/authors/admin/</link>
+      <pubDate>Tue, 10 Sep 2019 01:29:11 -0500</pubDate>
+      <guid>//jonghyun-yun.github.io/authors/admin/</guid>
+      <description>&lt;p&gt;He completed his PhD in the Department of Statistics at University of Illinois at Urbana-Champaign under the guidance of &lt;a href=&#34;https://publish.illinois.edu/yuguo/&#34; target=&#34;_blank&#34;&gt;Dr. Yuguo Chen&lt;/a&gt;. Prior to joining UTA, he was an Assistant Professor in the Department of Mathematical Sciences and a core faculty in the Border Biomedical Research Center at the University of Texas at El Paso, from 2015 to 2016. He was a postdoctoral researcher at UT Southwestern Medical Center under the guidance of Drs. &lt;a href=&#34;https://qbrc.swmed.edu/labs/xiaolab/&#34; target=&#34;_blank&#34;&gt;Guanghua Xiao&lt;/a&gt; and &lt;a href=&#34;https://qbrc.swmed.edu/labs/xielab/&#34; target=&#34;_blank&#34;&gt;Yang Xie&lt;/a&gt; from 2012 to 2015.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>F Yang</title>
+      <link>//jonghyun-yun.github.io/authors/f-yang/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 -0500</pubDate>
+      <guid>//jonghyun-yun.github.io/authors/f-yang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>J Yun</title>
+      <link>//jonghyun-yun.github.io/authors/j-yun/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 -0500</pubDate>
+      <guid>//jonghyun-yun.github.io/authors/j-yun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Y Chen</title>
+      <link>//jonghyun-yun.github.io/authors/y-chen/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 -0500</pubDate>
+      <guid>//jonghyun-yun.github.io/authors/y-chen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>G Xiao</title>
+      <link>//jonghyun-yun.github.io/authors/g-xiao/</link>
+      <pubDate>Mon, 24 Feb 2014 00:00:00 -0600</pubDate>
+      <guid>//jonghyun-yun.github.io/authors/g-xiao/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>T Wang</title>
+      <link>//jonghyun-yun.github.io/authors/t-wang/</link>
+      <pubDate>Mon, 24 Feb 2014 00:00:00 -0600</pubDate>
+      <guid>//jonghyun-yun.github.io/authors/t-wang/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mathematical_statistics | Jonghyun Yun</title>
+    <link>//jonghyun-yun.github.io/tags/mathematical_statistics/</link>
+      <atom:link href="//jonghyun-yun.github.io/tags/mathematical_statistics/index.xml" rel="self" type="application/rss+xml" />
+    <description>mathematical_statistics</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 21 Sep 2019 11:22:05 -0500</lastBuildDate>
+    <image>
+      <url>//jonghyun-yun.github.io/img/icon-192.png</url>
+      <title>mathematical_statistics</title>
+      <link>//jonghyun-yun.github.io/tags/mathematical_statistics/</link>
+    </image>
+    
+    <item>
+      <title>MATH 5312: Mathematical statistics I, Fall 2017</title>
+      <link>//jonghyun-yun.github.io/teaching/math5312-fa17/</link>
+      <pubDate>Sat, 21 Sep 2019 11:22:05 -0500</pubDate>
+      <guid>//jonghyun-yun.github.io/teaching/math5312-fa17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MATH 5313: Mathematical statistics II, Spring 2017</title>
+      <link>//jonghyun-yun.github.io/teaching/math5313-sp17/</link>
+      <pubDate>Sat, 21 Sep 2019 11:22:05 -0500</pubDate>
+      <guid>//jonghyun-yun.github.io/teaching/math5313-sp17/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MATH 5312: Mathematical statistics I, Fall 2016</title>
+      <link>//jonghyun-yun.github.io/teaching/math5312-fa16/</link>
+      <pubDate>Sat, 21 Sep 2019 11:22:04 -0500</pubDate>
+      <guid>//jonghyun-yun.github.io/teaching/math5312-fa16/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

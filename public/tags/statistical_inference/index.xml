@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>statistical_inference | Jonghyun Yun</title>
+    <link>//jonghyun-yun.github.io/tags/statistical_inference/</link>
+      <atom:link href="//jonghyun-yun.github.io/tags/statistical_inference/index.xml" rel="self" type="application/rss+xml" />
+    <description>statistical_inference</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 21 Sep 2019 11:22:06 -0500</lastBuildDate>
+    <image>
+      <url>//jonghyun-yun.github.io/img/icon-192.png</url>
+      <title>statistical_inference</title>
+      <link>//jonghyun-yun.github.io/tags/statistical_inference/</link>
+    </image>
+    
+    <item>
+      <title>MATH 3316: Statistical Inference, Fall 2018</title>
+      <link>//jonghyun-yun.github.io/teaching/math3316-fa18/</link>
+      <pubDate>Sat, 21 Sep 2019 11:22:06 -0500</pubDate>
+      <guid>//jonghyun-yun.github.io/teaching/math3316-fa18/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

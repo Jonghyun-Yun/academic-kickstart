@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jonghyun Yun">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="To run R code using fread, data.table package should be imported using library(data.table).
+Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measured for 28 animals.   
+brain = data.frame(fread(&quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&quot;), row.names=1)  Credit card data The credit data set displayed in Figure 3.6 of ESL records balance (average credit card debt for a number of individuals) as well as several predictors: age, cards (number of credit cards), education (years of education), income (in thousands of dollars), limit (credit limit), rating (credit rating), gender, student (student vs non-student), ethnicity, and married (marital status).">
+
+  
+  <link rel="alternate" hreflang="en-us" href="//jonghyun-yun.github.io/course/math5305-fa19/math5305-data/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+    
+    
+    
+    
+      
+    
+    
+    
+    <link rel="stylesheet" href="/css/academic.5cf0d09c4d7a87a246eed230d1832105.css">
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="//jonghyun-yun.github.io/course/math5305-fa19/math5305-data/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jonghyun Yun">
+  <meta property="og:url" content="//jonghyun-yun.github.io/course/math5305-fa19/math5305-data/">
+  <meta property="og:title" content="MATH 5305: Data Sets | Jonghyun Yun">
+  <meta property="og:description" content="To run R code using fread, data.table package should be imported using library(data.table).
+Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measured for 28 animals.   
+brain = data.frame(fread(&quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&quot;), row.names=1)  Credit card data The credit data set displayed in Figure 3.6 of ESL records balance (average credit card debt for a number of individuals) as well as several predictors: age, cards (number of credit cards), education (years of education), income (in thousands of dollars), limit (credit limit), rating (credit rating), gender, student (student vs non-student), ethnicity, and married (marital status)."><meta property="og:image" content="//jonghyun-yun.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="//jonghyun-yun.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-08-29T17:06:21-05:00">
+    
+    <meta property="article:modified_time" content="2019-08-29T17:06:21-05:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>MATH 5305: Data Sets | Jonghyun Yun</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jonghyun Yun</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured_publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/course/math5305-fa19/">Statistical Methods</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/course/math5305-fa19/">Overview</a>
+      </li>
+      
+      <li >
+        <a href="/course/math5305-fa19/math5305-syllabus/">Syllabus</a>
+      </li>
+      
+      <li class="active">
+        <a href="/course/math5305-fa19/math5305-data/">Data Sets</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="lab1.pdf">Lab</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="lab1.pdf">Lab 1: Introduction to R/R Studio</a>
+      </li>
+      
+      <li >
+        <a href="lab2.rmd.txt">Lab 2: Short Tutorial of R Markdown</a>
+      </li>
+      
+      <li >
+        <a href="lab3.rmd.txt">Lab 3: R Basics</a>
+      </li>
+      
+      <li >
+        <a href="lab4.rmd.txt">Lab 4: Looking at data</a>
+      </li>
+      
+      <li >
+        <a href="lab5.rmd.txt">Lab 5: Relationships</a>
+      </li>
+      
+      <li >
+        <a href="lab6.rmd.txt">Lab 6: Producing data</a>
+      </li>
+      
+      <li >
+        <a href="lab7.rmd.txt">Lab 7:</a>
+      </li>
+      
+      <li >
+        <a href="lab8.rmd.txt">Lab 8</a>
+      </li>
+      
+      <li >
+        <a href="lab9.rmd.txt">Lab 9</a>
+      </li>
+      
+      <li >
+        <a href="lab10.rmd.txt">Lab 10</a>
+      </li>
+      
+      <li >
+        <a href="lab11.rmd.txt">Lab 11</a>
+      </li>
+      
+      <li >
+        <a href="lab12.rmd.txt">Lab 12</a>
+      </li>
+      
+      <li >
+        <a href="lab13.rmd.txt">Lab 13</a>
+      </li>
+      
+      <li >
+        <a href="lab14.rmd.txt">Lab 14</a>
+      </li>
+      
+      <li >
+        <a href="lab15.rmd.txt">Lab 15</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/course/math5305-fa19/hw1/">Homework</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/course/math5305-fa19/hw1/">HW 1</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#brain-data">Brain data</a></li>
+<li><a href="#credit-card-data">Credit card data</a></li>
+<li><a href="#breakfast-cereals">Breakfast cereals</a></li>
+<li><a href="#advertising">Advertising</a></li>
+<li><a href="#prostate-cancer">Prostate cancer</a></li>
+<li><a href="#salary-survey">Salary survey</a></li>
+<li><a href="#south-African-heart-disease">South African heart disease</a></li>
+<li><a href="#vowel-data">Vowel data</a></li>
+<li><a href="#wage-data">Wage data</a>
+<ul>
+<li><a href="#source">Source</a></li>
+</ul></li>
+<li><a href="#spam-data">Spam data</a></li>
+<li><a href="#lpga-data">LPGA data</a></li>
+<li><a href="#housing-data">Housing data</a></li>
+<li><a href="#wine-quality">Wine quality data</a>
+<ul>
+<li><a href="#attribute-information">Attribute Information:</a></li>
+</ul></li>
+<li><a href="#nci-microarray">NCI microarray</a></li>
+<li><a href="#orange-juice">Orange juice</a></li>
+<li><a href="#iris-data">Iris data set</a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>MATH 5305: Data Sets</h1>
+
+          <div class="article-style">
+            
+
+<p>To run R code using <code>fread</code>, <code>data.table</code> package should be imported using <code>library(data.table)</code>.</p>
+
+<h2 id="brain-data">Brain data</h2>
+
+<ul>
+<li>y: <code>BrainWeight</code> are measured for 28 animals.</li>
+<li>X: <code>BodyWeight</code> are measured for 28 animals.</li>
+</ul>
+
+<!--listend-->
+
+<p><a id="code-snippet--read-brain"></a></p>
+
+<pre><code class="language-R">brain = data.frame(fread(&quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&quot;), row.names=1)
+</code></pre>
+
+<h2 id="credit-card-data">Credit card data</h2>
+
+<p>The <code>credit</code> data set displayed in Figure 3.6 of ESL records <code>balance</code> (average
+credit card debt for a number of individuals) as well as several
+predictors: <code>age</code>, <code>cards</code> (number of credit cards), <code>education</code> (years of
+education), <code>income</code> (in thousands of dollars), <code>limit</code> (credit limit),
+<code>rating</code> (credit rating), <code>gender</code>, <code>student</code> (student vs non-student),
+<code>ethnicity</code>, and <code>married</code> (marital status).</p>
+
+<p><a id="code-snippet--read-credit"></a></p>
+
+<pre><code class="language-R">credit = read.table(&quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/credit.csv&quot;,sep=&quot;,&quot;,head=T,row.names=1)
+credit$X = NULL
+</code></pre>
+
+<h2 id="breakfast-cereals">Breakfast cereals</h2>
+
+<p>A data set contains breakfast cereals produced by three different American manufacturers:
+General Mills (G), Kellogg (K), and Quaker (Q).</p>
+
+<p><a id="code-snippet--read-cereals"></a></p>
+
+<pre><code class="language-R">cereal = data.frame(fread(&quot;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.txt&quot;), row.names=1)
+colnames(cereal) = fread(&quot;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.name.txt&quot;, data.table = F)
+</code></pre>
+
+<h2 id="advertising">Advertising</h2>
+
+<p>The Advertising data set consists of the <code>sales</code> of that product in 200
+different markets, along with advertising budgets for the product in each of
+those markets for three different media: <code>TV</code>, <code>radio</code>, and <code>newspaper</code>.</p>
+
+<p><a id="code-snippet--read-advertising"></a></p>
+
+<pre><code class="language-R">advertising = fread(&quot;http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv&quot;, drop = 1)
+</code></pre>
+
+<h2 id="prostate-cancer">Prostate cancer</h2>
+
+<p>Prostate cancer is cancer that begins in tissues of the prostate gland. Located just below the bladder and in front of the rectum, the prostate is the male sex gland responsible for the production of semen. <code>Prostate cancer data</code> come from a study that examined the correlation between the level of prostate specific antigen and a number of clinical measures in men who were about to receive a radical prostatectomy.</p>
+
+<p>The data frame has the following variables:</p>
+
+<ul>
+<li><code>lcavol</code>: log(cancer volume)</li>
+<li><code>lweight</code>: log(prostate weight)</li>
+<li><code>age</code>: age</li>
+<li><code>lbph</code>: log(benign prostatic hyperplasia amount)</li>
+<li><code>svi</code>: seminal vesicle invasion</li>
+<li><code>lcp</code>: log(capsular penetration)</li>
+<li><code>gleason</code>: Gleason score</li>
+<li><code>pgg45</code>: percentage Gleason scores 4 or 5</li>
+<li><code>lpsa</code>: log(prostate specific antigen)</li>
+</ul>
+
+<!--listend-->
+
+<p><a id="code-snippet--read-prostate"></a></p>
+
+<pre><code class="language-R">prostate = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/prostate.data&quot;, drop=1)
+prostate$train = NULL
+</code></pre>
+
+<h2 id="salary-survey">Salary survey</h2>
+
+<p>The salary survey data was developed from a salary survey of omputer professionals in a large corporation. The response variable is salary (<code>S</code>) and the predicators are:</p>
+
+<ul>
+<li><code>X</code>: experience in years</li>
+<li><code>E</code>: education coded as
+
+<ul>
+<li><code>1</code> for completion of a high school diploma</li>
+<li><code>2</code> for completion of a bachelor degree</li>
+<li><code>3</code> for completion of an advanced degree</li>
+</ul></li>
+<li><code>M</code> management coded as <code>1</code> for a person with management responsibility; 0 otherwise.</li>
+</ul>
+
+<p>A linear regression on <code>S</code> will be fitted using <code>E</code> and <code>X</code>. If <code>E</code> is used in raw form, we would be assuming that each step up in education is worth a fixed increment to salary. This interpretation is possible but may be too restrictive.</p>
+
+<p><a id="code-snippet--read-salary"></a></p>
+
+<pre><code class="language-R">salary.survey = fread(&quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P130.txt&quot;, data.table = F)
+</code></pre>
+
+<h2 id="south-African-heart-disease">South African heart disease</h2>
+
+<p>This dataset is a retrospective sample of males in a heart-disease high-risk region
+of the Western Cape, South Africa. There are roughly two controls per
+case of CHD (coronary heart disease). Many of the CHD positive men have undergone blood
+pressure reduction treatment and other programs to reduce their risk
+factors after their CHD event. Descriptions of variables in this data set can be found <a href="http://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.info.txt" target="_blank">here</a>.</p>
+
+<p><a id="code-snippet--read-saheart"></a></p>
+
+<pre><code class="language-R">saheart = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.data&quot;, drop = 1, data.table=F)
+saheart$famhist = as.factor(saheart$famhist)
+saheart$chd = as.factor(saheart$chd)
+drops = c(&quot;typea&quot;,&quot;adiposity&quot;)
+saheart = saheart[,!(names(saheart) %in% drops)]
+</code></pre>
+
+<h2 id="vowel-data">Vowel data</h2>
+
+<p>The vowel data set is used to classify 11 spoken vowels using 10 feature
+variables. Detailed description of the data can be found <a href="https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.info.txt" target="_blank">here</a>. The data includes
+training and test set.</p>
+
+<p><a id="code-snippet--read-vowel"></a></p>
+
+<pre><code class="language-R">vowel.train = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.train&quot;, drop = 1, data.table = F)
+vowel.test = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.test&quot;, drop = 1, data.table = F)
+</code></pre>
+
+<h2 id="wage-data">Wage data</h2>
+
+<p>This data set contains wage and other data for a group of 3000 male workers in
+the Mid-Atlantic region. A data frame with 3000 observations on the following 11 variables.</p>
+
+<ul>
+<li><code>year</code>: Year that wage information was recorded</li>
+<li><code>age</code>: Age of worker</li>
+<li><code>maritl</code>: A factor with levels 1. Never Married 2. Married 3. Widowed 4. Divorced and 5.: Separated indicating marital status</li>
+<li><code>race</code>: A factor with levels 1. White 2. Black 3. Asian and 4. Other indicating race</li>
+<li><code>education</code>: A factor with levels 1. &lt; HS Grad 2. HS Grad 3. Some
+College 4. College Grad and 5. Advanced Degree indicating education level</li>
+<li><code>region</code>: Region of the country (mid-atlantic only)</li>
+<li><code>jobclass</code>: A factor with levels 1. Industrial and 2. Information indicating type of job</li>
+<li><code>health</code>: A factor with levels 1. &lt;=Good and 2. &gt;=Very Good indicating health level of worker</li>
+<li><code>health_ins</code>: A factor with levels 1. Yes and 2. No indicating whether worker has health insurance</li>
+<li><code>logwage</code>: Log of workers wage</li>
+<li><code>wage</code>: Workers raw wage</li>
+</ul>
+
+<!--listend-->
+
+<p><a id="code-snippet--read-wage"></a></p>
+
+<pre><code class="language-R">Wage = fread(&quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/wage.csv&quot;, data.table = 0, drop = 1)
+</code></pre>
+
+<h3 id="source">Source</h3>
+
+<p>Data was manually assembled by Steve Miller, of Open BI (www.openbi.com), from the March
+2011 Supplement to Current Population Survey data.
+<a href="http://thedataweb.rm.census.gov/TheDataWeb" target="_blank">http://thedataweb.rm.census.gov/TheDataWeb</a></p>
+
+<h2 id="spam-data">Spam data</h2>
+
+<p>Description of the spam data can be found in <a href="https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.info.txt" target="_blank">here</a>. We read in the list of spam words and delete garbage characters.</p>
+
+<p><a id="code-snippet--read-spam"></a></p>
+
+<pre><code class="language-R">spam.words = read.table(&quot;ftp://ftp.ics.uci.edu/pub/machine-learning-databases/spambase/spambase.names&quot;,skip=33,sep=&quot;:&quot;,comment.char=&quot;|&quot;,stringsAsFactors=F)
+  spam.words = spam.words[[1]]
+  for( si in 1:length(spam.words) ){
+    spam.words[si] = sub( &quot;word_freq_&quot;, &quot;&quot;, spam.words[si] )
+    spam.words[si] = sub( &quot;char_freq_&quot;, &quot;&quot;, spam.words[si] )
+    spam.words[si] = sub( &quot;capital_run_length_&quot;, &quot;CRL&quot;, spam.words[si] )
+  }
+
+spam.data = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.data&quot;, data.table = 0)
+spam.testidx = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.traintest&quot;, data.table = 0)
+</code></pre>
+
+<h2 id="lpga-data">LPGA data</h2>
+
+<p>The Ladies Professional Golf Association (LPGA) data contains 7 predictors and the response (Prize Money Per Round). You can find names of variables and players from the data sets (training and test).</p>
+
+<p><a id="code-snippet--read-lpga"></a></p>
+
+<pre><code class="language-R">lpga.train = fread(&quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.train.csv&quot;)
+lpga.test = fread(&quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.test.csv&quot;)
+
+v.name = c('Player',
+           'Rounds',
+           'Driving_Distance',
+           'Fairway_Accuracy',
+           'Green_in_Regulation_Percentage',
+           'Average_Putts_Per_Game',
+           'Average_Sandshots_Per_Game',
+           'Sand_Save_Percentage',
+           'Prize_Money_Per_Round')
+
+colnames(lpga.train) = v.name
+colnames(lpga.test) = v.name
+</code></pre>
+
+<h2 id="housing-data">Housing data</h2>
+
+<p>The Census Bureau divides the country up into geographic regions,
+smaller than counties, called <em>tracts</em> of a few thousand people each,
+and reports much of its data at the level of tracts. This data set,
+drawn from the 2011 American Community Survey, contains information on
+the housing stock and economic circumstances of every tract in
+California and Pennsylvania. For each tract, the data file records a
+large number of variables.</p>
+
+<ul>
+<li>A geographic ID code, a code for the state, a code for the county, and a code for the tract</li>
+<li>The population, latitude and longitude of the tract</li>
+<li>Its name</li>
+<li>The median value of the housing units in the tract</li>
+<li>The total number of units and the number of vacant units</li>
+<li>The median number of rooms per unit</li>
+<li>The mean number of people per household which owns its home, the mean number of people per renting household</li>
+<li>The median and mean income of households (in dollars, from all sources)</li>
+<li>The percentage of housing units built in 2005 or later; built in 2000&ndash;2004; built in the 1990s; in the 1980s; in the 1970s; in the 1960s; in the 1950s; in the 1940s; and in 1939 or earlier</li>
+<li>The percentage of housing units with 0 bedrooms; with 1 bedroom; with 2; with 3; with 4; with 5 or more bedrooms</li>
+<li>The percentage of households which own their home, and the percentage which rent</li>
+</ul>
+
+<p>Remember that these are not values for individual houses or families, but
+summaries of all of the houses and families in the tract.</p>
+
+<p><a id="code-snippet--read-housing"></a></p>
+
+<pre><code class="language-R">x = fread(&quot;http://www.stat.cmu.edu/~cshalizi/uADA/13/hw/01/calif_penn_2011.csv&quot;, drop = 1, data.table = F)
+names(x) &lt;- tolower(names(x))
+</code></pre>
+
+<h2 id="wine-quality">Wine quality data</h2>
+
+<p>The two datasets are related to red and white variants of the Portuguese &ldquo;Vinho Verde&rdquo; wine. For more details, consult: <a href="https://archive.ics.uci.edu/ml/datasets/wine+quality" target="_blank">https://archive.ics.uci.edu/ml/datasets/wine+quality</a>. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).</p>
+
+<h3 id="attribute-information">Attribute Information:</h3>
+
+<ul>
+<li><p>Input variables (based on physicochemical tests):</p>
+
+<ul>
+<li>1 - fixed acidity</li>
+<li>2 - volatile acidity</li>
+<li>3 - citric acid</li>
+<li>4 - residual sugar</li>
+<li>5 - chlorides</li>
+<li>6 - free sulfur dioxide</li>
+<li>7 - total sulfur dioxide</li>
+<li>8 - density</li>
+<li>9 - pH</li>
+<li>10 - sulphates</li>
+<li>11 - alcohol</li>
+</ul></li>
+
+<li><p>Output variable (based on sensory data):</p>
+
+<ul>
+<li>12 - quality (score between 0 and 10)</li>
+</ul></li>
+</ul>
+
+<!--listend-->
+
+<p><a id="code-snippet--read-wine"></a></p>
+
+<pre><code class="language-R">red = fread(&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv&quot;)
+white = fread(&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv&quot;)
+</code></pre>
+
+<h2 id="nci-microarray">NCI microarray</h2>
+
+<p>The data contains expression levels on 6830 genes from 64 cancer cell lines.
+Cancer type is also recorded.</p>
+
+<p><a id="code-snippet--read-nci"></a></p>
+
+<pre><code class="language-R">cancer = read.table(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.info.txt&quot;, skip = 20, stringsAsFactors = F)
+nci = data.table::fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.data&quot;)
+colnames(nci) = c(cancer[,1]) # assign the cancer type.
+</code></pre>
+
+<h2 id="orange-juice">Orange juice</h2>
+
+<p>The data contains 1070 purchases where the customer either purchased Citrus Hill or Minute Maid
+Orange Juice. A number of characteristics of the customer and product are
+recorded.</p>
+
+<p>A data frame with 1070 observations on the following 18 variables:</p>
+
+<ul>
+<li><code>Purchase</code>: A factor with levels CH and MM indicating whether the customer
+purchased Citrus Hill or Minute Maid Orange Juice</li>
+<li><code>WeekofPurchase</code>: Week of purchase</li>
+<li><code>StoreID</code>: Store ID</li>
+<li><code>PriceCH</code>: Price charged for CH</li>
+<li><code>PriceMM</code>: Price charged for MM</li>
+<li><code>DiscCH</code>: Discount offered for CH</li>
+<li><code>DiscMM</code>: Discount offered for MM</li>
+<li><code>SpecialCH</code>: Indicator of special on CH</li>
+<li><code>SpecialMM</code>: Indicator of special on MM</li>
+<li><code>LoyalCH</code>: Customer brand loyalty for CH</li>
+<li><code>SalePriceMM</code>: Sale price for MM</li>
+<li><code>SalePriceCH</code>: Sale price for CH</li>
+<li><code>PriceDiff</code>: Sale price of MM less sale price of CH</li>
+<li><code>Store7</code>: A factor with levels No and Yes indicating whether the sale is at Store 7</li>
+<li><code>PctDiscMM</code>: Percentage discount for MM</li>
+<li><code>PctDiscCH</code>: Percentage discount for CH</li>
+<li><code>ListPriceDiff</code>: List price of MM less list price of CH</li>
+<li><code>STORE</code>: Which of 5 possible stores the sale occured at</li>
+</ul>
+
+<!--listend-->
+
+<p><a id="code-snippet--read-oj"></a></p>
+
+<pre><code class="language-R">oj = fread(&quot;http://wweb.uta.edu/faculty/yunj/data/islr/oj.csv&quot;, data.table = 0)
+</code></pre>
+
+<h2 id="iris-data">Iris data set</h2>
+
+<p>This famous (Fisher&rsquo;s or Anderson&rsquo;s) iris data set gives the measurements in
+centimeters of the variables sepal length and width and petal length and width,
+respectively, for 50 flowers from each of 3 species of iris. The species are
+Iris setosa, versicolor, and virginica.</p>
+
+<p>Running a command below will load the Iris data set to data frame <code>iris</code>.</p>
+
+<p><a id="code-snippet--read-iris"></a></p>
+
+<pre><code class="language-R">data(iris)
+</code></pre>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/course/math5305-fa19/math5305-syllabus/" rel="next">MATH 5305: Syllabus</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Aug 29, 2019</p>
+
+          
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/course/math5305-fa19/math5305-data.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/lisp.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/bash.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/shell.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+      
+    
+    
+    
+    <script src="/js/academic.min.40fb93687aa6ee42a3fcdaaae3322ea1.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -7,7 +7,7 @@
     <description>data__sets</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 29 Aug 2019 17:06:21 -0500</lastBuildDate>
     <image>
-      <url>//jonghyun-yun.github.io/img/icon-192.png</url>
+      <url>//jonghyun-yun.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>data__sets</title>
       <link>//jonghyun-yun.github.io/categories/data__sets/</link>
     </image>
@@ -17,67 +17,40 @@
       <link>//jonghyun-yun.github.io/course/math5305-fa19/math5305-data/</link>
       <pubDate>Thu, 29 Aug 2019 17:06:21 -0500</pubDate>
       <guid>//jonghyun-yun.github.io/course/math5305-fa19/math5305-data/</guid>
-      <description>
-
-&lt;p&gt;To run R code using &lt;code&gt;fread&lt;/code&gt;, &lt;code&gt;data.table&lt;/code&gt; package should be imported using &lt;code&gt;library(data.table)&lt;/code&gt;.&lt;/p&gt;
-
+      <description>&lt;p&gt;To run R code using &lt;code&gt;fread&lt;/code&gt;, &lt;code&gt;data.table&lt;/code&gt; package should be imported using &lt;code&gt;library(data.table)&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;brain-data&#34;&gt;Brain data&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;y: &lt;code&gt;BrainWeight&lt;/code&gt; are measured for 28 animals.&lt;/li&gt;
 &lt;li&gt;X: &lt;code&gt;BodyWeight&lt;/code&gt; are measured for 28 animals.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;!--listend--&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-brain&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;brain = data.frame(fread(&amp;quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&amp;quot;), row.names=1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;credit-card-data&#34;&gt;Credit card data&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;brain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data.frame&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&amp;#34;&lt;/span&gt;), row.names&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;credit-card-data&#34;&gt;Credit card data&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;credit&lt;/code&gt; data set displayed in Figure 3.6 of ESL records &lt;code&gt;balance&lt;/code&gt; (average
 credit card debt for a number of individuals) as well as several
 predictors: &lt;code&gt;age&lt;/code&gt;, &lt;code&gt;cards&lt;/code&gt; (number of credit cards), &lt;code&gt;education&lt;/code&gt; (years of
 education), &lt;code&gt;income&lt;/code&gt; (in thousands of dollars), &lt;code&gt;limit&lt;/code&gt; (credit limit),
 &lt;code&gt;rating&lt;/code&gt; (credit rating), &lt;code&gt;gender&lt;/code&gt;, &lt;code&gt;student&lt;/code&gt; (student vs non-student),
 &lt;code&gt;ethnicity&lt;/code&gt;, and &lt;code&gt;married&lt;/code&gt; (marital status).&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-credit&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;credit = read.table(&amp;quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/credit.csv&amp;quot;,sep=&amp;quot;,&amp;quot;,head=T,row.names=1)
-credit$X = NULL
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;breakfast-cereals&#34;&gt;Breakfast cereals&lt;/h2&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;credit &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;read.table&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/credit.csv&amp;#34;&lt;/span&gt;,sep&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt;,head&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;T,row.names&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+credit&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;X &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;breakfast-cereals&#34;&gt;Breakfast cereals&lt;/h2&gt;
 &lt;p&gt;A data set contains breakfast cereals produced by three different American manufacturers:
 General Mills (G), Kellogg (K), and Quaker (Q).&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-cereals&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;cereal = data.frame(fread(&amp;quot;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.txt&amp;quot;), row.names=1)
-colnames(cereal) = fread(&amp;quot;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.name.txt&amp;quot;, data.table = F)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;advertising&#34;&gt;Advertising&lt;/h2&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;cereal &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data.frame&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.txt&amp;#34;&lt;/span&gt;), row.names&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;colnames&lt;/span&gt;(cereal) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.name.txt&amp;#34;&lt;/span&gt;, data.table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; F)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;advertising&#34;&gt;Advertising&lt;/h2&gt;
 &lt;p&gt;The Advertising data set consists of the &lt;code&gt;sales&lt;/code&gt; of that product in 200
 different markets, along with advertising budgets for the product in each of
 those markets for three different media: &lt;code&gt;TV&lt;/code&gt;, &lt;code&gt;radio&lt;/code&gt;, and &lt;code&gt;newspaper&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-advertising&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;advertising = fread(&amp;quot;http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv&amp;quot;, drop = 1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;prostate-cancer&#34;&gt;Prostate cancer&lt;/h2&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;advertising &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv&amp;#34;&lt;/span&gt;, drop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;prostate-cancer&#34;&gt;Prostate cancer&lt;/h2&gt;
 &lt;p&gt;Prostate cancer is cancer that begins in tissues of the prostate gland. Located just below the bladder and in front of the rectum, the prostate is the male sex gland responsible for the production of semen. &lt;code&gt;Prostate cancer data&lt;/code&gt; come from a study that examined the correlation between the level of prostate specific antigen and a number of clinical measures in men who were about to receive a radical prostatectomy.&lt;/p&gt;
-
 &lt;p&gt;The data frame has the following variables:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;lcavol&lt;/code&gt;: log(cancer volume)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;lweight&lt;/code&gt;: log(prostate weight)&lt;/li&gt;
@@ -89,72 +62,50 @@ those markets for three different media: &lt;code&gt;TV&lt;/code&gt;, &lt;code&g
 &lt;li&gt;&lt;code&gt;pgg45&lt;/code&gt;: percentage Gleason scores 4 or 5&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;lpsa&lt;/code&gt;: log(prostate specific antigen)&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;!--listend--&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-prostate&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;prostate = fread(&amp;quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/prostate.data&amp;quot;, drop=1)
-prostate$train = NULL
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;salary-survey&#34;&gt;Salary survey&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;prostate &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/prostate.data&amp;#34;&lt;/span&gt;, drop&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+prostate&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;train &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;salary-survey&#34;&gt;Salary survey&lt;/h2&gt;
 &lt;p&gt;The salary survey data was developed from a salary survey of omputer professionals in a large corporation. The response variable is salary (&lt;code&gt;S&lt;/code&gt;) and the predicators are:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;X&lt;/code&gt;: experience in years&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;E&lt;/code&gt;: education coded as
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;1&lt;/code&gt; for completion of a high school diploma&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;2&lt;/code&gt; for completion of a bachelor degree&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;3&lt;/code&gt; for completion of an advanced degree&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;M&lt;/code&gt; management coded as &lt;code&gt;1&lt;/code&gt; for a person with management responsibility; 0 otherwise.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;A linear regression on &lt;code&gt;S&lt;/code&gt; will be fitted using &lt;code&gt;E&lt;/code&gt; and &lt;code&gt;X&lt;/code&gt;. If &lt;code&gt;E&lt;/code&gt; is used in raw form, we would be assuming that each step up in education is worth a fixed increment to salary. This interpretation is possible but may be too restrictive.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-salary&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;salary.survey = fread(&amp;quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P130.txt&amp;quot;, data.table = F)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;south-African-heart-disease&#34;&gt;South African heart disease&lt;/h2&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;salary.survey &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P130.txt&amp;#34;&lt;/span&gt;, data.table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; F)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;south-African-heart-disease&#34;&gt;South African heart disease&lt;/h2&gt;
 &lt;p&gt;This dataset is a retrospective sample of males in a heart-disease high-risk region
 of the Western Cape, South Africa. There are roughly two controls per
 case of CHD (coronary heart disease). Many of the CHD positive men have undergone blood
 pressure reduction treatment and other programs to reduce their risk
-factors after their CHD event. Descriptions of variables in this data set can be found &lt;a href=&#34;http://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.info.txt&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-saheart&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;saheart = fread(&amp;quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.data&amp;quot;, drop = 1, data.table=F)
-saheart$famhist = as.factor(saheart$famhist)
-saheart$chd = as.factor(saheart$chd)
-drops = c(&amp;quot;typea&amp;quot;,&amp;quot;adiposity&amp;quot;)
-saheart = saheart[,!(names(saheart) %in% drops)]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;vowel-data&#34;&gt;Vowel data&lt;/h2&gt;
-
+factors after their CHD event. Descriptions of variables in this data set can be found 
+&lt;a href=&#34;http://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.info.txt&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;saheart &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.data&amp;#34;&lt;/span&gt;, drop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, data.table&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;F)
+saheart&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;famhist &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;as.factor&lt;/span&gt;(saheart&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;famhist)
+saheart&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;chd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;as.factor&lt;/span&gt;(saheart&lt;span style=&#34;color:#f92672&#34;&gt;$&lt;/span&gt;chd)
+drops &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;typea&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;adiposity&amp;#34;&lt;/span&gt;)
+saheart &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; saheart[,&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;names&lt;/span&gt;(saheart) &lt;span style=&#34;color:#f92672&#34;&gt;%in%&lt;/span&gt; drops)]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;vowel-data&#34;&gt;Vowel data&lt;/h2&gt;
 &lt;p&gt;The vowel data set is used to classify 11 spoken vowels using 10 feature
-variables. Detailed description of the data can be found &lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.info.txt&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. The data includes
+variables. Detailed description of the data can be found 
+&lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.info.txt&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. The data includes
 training and test set.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-vowel&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;vowel.train = fread(&amp;quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.train&amp;quot;, drop = 1, data.table = F)
-vowel.test = fread(&amp;quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.test&amp;quot;, drop = 1, data.table = F)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;wage-data&#34;&gt;Wage data&lt;/h2&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;vowel.train &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.train&amp;#34;&lt;/span&gt;, drop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, data.table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; F)
+vowel.test &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.test&amp;#34;&lt;/span&gt;, drop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, data.table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; F)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;wage-data&#34;&gt;Wage data&lt;/h2&gt;
 &lt;p&gt;This data set contains wage and other data for a group of 3000 male workers in
 the Mid-Atlantic region. A data frame with 3000 observations on the following 11 variables.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;year&lt;/code&gt;: Year that wage information was recorded&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;age&lt;/code&gt;: Age of worker&lt;/li&gt;
@@ -169,63 +120,46 @@ College 4. College Grad and 5. Advanced Degree indicating education level&lt;/li
 &lt;li&gt;&lt;code&gt;logwage&lt;/code&gt;: Log of workers wage&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;wage&lt;/code&gt;: Workers raw wage&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;!--listend--&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-wage&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;Wage = fread(&amp;quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/wage.csv&amp;quot;, data.table = 0, drop = 1)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;source&#34;&gt;Source&lt;/h3&gt;
-
-&lt;p&gt;Data was manually assembled by Steve Miller, of Open BI (www.openbi.com), from the March
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;Wage &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/wage.csv&amp;#34;&lt;/span&gt;, data.table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, drop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;source&#34;&gt;Source&lt;/h3&gt;
+&lt;p&gt;Data was manually assembled by Steve Miller, of Open BI (&lt;a href=&#34;http://www.openbi.com&#34;&gt;www.openbi.com&lt;/a&gt;), from the March
 2011 Supplement to Current Population Survey data.
-&lt;a href=&#34;http://thedataweb.rm.census.gov/TheDataWeb&#34; target=&#34;_blank&#34;&gt;http://thedataweb.rm.census.gov/TheDataWeb&lt;/a&gt;&lt;/p&gt;
-
+&lt;a href=&#34;http://thedataweb.rm.census.gov/TheDataWeb&#34;&gt;http://thedataweb.rm.census.gov/TheDataWeb&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;spam-data&#34;&gt;Spam data&lt;/h2&gt;
-
-&lt;p&gt;Description of the spam data can be found in &lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.info.txt&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. We read in the list of spam words and delete garbage characters.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-spam&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;spam.words = read.table(&amp;quot;ftp://ftp.ics.uci.edu/pub/machine-learning-databases/spambase/spambase.names&amp;quot;,skip=33,sep=&amp;quot;:&amp;quot;,comment.char=&amp;quot;|&amp;quot;,stringsAsFactors=F)
-  spam.words = spam.words[[1]]
-  for( si in 1:length(spam.words) ){
-    spam.words[si] = sub( &amp;quot;word_freq_&amp;quot;, &amp;quot;&amp;quot;, spam.words[si] )
-    spam.words[si] = sub( &amp;quot;char_freq_&amp;quot;, &amp;quot;&amp;quot;, spam.words[si] )
-    spam.words[si] = sub( &amp;quot;capital_run_length_&amp;quot;, &amp;quot;CRL&amp;quot;, spam.words[si] )
+&lt;p&gt;Description of the spam data can be found in 
+&lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.info.txt&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. We read in the list of spam words and delete garbage characters.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;spam.words &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;read.table&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ftp://ftp.ics.uci.edu/pub/machine-learning-databases/spambase/spambase.names&amp;#34;&lt;/span&gt;,skip&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;33&lt;/span&gt;,sep&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:&amp;#34;&lt;/span&gt;,comment.char&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;|&amp;#34;&lt;/span&gt;,stringsAsFactors&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;F)
+  spam.words &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; spam.words[[1]]
+  &lt;span style=&#34;color:#a6e22e&#34;&gt;for&lt;/span&gt;( si in &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;(spam.words) ){
+    spam.words[si] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sub&lt;/span&gt;( &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;word_freq_&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, spam.words[si] )
+    spam.words[si] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sub&lt;/span&gt;( &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;char_freq_&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;, spam.words[si] )
+    spam.words[si] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;sub&lt;/span&gt;( &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;capital_run_length_&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;CRL&amp;#34;&lt;/span&gt;, spam.words[si] )
   }
 
-spam.data = fread(&amp;quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.data&amp;quot;, data.table = 0)
-spam.testidx = fread(&amp;quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.traintest&amp;quot;, data.table = 0)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;lpga-data&#34;&gt;LPGA data&lt;/h2&gt;
-
+spam.data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.data&amp;#34;&lt;/span&gt;, data.table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+spam.testidx &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.traintest&amp;#34;&lt;/span&gt;, data.table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;lpga-data&#34;&gt;LPGA data&lt;/h2&gt;
 &lt;p&gt;The Ladies Professional Golf Association (LPGA) data contains 7 predictors and the response (Prize Money Per Round). You can find names of variables and players from the data sets (training and test).&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;lpga.train &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.train.csv&amp;#34;&lt;/span&gt;)
+lpga.test &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.test.csv&amp;#34;&lt;/span&gt;)
 
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-lpga&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+v.name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Player&amp;#39;&lt;/span&gt;,
+           &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Rounds&amp;#39;&lt;/span&gt;,
+           &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Driving_Distance&amp;#39;&lt;/span&gt;,
+           &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fairway_Accuracy&amp;#39;&lt;/span&gt;,
+           &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Green_in_Regulation_Percentage&amp;#39;&lt;/span&gt;,
+           &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Average_Putts_Per_Game&amp;#39;&lt;/span&gt;,
+           &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Average_Sandshots_Per_Game&amp;#39;&lt;/span&gt;,
+           &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Sand_Save_Percentage&amp;#39;&lt;/span&gt;,
+           &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Prize_Money_Per_Round&amp;#39;&lt;/span&gt;)
 
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;lpga.train = fread(&amp;quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.train.csv&amp;quot;)
-lpga.test = fread(&amp;quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.test.csv&amp;quot;)
-
-v.name = c(&#39;Player&#39;,
-           &#39;Rounds&#39;,
-           &#39;Driving_Distance&#39;,
-           &#39;Fairway_Accuracy&#39;,
-           &#39;Green_in_Regulation_Percentage&#39;,
-           &#39;Average_Putts_Per_Game&#39;,
-           &#39;Average_Sandshots_Per_Game&#39;,
-           &#39;Sand_Save_Percentage&#39;,
-           &#39;Prize_Money_Per_Round&#39;)
-
-colnames(lpga.train) = v.name
-colnames(lpga.test) = v.name
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;housing-data&#34;&gt;Housing data&lt;/h2&gt;
-
+&lt;span style=&#34;color:#a6e22e&#34;&gt;colnames&lt;/span&gt;(lpga.train) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; v.name
+&lt;span style=&#34;color:#a6e22e&#34;&gt;colnames&lt;/span&gt;(lpga.test) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; v.name
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;housing-data&#34;&gt;Housing data&lt;/h2&gt;
 &lt;p&gt;The Census Bureau divides the country up into geographic regions,
 smaller than counties, called &lt;em&gt;tracts&lt;/em&gt; of a few thousand people each,
 and reports much of its data at the level of tracts. This data set,
@@ -233,7 +167,6 @@ drawn from the 2011 American Community Survey, contains information on
 the housing stock and economic circumstances of every tract in
 California and Pennsylvania. For each tract, the data file records a
 large number of variables.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;A geographic ID code, a code for the state, a code for the county, and a code for the tract&lt;/li&gt;
 &lt;li&gt;The population, latitude and longitude of the tract&lt;/li&gt;
@@ -247,25 +180,17 @@ large number of variables.&lt;/p&gt;
 &lt;li&gt;The percentage of housing units with 0 bedrooms; with 1 bedroom; with 2; with 3; with 4; with 5 or more bedrooms&lt;/li&gt;
 &lt;li&gt;The percentage of households which own their home, and the percentage which rent&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Remember that these are not values for individual houses or families, but
 summaries of all of the houses and families in the tract.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-housing&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;x = fread(&amp;quot;http://www.stat.cmu.edu/~cshalizi/uADA/13/hw/01/calif_penn_2011.csv&amp;quot;, drop = 1, data.table = F)
-names(x) &amp;lt;- tolower(names(x))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;wine-quality&#34;&gt;Wine quality data&lt;/h2&gt;
-
-&lt;p&gt;The two datasets are related to red and white variants of the Portuguese &amp;ldquo;Vinho Verde&amp;rdquo; wine. For more details, consult: &lt;a href=&#34;https://archive.ics.uci.edu/ml/datasets/wine+quality&#34; target=&#34;_blank&#34;&gt;https://archive.ics.uci.edu/ml/datasets/wine+quality&lt;/a&gt;. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).&lt;/p&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://www.stat.cmu.edu/~cshalizi/uADA/13/hw/01/calif_penn_2011.csv&amp;#34;&lt;/span&gt;, drop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, data.table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; F)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;names&lt;/span&gt;(x) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tolower&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;names&lt;/span&gt;(x))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;wine-quality&#34;&gt;Wine quality data&lt;/h2&gt;
+&lt;p&gt;The two datasets are related to red and white variants of the Portuguese &amp;ldquo;Vinho Verde&amp;rdquo; wine. For more details, consult: &lt;a href=&#34;https://archive.ics.uci.edu/ml/datasets/wine+quality&#34;&gt;https://archive.ics.uci.edu/ml/datasets/wine+quality&lt;/a&gt;. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).&lt;/p&gt;
 &lt;h3 id=&#34;attribute-information&#34;&gt;Attribute Information:&lt;/h3&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Input variables (based on physicochemical tests):&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;Input variables (based on physicochemical tests):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1 - fixed acidity&lt;/li&gt;
 &lt;li&gt;2 - volatile acidity&lt;/li&gt;
@@ -278,43 +203,31 @@ names(x) &amp;lt;- tolower(names(x))
 &lt;li&gt;9 - pH&lt;/li&gt;
 &lt;li&gt;10 - sulphates&lt;/li&gt;
 &lt;li&gt;11 - alcohol&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Output variable (based on sensory data):&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Output variable (based on sensory data):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;12 - quality (score between 0 and 10)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;!--listend--&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-wine&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;red = fread(&amp;quot;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv&amp;quot;)
-white = fread(&amp;quot;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;nci-microarray&#34;&gt;NCI microarray&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;red &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv&amp;#34;&lt;/span&gt;)
+white &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv&amp;#34;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;nci-microarray&#34;&gt;NCI microarray&lt;/h2&gt;
 &lt;p&gt;The data contains expression levels on 6830 genes from 64 cancer cell lines.
 Cancer type is also recorded.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-nci&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;cancer = read.table(&amp;quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.info.txt&amp;quot;, skip = 20, stringsAsFactors = F)
-nci = data.table::fread(&amp;quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.data&amp;quot;)
-colnames(nci) = c(cancer[,1]) # assign the cancer type.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;orange-juice&#34;&gt;Orange juice&lt;/h2&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;cancer &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;read.table&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.info.txt&amp;#34;&lt;/span&gt;, skip &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;, stringsAsFactors &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; F)
+nci &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; data.table&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.data&amp;#34;&lt;/span&gt;)
+&lt;span style=&#34;color:#a6e22e&#34;&gt;colnames&lt;/span&gt;(nci) &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(cancer[,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]) &lt;span style=&#34;color:#75715e&#34;&gt;# assign the cancer type.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;orange-juice&#34;&gt;Orange juice&lt;/h2&gt;
 &lt;p&gt;The data contains 1070 purchases where the customer either purchased Citrus Hill or Minute Maid
 Orange Juice. A number of characteristics of the customer and product are
 recorded.&lt;/p&gt;
-
 &lt;p&gt;A data frame with 1070 observations on the following 18 variables:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Purchase&lt;/code&gt;: A factor with levels CH and MM indicating whether the customer
 purchased Citrus Hill or Minute Maid Orange Juice&lt;/li&gt;
@@ -336,28 +249,18 @@ purchased Citrus Hill or Minute Maid Orange Juice&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ListPriceDiff&lt;/code&gt;: List price of MM less list price of CH&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;STORE&lt;/code&gt;: Which of 5 possible stores the sale occured at&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;!--listend--&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-oj&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;oj = fread(&amp;quot;http://wweb.uta.edu/faculty/yunj/data/islr/oj.csv&amp;quot;, data.table = 0)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;iris-data&#34;&gt;Iris data set&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;oj &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;fread&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://wweb.uta.edu/faculty/yunj/data/islr/oj.csv&amp;#34;&lt;/span&gt;, data.table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;iris-data&#34;&gt;Iris data set&lt;/h2&gt;
 &lt;p&gt;This famous (Fisher&amp;rsquo;s or Anderson&amp;rsquo;s) iris data set gives the measurements in
 centimeters of the variables sepal length and width and petal length and width,
 respectively, for 50 flowers from each of 3 species of iris. The species are
 Iris setosa, versicolor, and virginica.&lt;/p&gt;
-
 &lt;p&gt;Running a command below will load the Iris data set to data frame &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a id=&#34;code-snippet--read-iris&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;data(iris)
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;(iris)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

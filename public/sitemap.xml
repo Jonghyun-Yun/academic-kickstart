@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -128,8 +128,18 @@
   </url>
   
   <url>
+    <loc>//jonghyun-yun.github.io/authors/</loc>
+    <lastmod>2019-09-10T01:29:11-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//jonghyun-yun.github.io/authors/admin/</loc>
     <lastmod>2019-09-10T01:29:11-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//jonghyun-yun.github.io/course/</loc>
+    <lastmod>2019-09-05T09:29:52-05:00</lastmod>
   </url>
   
   <url>
@@ -213,6 +223,16 @@
   </url>
   
   <url>
+    <loc>//jonghyun-yun.github.io/tags/math5305/</loc>
+    <lastmod>2019-09-05T09:29:45-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//jonghyun-yun.github.io/tags/statistical-methods/</loc>
+    <lastmod>2019-09-05T09:29:45-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//jonghyun-yun.github.io/course/math5305-fa19/hw1/</loc>
     <lastmod>2019-09-03T21:47:56-05:00</lastmod>
   </url>
@@ -253,11 +273,6 @@
   </url>
   
   <url>
-    <loc>//jonghyun-yun.github.io/authors/</loc>
-    <lastmod>2019-08-29T15:52:53-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>//jonghyun-yun.github.io/authors/f-yang/</loc>
     <lastmod>2019-08-29T15:52:52-05:00</lastmod>
   </url>
@@ -290,10 +305,6 @@
   <url>
     <loc>//jonghyun-yun.github.io/authors/t-wang/</loc>
     <lastmod>2019-08-29T15:52:53-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>//jonghyun-yun.github.io/course/</loc>
   </url>
   
 </urlset>

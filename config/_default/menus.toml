@@ -9,19 +9,19 @@
   weight = 10
 
 [[main]]
-  name = "Posts"
-  url = "#posts"
+ name = "Publications"
+  url = "#featured_publications"
   weight = 20
 
 [[main]]
   name = "Projects"
   url = "#projects"
-  weight = 30
+  weight = 40
 
 [[main]]
-  name = "Publications"
-  url = "#featured"
-  weight = 40
+  name = "Teaching"
+  url = "#teaching"
+  weight = 50
 
 [[main]]
   name = "Contact"
@@ -34,3 +34,15 @@
 #    name = "CV"
 #    url = "files/cv.pdf"
 #    weight = 70
+
+[[math5305-fa19]]
+  name = "Statistical Methods"
+  weight = 10
+
+[[math5305-fa19]]
+  name = "Lab"
+  weight = 20
+
+[[math5305-fa19]]
+  name = "Homework"
+  weight = 30

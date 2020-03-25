@@ -1,0 +1,65 @@
+#+hugo_base_dir: ../
+
+#+seq_todo: TODO DRAFT DONE
+
+#+property: header-args :eval no
+
+#+startup: indent
+
+#+CREATOR: Emacs 26.1 (Org mode 9.1.14 + ox-hugo)
+#+HUGO_FRONT_MATTER_FORMAT: toml
+#+HUGO_PRESERVE_FILLING:
+#+HUGO_DELETE_TRAILING_WS:
+#+HUGO_SECTION: tutorial
+
+* tutorial
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:EXPORT_TITLE: Overview
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type docs :toc true 
+:EXPORT_HUGO_MENU: :menu tutorial :weight 1
+:END:
+
+This feature can be used for publishing content such as:
+
+- **Project or software documentation**
+- **Online courses**
+- **Tutorials**
+
+The parent folder may be renamed, for example, to `docs` for project documentation or `course` for creating an online course.
+
+To disable this feature, either delete the parent folder, or set `draft = true` in the front matter of all its pages. 
+
+After renaming or deleting the parent folder, you may wish to update any `menu.main` menu links to it in the `config.toml`. 
+
+* Example Topic
+:PROPERTIES:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:END:
+
+** Example page
+:PROPERTIES:
+:EXPORT_FILE_NAME: example
+:EXPORT_TITLE: Example Page
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :type docs :toc true
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :linktitle Example Page
+:EXPORT_HUGO_MENU: :menu tutorial :weight 1 :parent Example Topic
+:END:
+
+In this tutorial, I'll share my top 10 tips for getting started with Academic:
+
+*** Tip 1
+
+...
+
+*** Tip 2
+
+...
+This is a test for admonition
+#+BEGIN_important
+Quiz III will be taken on 11/13. Chapters 7.2-9 and 2.6 will be covered. The quiz is closed book, closed note, and open calculator. A cell phone calculator is not allowed. Students can bring a cheat sheet under the same restriction for the exams. Probability tables will be provided.
+#+END_important
+
+#+BEGIN_caution
+The due data of HW 6 is extended to 10/25.
+#+END_caution

@@ -1,0 +1,80 @@
+#+TITLE: Courses
+#+AUTHOR:
+#+EMAIL: "j" dot "yun" at-sign "uta" dot "edu"
+
+#+OPTIONS: ':nil -:nil ^:{} num:t toc:t
+#+CREATOR: Emacs 26.1 (Org mode 9.1.14 + ox-hugo
+
+#+HUGO_BASE_DIR: ~/website
+#+HUGO_AUTO_SET_LASTMOD: t
+#+HUGO_DATE_FORMAT: %Y-%m-%dT%T%z
+#+HUGO_FRONT_MATTER_FORMAT: yaml
+
+#+HUGO_SECTION: /
+#+HUGO_BUNDLE: 
+
+#+BIBLIOGRAPHY:
+#+HUGO_EXPORT_RMARKDOWN:
+
+#+SEQ_TODO: TODO DRAFT DONE
+
+#+STARTUP: indent logdone
+
+# https://scripter.co/latex-in-html/
+#+macro: latex @@html:<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>@@
+
+#+OPTIONS: toc:nil num:nil H:4 ^:nil pri:t
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:nil html-preamble:t
+#+OPTIONS: html-scripts:t html-style:t html5-fancy:t
+#+HTML_MATHJAX: align: left tagside: right
+#+HTML_MATHJAX: indent: 5em scale: 85
+# MATHJAX font: MathJax TeX (default) Asana-Math Neo-Euler Latin-Modern Gyre-Pagella Gyre-Termes
+# #+OPTIONS: tex:dvipng # use LaTeX to generate images for equations
+
+#+LATEX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [9pt]
+#+LATEX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{geometry}\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=0.7in,rmargin=0.7in}
+#+LATEX_HEADER: \usepackage[stretch=10,babel=true]{microtype}\usepackage{lmodern}
+#+LATEX_HEADER: \setlength\parindent{0pt}\linespread{0.95}
+#+LATEX_HEADER: \usepackage{unicode-math}
+
+#+PROPERTY: header-args:R :session *org-R* :exports both :results output :noweb yes :eval never-export
+
+#+SETUPFILE: ~/setup/theme-readtheorg-side-remote.setup
+
+# #+HTML_LINK_HOME: http://wweb.uta.edu/faculty/yunj/index.html
+# #+HTML_LINK_UP: http://wweb.uta.edu/faculty/yunj/index.html
+
+#+HTML_HEAD:  <!-- Global site tag (gtag.js) - Google Analytics -->
+#+HTML_HEAD:<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128966866-1"></script>
+#+HTML_HEAD:<script>
+#+HTML_HEAD:  window.dataLayer = window.dataLayer || [];
+#+HTML_HEAD:  function gtag(){dataLayer.push(arguments);}
+#+HTML_HEAD:  gtag('js', new Date());
+#+HTML_HEAD:
+#+HTML_HEAD:  gtag('config', 'UA-128966866-1');
+#+HTML_HEAD:</script>
+
+#+MACRO: phone x29045
+#+MACRO: doclink [[https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/$1][$2]]
+
+# insert hyper links at the beginning or ending of TOC
+# #+HTML: <script>$( "#text-table-of-contents ul:first" ).append( '<li><a href = "https://elearn.uta.edu">Blackboard</a><li>' )</script>
+
+# #+HTML_HEAD:<script type="text/javascript" src="../styles/readtheorg/js/readtheorg-title.js"></script>
+# #+HTML_HEAD:<link rel="stylesheet" href="../styles/responsive-tables.css">
+
+* course
+:PROPERTIES:
+:EXPORT_TITLE: Courses
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :layout docs
+:END:
+
+#+begin_src yaml :front_matter_extra t
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+#+end_src

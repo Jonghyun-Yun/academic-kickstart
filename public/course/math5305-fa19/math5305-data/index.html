@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.8.0">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
 
   
 
@@ -29,7 +29,8 @@
     
   
   <meta name="description" content="To run R code using fread, data.table package should be imported using library(data.table).
-Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measured for 28 animals.  brain = data.frame(fread(&#34;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&#34;), row.names=1) Credit card data The credit data set displayed in Figure 3.6 of ESL records balance (average credit card debt for a number of individuals) as well as several predictors: age, cards (number of credit cards), education (years of education), income (in thousands of dollars), limit (credit limit), rating (credit rating), gender, student (student vs non-student), ethnicity, and married (marital status).">
+Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measured for 28 animals.   
+brain = data.frame(fread(&quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&quot;), row.names=1)  Credit card data The credit data set displayed in Figure 3.6 of ESL records balance (average credit card debt for a number of individuals) as well as several predictors: age, cards (number of credit cards), education (years of education), income (in thousands of dollars), limit (credit limit), rating (credit rating), gender, student (student vs non-student), ethnicity, and married (marital status).">
 
   
   <link rel="alternate" hreflang="en-us" href="//jonghyun-yun.github.io/course/math5305-fa19/math5305-data/">
@@ -46,17 +47,11 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
   
   
   
-  <script src="/js/mathjax-config.js"></script>
-  
-
-  
-  
-  
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
 
     
     
@@ -67,128 +62,16 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
     
 
-    
-
-    
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-    
-      
-
-      
-      
-
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
-      
-    
-      
-
-      
-      
-
-      
     
 
   
@@ -202,50 +85,23 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
   
   
   
-  
-  <link rel="stylesheet" href="/css/academic.css">
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
 
   
-
-
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128966866-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'UA-128966866-2', {});
+    
+    
+    
+    
+      
+    
+    
+    
+    <link rel="stylesheet" href="/css/academic.5cf0d09c4d7a87a246eed230d1832105.css">
+  
 
   
-  document.addEventListener('click', onClickCallback, false);
-</script>
+
+
 
 
   
@@ -254,12 +110,11 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
   
 
   <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
   <link rel="canonical" href="//jonghyun-yun.github.io/course/math5305-fa19/math5305-data/">
 
-  
   
   
   
@@ -274,8 +129,9 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
   <meta property="og:url" content="//jonghyun-yun.github.io/course/math5305-fa19/math5305-data/">
   <meta property="og:title" content="MATH 5305: Data Sets | Jonghyun Yun">
   <meta property="og:description" content="To run R code using fread, data.table package should be imported using library(data.table).
-Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measured for 28 animals.  brain = data.frame(fread(&#34;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&#34;), row.names=1) Credit card data The credit data set displayed in Figure 3.6 of ESL records balance (average credit card debt for a number of individuals) as well as several predictors: age, cards (number of credit cards), education (years of education), income (in thousands of dollars), limit (credit limit), rating (credit rating), gender, student (student vs non-student), ethnicity, and married (marital status)."><meta property="og:image" content="//jonghyun-yun.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="//jonghyun-yun.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measured for 28 animals.   
+brain = data.frame(fread(&quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&quot;), row.names=1)  Credit card data The credit data set displayed in Figure 3.6 of ESL records balance (average credit card debt for a number of individuals) as well as several predictors: age, cards (number of credit cards), education (years of education), income (in thousands of dollars), limit (credit limit), rating (credit rating), gender, student (student vs non-student), ethnicity, and married (marital status)."><meta property="og:image" content="//jonghyun-yun.github.io/img/icon-192.png">
+  <meta property="twitter:image" content="//jonghyun-yun.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2019-08-29T17:06:21-05:00">
@@ -338,41 +194,24 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
 
 
   
-
-
-
-
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
-    <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="/">Jonghyun Yun</a>
-    </div>
-    
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
 
     
-    <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span><i class="fas fa-bars"></i></span>
-    </button>
-    
-
-    
-    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class="navbar-brand" href="/">Jonghyun Yun</a>
-    </div>
-    
-
-    
-    
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+    <div class="collapse navbar-collapse" id="navbar">
 
       
-      <ul class="navbar-nav d-md-inline-flex">
+      
+      <ul class="navbar-nav mr-auto">
         
 
         
@@ -521,41 +360,29 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
         
 
       
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
 
         
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
       </ul>
+
     </div>
-
-    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-      
-      <li class="nav-item">
-        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-      </li>
-      
-
-      
-      <li class="nav-item dropdown theme-dropdown">
-        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
-          <i class="fas fa-palette" aria-hidden="true"></i>
-        </a>
-        <div class="dropdown-menu">
-          <a href="#" class="dropdown-item js-set-theme-light">
-            <span>Light</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-dark">
-            <span>Dark</span>
-          </a>
-          <a href="#" class="dropdown-item js-set-theme-auto">
-            <span>Automatic</span>
-          </a>
-        </div>
-      </li>
-      
-
-      
-
-    </ul>
-
   </div>
 </nav>
 
@@ -571,13 +398,6 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
 
 
 
-  
-    
-  
-
-
-
-
 <form class="docs-search d-flex align-items-center">
   <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
     <span><i class="fas fa-bars"></i></span>
@@ -589,10 +409,6 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
 </form>
 
 <nav class="collapse docs-links" id="docs-nav">
-  
-
-  
-  
   
   
   <div class="docs-toc-item">
@@ -710,32 +526,33 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
       </ul>
 
       <nav id="TableOfContents">
-  <ul>
-    <li><a href="#brain-data">Brain data</a></li>
-    <li><a href="#credit-card-data">Credit card data</a></li>
-    <li><a href="#breakfast-cereals">Breakfast cereals</a></li>
-    <li><a href="#advertising">Advertising</a></li>
-    <li><a href="#prostate-cancer">Prostate cancer</a></li>
-    <li><a href="#salary-survey">Salary survey</a></li>
-    <li><a href="#south-African-heart-disease">South African heart disease</a></li>
-    <li><a href="#vowel-data">Vowel data</a></li>
-    <li><a href="#wage-data">Wage data</a>
-      <ul>
-        <li><a href="#source">Source</a></li>
-      </ul>
-    </li>
-    <li><a href="#spam-data">Spam data</a></li>
-    <li><a href="#lpga-data">LPGA data</a></li>
-    <li><a href="#housing-data">Housing data</a></li>
-    <li><a href="#wine-quality">Wine quality data</a>
-      <ul>
-        <li><a href="#attribute-information">Attribute Information:</a></li>
-      </ul>
-    </li>
-    <li><a href="#nci-microarray">NCI microarray</a></li>
-    <li><a href="#orange-juice">Orange juice</a></li>
-    <li><a href="#iris-data">Iris data set</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#brain-data">Brain data</a></li>
+<li><a href="#credit-card-data">Credit card data</a></li>
+<li><a href="#breakfast-cereals">Breakfast cereals</a></li>
+<li><a href="#advertising">Advertising</a></li>
+<li><a href="#prostate-cancer">Prostate cancer</a></li>
+<li><a href="#salary-survey">Salary survey</a></li>
+<li><a href="#south-African-heart-disease">South African heart disease</a></li>
+<li><a href="#vowel-data">Vowel data</a></li>
+<li><a href="#wage-data">Wage data</a>
+<ul>
+<li><a href="#source">Source</a></li>
+</ul></li>
+<li><a href="#spam-data">Spam data</a></li>
+<li><a href="#lpga-data">LPGA data</a></li>
+<li><a href="#housing-data">Housing data</a></li>
+<li><a href="#wine-quality">Wine quality data</a>
+<ul>
+<li><a href="#attribute-information">Attribute Information:</a></li>
+</ul></li>
+<li><a href="#nci-microarray">NCI microarray</a></li>
+<li><a href="#orange-juice">Orange juice</a></li>
+<li><a href="#iris-data">Iris data set</a></li>
+</ul></li>
+</ul>
 </nav>
 
       
@@ -750,40 +567,67 @@ Brain data  y: BrainWeight are measured for 28 animals. X: BodyWeight are measur
           <h1>MATH 5305: Data Sets</h1>
 
           <div class="article-style">
-            <p>To run R code using <code>fread</code>, <code>data.table</code> package should be imported using <code>library(data.table)</code>.</p>
+            
+
+<p>To run R code using <code>fread</code>, <code>data.table</code> package should be imported using <code>library(data.table)</code>.</p>
+
 <h2 id="brain-data">Brain data</h2>
+
 <ul>
 <li>y: <code>BrainWeight</code> are measured for 28 animals.</li>
 <li>X: <code>BodyWeight</code> are measured for 28 animals.</li>
 </ul>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">brain <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(<span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&#34;</span>), row.names<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-</code></pre></div><h2 id="credit-card-data">Credit card data</h2>
+
+<!--listend-->
+
+<p><a id="code-snippet--read-brain"></a></p>
+
+<pre><code class="language-R">brain = data.frame(fread(&quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P184.txt&quot;), row.names=1)
+</code></pre>
+
+<h2 id="credit-card-data">Credit card data</h2>
+
 <p>The <code>credit</code> data set displayed in Figure 3.6 of ESL records <code>balance</code> (average
 credit card debt for a number of individuals) as well as several
 predictors: <code>age</code>, <code>cards</code> (number of credit cards), <code>education</code> (years of
 education), <code>income</code> (in thousands of dollars), <code>limit</code> (credit limit),
 <code>rating</code> (credit rating), <code>gender</code>, <code>student</code> (student vs non-student),
 <code>ethnicity</code>, and <code>married</code> (marital status).</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">credit <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.table</span>(<span style="color:#e6db74">&#34;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/credit.csv&#34;</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;,&#34;</span>,head<span style="color:#f92672">=</span>T,row.names<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-credit<span style="color:#f92672">$</span>X <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>
-</code></pre></div><h2 id="breakfast-cereals">Breakfast cereals</h2>
+
+<p><a id="code-snippet--read-credit"></a></p>
+
+<pre><code class="language-R">credit = read.table(&quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/credit.csv&quot;,sep=&quot;,&quot;,head=T,row.names=1)
+credit$X = NULL
+</code></pre>
+
+<h2 id="breakfast-cereals">Breakfast cereals</h2>
+
 <p>A data set contains breakfast cereals produced by three different American manufacturers:
 General Mills (G), Kellogg (K), and Quaker (Q).</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">cereal <span style="color:#f92672">=</span> <span style="color:#a6e22e">data.frame</span>(<span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.txt&#34;</span>), row.names<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-<span style="color:#a6e22e">colnames</span>(cereal) <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.name.txt&#34;</span>, data.table <span style="color:#f92672">=</span> F)
-</code></pre></div><h2 id="advertising">Advertising</h2>
+
+<p><a id="code-snippet--read-cereals"></a></p>
+
+<pre><code class="language-R">cereal = data.frame(fread(&quot;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.txt&quot;), row.names=1)
+colnames(cereal) = fread(&quot;http://wweb.uta.edu/faculty/yunj/data/jw/T11-9.name.txt&quot;, data.table = F)
+</code></pre>
+
+<h2 id="advertising">Advertising</h2>
+
 <p>The Advertising data set consists of the <code>sales</code> of that product in 200
 different markets, along with advertising budgets for the product in each of
 those markets for three different media: <code>TV</code>, <code>radio</code>, and <code>newspaper</code>.</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">advertising <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv&#34;</span>, drop <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
-</code></pre></div><h2 id="prostate-cancer">Prostate cancer</h2>
+
+<p><a id="code-snippet--read-advertising"></a></p>
+
+<pre><code class="language-R">advertising = fread(&quot;http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv&quot;, drop = 1)
+</code></pre>
+
+<h2 id="prostate-cancer">Prostate cancer</h2>
+
 <p>Prostate cancer is cancer that begins in tissues of the prostate gland. Located just below the bladder and in front of the rectum, the prostate is the male sex gland responsible for the production of semen. <code>Prostate cancer data</code> come from a study that examined the correlation between the level of prostate specific antigen and a number of clinical measures in men who were about to receive a radical prostatectomy.</p>
+
 <p>The data frame has the following variables:</p>
+
 <ul>
 <li><code>lcavol</code>: log(cancer volume)</li>
 <li><code>lweight</code>: log(prostate weight)</li>
@@ -795,50 +639,72 @@ those markets for three different media: <code>TV</code>, <code>radio</code>, an
 <li><code>pgg45</code>: percentage Gleason scores 4 or 5</li>
 <li><code>lpsa</code>: log(prostate specific antigen)</li>
 </ul>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">prostate <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/prostate.data&#34;</span>, drop<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
-prostate<span style="color:#f92672">$</span>train <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>
-</code></pre></div><h2 id="salary-survey">Salary survey</h2>
+
+<!--listend-->
+
+<p><a id="code-snippet--read-prostate"></a></p>
+
+<pre><code class="language-R">prostate = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/prostate.data&quot;, drop=1)
+prostate$train = NULL
+</code></pre>
+
+<h2 id="salary-survey">Salary survey</h2>
+
 <p>The salary survey data was developed from a salary survey of omputer professionals in a large corporation. The response variable is salary (<code>S</code>) and the predicators are:</p>
+
 <ul>
 <li><code>X</code>: experience in years</li>
 <li><code>E</code>: education coded as
+
 <ul>
 <li><code>1</code> for completion of a high school diploma</li>
 <li><code>2</code> for completion of a bachelor degree</li>
 <li><code>3</code> for completion of an advanced degree</li>
-</ul>
-</li>
+</ul></li>
 <li><code>M</code> management coded as <code>1</code> for a person with management responsibility; 0 otherwise.</li>
 </ul>
+
 <p>A linear regression on <code>S</code> will be fitted using <code>E</code> and <code>X</code>. If <code>E</code> is used in raw form, we would be assuming that each step up in education is worth a fixed increment to salary. This interpretation is possible but may be too restrictive.</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">salary.survey <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P130.txt&#34;</span>, data.table <span style="color:#f92672">=</span> F)
-</code></pre></div><h2 id="south-African-heart-disease">South African heart disease</h2>
+
+<p><a id="code-snippet--read-salary"></a></p>
+
+<pre><code class="language-R">salary.survey = fread(&quot;http://www1.aucegypt.edu/faculty/hadi/RABE5/Data5/P130.txt&quot;, data.table = F)
+</code></pre>
+
+<h2 id="south-African-heart-disease">South African heart disease</h2>
+
 <p>This dataset is a retrospective sample of males in a heart-disease high-risk region
 of the Western Cape, South Africa. There are roughly two controls per
 case of CHD (coronary heart disease). Many of the CHD positive men have undergone blood
 pressure reduction treatment and other programs to reduce their risk
-factors after their CHD event. Descriptions of variables in this data set can be found 
-<a href="http://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.info.txt" target="_blank" rel="noopener">here</a>.</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">saheart <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.data&#34;</span>, drop <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, data.table<span style="color:#f92672">=</span>F)
-saheart<span style="color:#f92672">$</span>famhist <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.factor</span>(saheart<span style="color:#f92672">$</span>famhist)
-saheart<span style="color:#f92672">$</span>chd <span style="color:#f92672">=</span> <span style="color:#a6e22e">as.factor</span>(saheart<span style="color:#f92672">$</span>chd)
-drops <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#34;typea&#34;</span>,<span style="color:#e6db74">&#34;adiposity&#34;</span>)
-saheart <span style="color:#f92672">=</span> saheart[,<span style="color:#f92672">!</span>(<span style="color:#a6e22e">names</span>(saheart) <span style="color:#f92672">%in%</span> drops)]
-</code></pre></div><h2 id="vowel-data">Vowel data</h2>
+factors after their CHD event. Descriptions of variables in this data set can be found <a href="http://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.info.txt" target="_blank">here</a>.</p>
+
+<p><a id="code-snippet--read-saheart"></a></p>
+
+<pre><code class="language-R">saheart = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/SAheart.data&quot;, drop = 1, data.table=F)
+saheart$famhist = as.factor(saheart$famhist)
+saheart$chd = as.factor(saheart$chd)
+drops = c(&quot;typea&quot;,&quot;adiposity&quot;)
+saheart = saheart[,!(names(saheart) %in% drops)]
+</code></pre>
+
+<h2 id="vowel-data">Vowel data</h2>
+
 <p>The vowel data set is used to classify 11 spoken vowels using 10 feature
-variables. Detailed description of the data can be found 
-<a href="https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.info.txt" target="_blank" rel="noopener">here</a>. The data includes
+variables. Detailed description of the data can be found <a href="https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.info.txt" target="_blank">here</a>. The data includes
 training and test set.</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">vowel.train <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.train&#34;</span>, drop <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, data.table <span style="color:#f92672">=</span> F)
-vowel.test <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.test&#34;</span>, drop <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, data.table <span style="color:#f92672">=</span> F)
-</code></pre></div><h2 id="wage-data">Wage data</h2>
+
+<p><a id="code-snippet--read-vowel"></a></p>
+
+<pre><code class="language-R">vowel.train = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.train&quot;, drop = 1, data.table = F)
+vowel.test = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/vowel.test&quot;, drop = 1, data.table = F)
+</code></pre>
+
+<h2 id="wage-data">Wage data</h2>
+
 <p>This data set contains wage and other data for a group of 3000 male workers in
 the Mid-Atlantic region. A data frame with 3000 observations on the following 11 variables.</p>
+
 <ul>
 <li><code>year</code>: Year that wage information was recorded</li>
 <li><code>age</code>: Age of worker</li>
@@ -853,46 +719,63 @@ College 4. College Grad and 5. Advanced Degree indicating education level</li>
 <li><code>logwage</code>: Log of workers wage</li>
 <li><code>wage</code>: Workers raw wage</li>
 </ul>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">Wage <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/wage.csv&#34;</span>, data.table <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, drop <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>)
-</code></pre></div><h3 id="source">Source</h3>
-<p>Data was manually assembled by Steve Miller, of Open BI (<a href="http://www.openbi.com">www.openbi.com</a>), from the March
+
+<!--listend-->
+
+<p><a id="code-snippet--read-wage"></a></p>
+
+<pre><code class="language-R">Wage = fread(&quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/wage.csv&quot;, data.table = 0, drop = 1)
+</code></pre>
+
+<h3 id="source">Source</h3>
+
+<p>Data was manually assembled by Steve Miller, of Open BI (www.openbi.com), from the March
 2011 Supplement to Current Population Survey data.
-<a href="http://thedataweb.rm.census.gov/TheDataWeb">http://thedataweb.rm.census.gov/TheDataWeb</a></p>
+<a href="http://thedataweb.rm.census.gov/TheDataWeb" target="_blank">http://thedataweb.rm.census.gov/TheDataWeb</a></p>
+
 <h2 id="spam-data">Spam data</h2>
-<p>Description of the spam data can be found in 
-<a href="https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.info.txt" target="_blank" rel="noopener">here</a>. We read in the list of spam words and delete garbage characters.</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">spam.words <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.table</span>(<span style="color:#e6db74">&#34;ftp://ftp.ics.uci.edu/pub/machine-learning-databases/spambase/spambase.names&#34;</span>,skip<span style="color:#f92672">=</span><span style="color:#ae81ff">33</span>,sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;:&#34;</span>,comment.char<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;|&#34;</span>,stringsAsFactors<span style="color:#f92672">=</span>F)
-  spam.words <span style="color:#f92672">=</span> spam.words[[1]]
-  <span style="color:#a6e22e">for</span>( si in <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#a6e22e">length</span>(spam.words) ){
-    spam.words[si] <span style="color:#f92672">=</span> <span style="color:#a6e22e">sub</span>( <span style="color:#e6db74">&#34;word_freq_&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, spam.words[si] )
-    spam.words[si] <span style="color:#f92672">=</span> <span style="color:#a6e22e">sub</span>( <span style="color:#e6db74">&#34;char_freq_&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>, spam.words[si] )
-    spam.words[si] <span style="color:#f92672">=</span> <span style="color:#a6e22e">sub</span>( <span style="color:#e6db74">&#34;capital_run_length_&#34;</span>, <span style="color:#e6db74">&#34;CRL&#34;</span>, spam.words[si] )
+
+<p>Description of the spam data can be found in <a href="https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.info.txt" target="_blank">here</a>. We read in the list of spam words and delete garbage characters.</p>
+
+<p><a id="code-snippet--read-spam"></a></p>
+
+<pre><code class="language-R">spam.words = read.table(&quot;ftp://ftp.ics.uci.edu/pub/machine-learning-databases/spambase/spambase.names&quot;,skip=33,sep=&quot;:&quot;,comment.char=&quot;|&quot;,stringsAsFactors=F)
+  spam.words = spam.words[[1]]
+  for( si in 1:length(spam.words) ){
+    spam.words[si] = sub( &quot;word_freq_&quot;, &quot;&quot;, spam.words[si] )
+    spam.words[si] = sub( &quot;char_freq_&quot;, &quot;&quot;, spam.words[si] )
+    spam.words[si] = sub( &quot;capital_run_length_&quot;, &quot;CRL&quot;, spam.words[si] )
   }
 
-spam.data <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.data&#34;</span>, data.table <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
-spam.testidx <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.traintest&#34;</span>, data.table <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
-</code></pre></div><h2 id="lpga-data">LPGA data</h2>
+spam.data = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.data&quot;, data.table = 0)
+spam.testidx = fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/spam.traintest&quot;, data.table = 0)
+</code></pre>
+
+<h2 id="lpga-data">LPGA data</h2>
+
 <p>The Ladies Professional Golf Association (LPGA) data contains 7 predictors and the response (Prize Money Per Round). You can find names of variables and players from the data sets (training and test).</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">lpga.train <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.train.csv&#34;</span>)
-lpga.test <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.test.csv&#34;</span>)
 
-v.name <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(<span style="color:#e6db74">&#39;Player&#39;</span>,
-           <span style="color:#e6db74">&#39;Rounds&#39;</span>,
-           <span style="color:#e6db74">&#39;Driving_Distance&#39;</span>,
-           <span style="color:#e6db74">&#39;Fairway_Accuracy&#39;</span>,
-           <span style="color:#e6db74">&#39;Green_in_Regulation_Percentage&#39;</span>,
-           <span style="color:#e6db74">&#39;Average_Putts_Per_Game&#39;</span>,
-           <span style="color:#e6db74">&#39;Average_Sandshots_Per_Game&#39;</span>,
-           <span style="color:#e6db74">&#39;Sand_Save_Percentage&#39;</span>,
-           <span style="color:#e6db74">&#39;Prize_Money_Per_Round&#39;</span>)
+<p><a id="code-snippet--read-lpga"></a></p>
 
-<span style="color:#a6e22e">colnames</span>(lpga.train) <span style="color:#f92672">=</span> v.name
-<span style="color:#a6e22e">colnames</span>(lpga.test) <span style="color:#f92672">=</span> v.name
-</code></pre></div><h2 id="housing-data">Housing data</h2>
+<pre><code class="language-R">lpga.train = fread(&quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.train.csv&quot;)
+lpga.test = fread(&quot;https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/data/lpga.test.csv&quot;)
+
+v.name = c('Player',
+           'Rounds',
+           'Driving_Distance',
+           'Fairway_Accuracy',
+           'Green_in_Regulation_Percentage',
+           'Average_Putts_Per_Game',
+           'Average_Sandshots_Per_Game',
+           'Sand_Save_Percentage',
+           'Prize_Money_Per_Round')
+
+colnames(lpga.train) = v.name
+colnames(lpga.test) = v.name
+</code></pre>
+
+<h2 id="housing-data">Housing data</h2>
+
 <p>The Census Bureau divides the country up into geographic regions,
 smaller than counties, called <em>tracts</em> of a few thousand people each,
 and reports much of its data at the level of tracts. This data set,
@@ -900,6 +783,7 @@ drawn from the 2011 American Community Survey, contains information on
 the housing stock and economic circumstances of every tract in
 California and Pennsylvania. For each tract, the data file records a
 large number of variables.</p>
+
 <ul>
 <li>A geographic ID code, a code for the state, a code for the county, and a code for the tract</li>
 <li>The population, latitude and longitude of the tract</li>
@@ -913,17 +797,25 @@ large number of variables.</p>
 <li>The percentage of housing units with 0 bedrooms; with 1 bedroom; with 2; with 3; with 4; with 5 or more bedrooms</li>
 <li>The percentage of households which own their home, and the percentage which rent</li>
 </ul>
+
 <p>Remember that these are not values for individual houses or families, but
 summaries of all of the houses and families in the tract.</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">x <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;http://www.stat.cmu.edu/~cshalizi/uADA/13/hw/01/calif_penn_2011.csv&#34;</span>, drop <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, data.table <span style="color:#f92672">=</span> F)
-<span style="color:#a6e22e">names</span>(x) <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">tolower</span>(<span style="color:#a6e22e">names</span>(x))
-</code></pre></div><h2 id="wine-quality">Wine quality data</h2>
-<p>The two datasets are related to red and white variants of the Portuguese &ldquo;Vinho Verde&rdquo; wine. For more details, consult: <a href="https://archive.ics.uci.edu/ml/datasets/wine+quality">https://archive.ics.uci.edu/ml/datasets/wine+quality</a>. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).</p>
+
+<p><a id="code-snippet--read-housing"></a></p>
+
+<pre><code class="language-R">x = fread(&quot;http://www.stat.cmu.edu/~cshalizi/uADA/13/hw/01/calif_penn_2011.csv&quot;, drop = 1, data.table = F)
+names(x) &lt;- tolower(names(x))
+</code></pre>
+
+<h2 id="wine-quality">Wine quality data</h2>
+
+<p>The two datasets are related to red and white variants of the Portuguese &ldquo;Vinho Verde&rdquo; wine. For more details, consult: <a href="https://archive.ics.uci.edu/ml/datasets/wine+quality" target="_blank">https://archive.ics.uci.edu/ml/datasets/wine+quality</a>. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).</p>
+
 <h3 id="attribute-information">Attribute Information:</h3>
+
 <ul>
-<li>
-<p>Input variables (based on physicochemical tests):</p>
+<li><p>Input variables (based on physicochemical tests):</p>
+
 <ul>
 <li>1 - fixed acidity</li>
 <li>2 - volatile acidity</li>
@@ -936,31 +828,43 @@ summaries of all of the houses and families in the tract.</p>
 <li>9 - pH</li>
 <li>10 - sulphates</li>
 <li>11 - alcohol</li>
-</ul>
-</li>
-<li>
-<p>Output variable (based on sensory data):</p>
+</ul></li>
+
+<li><p>Output variable (based on sensory data):</p>
+
 <ul>
 <li>12 - quality (score between 0 and 10)</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">red <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv&#34;</span>)
-white <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv&#34;</span>)
-</code></pre></div><h2 id="nci-microarray">NCI microarray</h2>
+
+<!--listend-->
+
+<p><a id="code-snippet--read-wine"></a></p>
+
+<pre><code class="language-R">red = fread(&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv&quot;)
+white = fread(&quot;https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv&quot;)
+</code></pre>
+
+<h2 id="nci-microarray">NCI microarray</h2>
+
 <p>The data contains expression levels on 6830 genes from 64 cancer cell lines.
 Cancer type is also recorded.</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">cancer <span style="color:#f92672">=</span> <span style="color:#a6e22e">read.table</span>(<span style="color:#e6db74">&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.info.txt&#34;</span>, skip <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, stringsAsFactors <span style="color:#f92672">=</span> F)
-nci <span style="color:#f92672">=</span> data.table<span style="color:#f92672">::</span><span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.data&#34;</span>)
-<span style="color:#a6e22e">colnames</span>(nci) <span style="color:#f92672">=</span> <span style="color:#a6e22e">c</span>(cancer[,<span style="color:#ae81ff">1</span>]) <span style="color:#75715e"># assign the cancer type.</span>
-</code></pre></div><h2 id="orange-juice">Orange juice</h2>
+
+<p><a id="code-snippet--read-nci"></a></p>
+
+<pre><code class="language-R">cancer = read.table(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.info.txt&quot;, skip = 20, stringsAsFactors = F)
+nci = data.table::fread(&quot;https://web.stanford.edu/~hastie/ElemStatLearn/datasets/nci.data&quot;)
+colnames(nci) = c(cancer[,1]) # assign the cancer type.
+</code></pre>
+
+<h2 id="orange-juice">Orange juice</h2>
+
 <p>The data contains 1070 purchases where the customer either purchased Citrus Hill or Minute Maid
 Orange Juice. A number of characteristics of the customer and product are
 recorded.</p>
+
 <p>A data frame with 1070 observations on the following 18 variables:</p>
+
 <ul>
 <li><code>Purchase</code>: A factor with levels CH and MM indicating whether the customer
 purchased Citrus Hill or Minute Maid Orange Juice</li>
@@ -982,18 +886,28 @@ purchased Citrus Hill or Minute Maid Orange Juice</li>
 <li><code>ListPriceDiff</code>: List price of MM less list price of CH</li>
 <li><code>STORE</code>: Which of 5 possible stores the sale occured at</li>
 </ul>
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">oj <span style="color:#f92672">=</span> <span style="color:#a6e22e">fread</span>(<span style="color:#e6db74">&#34;http://wweb.uta.edu/faculty/yunj/data/islr/oj.csv&#34;</span>, data.table <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>)
-</code></pre></div><h2 id="iris-data">Iris data set</h2>
+
+<!--listend-->
+
+<p><a id="code-snippet--read-oj"></a></p>
+
+<pre><code class="language-R">oj = fread(&quot;http://wweb.uta.edu/faculty/yunj/data/islr/oj.csv&quot;, data.table = 0)
+</code></pre>
+
+<h2 id="iris-data">Iris data set</h2>
+
 <p>This famous (Fisher&rsquo;s or Anderson&rsquo;s) iris data set gives the measurements in
 centimeters of the variables sepal length and width and petal length and width,
 respectively, for 50 flowers from each of 3 species of iris. The species are
 Iris setosa, versicolor, and virginica.</p>
+
 <p>Running a command below will load the Iris data set to data frame <code>iris</code>.</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#a6e22e">data</span>(iris)
-</code></pre></div>
+
+<p><a id="code-snippet--read-iris"></a></p>
+
+<pre><code class="language-R">data(iris)
+</code></pre>
+
           </div>
 
           
@@ -1023,20 +937,11 @@ Iris setosa, versicolor, and virginica.</p>
           <p>Last updated on Aug 29, 2019</p>
 
           
-
-
-
-
-
-  
-  
-
 <p class="edit-page">
   <a href="https://github.com/gcushen/hugo-academic/edit/master/content/course/math5305-fa19/math5305-data.md">
     <i class="fas fa-pen pr-2"></i>Edit this page
   </a>
 </p>
-
 
 
 
@@ -1071,61 +976,66 @@ Iris setosa, versicolor, and virginica.</p>
     
     
     
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
 
       
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/lisp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/lisp.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/markdown.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/toml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/bash.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/shell.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
         
       
 
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
     
 
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
     
 
     
     
-    <script>const code_highlighting = true;</script>
+    <script>hljs.initHighlightingOnLoad();</script>
     
 
-    
-    
-    <script>const isSiteThemeDark = false;</script>
-    
-
-    
-    
-    
-    
     
     
     <script>
-      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
-      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
       const content_type = {
         'post': "Posts",
         'project': "Projects",
@@ -1186,7 +1096,7 @@ Iris setosa, versicolor, and virginica.</p>
     
     
     
-    <script src="/js/academic.min.f2631eb7f9e756a4bc465f24291b39da.js"></script>
+    <script src="/js/academic.min.40fb93687aa6ee42a3fcdaaae3322ea1.js"></script>
 
     
 
@@ -1195,7 +1105,6 @@ Iris setosa, versicolor, and virginica.</p>
 
 
 
-  
   
 
   

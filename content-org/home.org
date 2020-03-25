@@ -1,0 +1,736 @@
+#+TITLE: Jonghyun Yun
+#+AUTHOR:
+#+EMAIL: "jonghyun" dot "yun" at-sign "gmail" dot "com"
+
+#+OPTIONS: ':nil -:nil ^:{} num:t toc:t
+#+CREATOR: Emacs 26.1 (Org mode 9.1.14 + ox-hugo
+
+#+HUGO_BASE_DIR: ~/website
+#+HUGO_AUTO_SET_LASTMOD: t
+#+HUGO_DATE_FORMAT: %Y-%m-%dT%T%z
+#+HUGO_FRONT_MATTER_FORMAT: toml
+#+HUGO_LEVEL_OFFSET: 4
+
+#+HUGO_SECTION: /
+#+HUGO_BUNDLE: home
+
+#+BIBLIOGRAPHY:
+#+HUGO_EXPORT_RMARKDOWN:
+
+#+SEQ_TODO: TODO DRAFT DONE
+
+#+STARTUP: indent logdone
+
+# https://scripter.co/latex-in-html/
+#+macro: latex @@html:<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>@@
+
+#+OPTIONS: toc:nil num:nil H:4 ^:nil pri:t
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:nil html-preamble:t
+#+OPTIONS: html-scripts:t html-style:t html5-fancy:t
+#+HTML_MATHJAX: align: left tagside: right
+#+HTML_MATHJAX: indent: 5em scale: 85
+# MATHJAX font: MathJax TeX (default) Asana-Math Neo-Euler Latin-Modern Gyre-Pagella Gyre-Termes
+# #+OPTIONS: tex:dvipng # use LaTeX to generate images for equations
+
+#+LATEX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [9pt]
+#+LATEX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{geometry}\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=0.7in,rmargin=0.7in}
+#+LATEX_HEADER: \usepackage[stretch=10,babel=true]{microtype}\usepackage{lmodern}
+#+LATEX_HEADER: \setlength\parindent{0pt}\linespread{0.95}
+#+LATEX_HEADER: \usepackage{unicode-math}
+
+#+PROPERTY: header-args:R :session *org-R* :exports both :results output :noweb yes :eval never-export
+
+#+SETUPFILE: ~/setup/theme-readtheorg-side-remote.setup
+
+# #+HTML_LINK_HOME: http://wweb.uta.edu/faculty/yunj/index.html
+# #+HTML_LINK_UP: http://wweb.uta.edu/faculty/yunj/index.html
+
+#+HTML_HEAD:  <!-- Global site tag (gtag.js) - Google Analytics -->
+#+HTML_HEAD:<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128966866-1"></script>
+#+HTML_HEAD:<script>
+#+HTML_HEAD:  window.dataLayer = window.dataLayer || [];
+#+HTML_HEAD:  function gtag(){dataLayer.push(arguments);}
+#+HTML_HEAD:  gtag('js', new Date());
+#+HTML_HEAD:
+#+HTML_HEAD:  gtag('config', 'UA-128966866-1');
+#+HTML_HEAD:</script>
+
+#+MACRO: phone x29045
+#+MACRO: doclink [[https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/$1][$2]]
+
+# insert hyper links at the beginning or ending of TOC
+# #+HTML: <script>$( "#text-table-of-contents ul:first" ).append( '<li><a href = "https://elearn.uta.edu">Blackboard</a><li>' )</script>
+
+# #+HTML_HEAD:<script type="text/javascript" src="../styles/readtheorg/js/readtheorg-title.js"></script>
+# #+HTML_HEAD:<link rel="stylesheet" href="../styles/responsive-tables.css">
+
+#+BEGIN_SRC shell
+cp ./img/portrait.jpg ~/website/static/img/portrait.jpg
+#+END_SRC
+
+#+RESULTS:
+
+* about
+:PROPERTIES:
+:EXPORT_FILE_NAME: about
+:EXPORT_TITLE: Biography
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget about :headless true
+:EXPORT_HUGO_WEIGHT: 5
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+
+# Choose the user profile to display
+# This should be the username of a profile in your `content/authors/` folder.
+# See https://sourcethemes.com/academic/docs/get-started/#introduce-yourself
+author = "admin"
+#+end_src
+
+* contact
+:PROPERTIES:
+:EXPORT_FILE_NAME: contact
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget contact :headless true
+:EXPORT_HUGO_WEIGHT: 70
+:EXPORT_TITLE: Contact
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+
+# Automatically link email and phone?
+autolink = true
+
+# Email form provider
+#   0: Disable email form
+#   1: Netlify (requires that the site is hosted by Netlify)
+#   2: formspree.io
+email_form = 2
+#+end_src
+
+* experience
+:PROPERTIES:
+:EXPORT_FILE_NAME: experience
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget experience :headless true
+:EXPORT_HUGO_WEIGHT: 8
+:EXPORT_TITLE: Experience
+:END:
+
+#+begin_src toml :front_matter_extra t
+  # Activate this widget? true/false
+  active = true
+
+  # Date format for experience
+  #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
+  date_format = "January 2006"
+
+  # Experiences.
+  #   Add/remove as many `[[experience]]` blocks below as you like.
+  #   Required fields are `title`, `company`, and `date_start`.
+  #   Leave `date_end` empty if it's your current employer.
+  #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+  [[experience]]
+    title = "Assistant Professor"
+    company = "UT Arlington"
+    company_url = "https://www.uta.edu/uta/"
+    location = "Arlington, TX"
+    date_start = "2016-09-01"
+    date_end = "2019-08-31"
+
+    # description = """
+    # Responsibilities include:
+
+    # * Analysing
+    # * Modelling
+    # * Deploying
+    # """
+
+  [[experience]]
+    title = "Assistant Professor"
+    company = "UT El Paso"
+    company_url = "https://www.utep.edu/"
+    location = "El Paso, TX"
+    date_start = "2015-09-01"
+    date_end = "2016-06-30"
+
+    # description = """
+    # Responsibilities include:
+
+  #   * Analysing
+  #   * Modelling
+  #   * Deploying
+  # """
+
+  [[experience]]
+    title = "Postdoctoral Researcher"
+    company = "UT Southwestern Medical Center"
+    company_url = "https://www.utsouthwestern.edu/"
+    location = "Dallas, TX"
+    date_start = "2012-09-01"
+    date_end = "2015-08-30"
+
+    # description = """
+    # Responsibilities include:
+
+  #   * Analysing
+  #   * Modelling
+  #   * Deploying
+  # """
+#+end_src
+
+* DRAFT hero                                                       :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: hero
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget hero
+:EXPORT_HUGO_WEIGHT: 3
+:EXPORT_TITLE: Academic
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = false
+
+# Overlay a color or image (optional).
+#   Deactivate an option by commenting out the line, prefixing it with `#`.
+[header]
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/bubbles-wide.jpg"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+
+# Call to action button (optional).
+#   Activate the button by specifying a URL and button label below.
+#   Deactivate by commenting out parameters, prefixing lines with `#`.
+[cta]
+  url = "./post/getting-started/"
+  label = '<i class="fas fa-download"></i> Install Now'
+#+end_src
+
+
+The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes :rocket:
+#+BEGIN_export html
+<div style="margin-top: -0.5rem;">
+  <a id="academic-release" href="https://sourcethemes.com/academic/updates" data-repo="gcushen/hugo-academic">
+  Latest release <!-- V -->
+  </a>
+</div>
+<div class="mt-3">
+  <a class="github-button" href="https://github.com/gcushen/hugo-academic" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star</a>
+</div>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+#+END_export
+
+* DRAFT hero_carousel                                              :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: hero_carousel
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget hero_carousel
+:EXPORT_HUGO_WEIGHT: 1
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+
+# Slide interval.
+# Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
+interval = false
+
+# Minimum slide height.
+# Specify a height to ensure a consistent height for each slide.
+height = "300px"
+
+# Slides.
+# Duplicate an `[[item]]` block to add more slides.
+[[item]]
+  title = ""
+  content = "Due to HW 3 is extended to xx. I am center aligned :smile:"
+  align = "center"  # Choose `center`, `left`, or `right`.
+
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/bubbles-wide.jpg"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+
+  # Call to action button (optional).
+  #   Activate the button by specifying a URL and button label below.
+  #   Deactivate by commenting out parameters, prefixing lines with `#`.
+  cta_label = "Get Academic"
+  cta_url = "https://sourcethemes.com/academic/"
+  cta_icon_pack = "fas"
+  cta_icon = "graduation-cap"
+
+[[item]]
+  title = "Left"
+  content = "I am left aligned :smile:"
+  align = "left"
+
+  overlay_color = "#555"  # An HTML color value.
+  overlay_img = ""  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+
+[[item]]
+  title = "Right"
+  content = "I am right aligned :smile:"
+  align = "right"
+
+  overlay_color = "#333"  # An HTML color value.
+  overlay_img = ""  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+#+end_src
+
+* DRAFT posts                                                      :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: posts
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget posts
+:EXPORT_HUGO_WEIGHT: 40
+:EXPORT_TITLE: Recent Posts
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+
+# This widget displays recent posts from `content/post/`.
+
+# Filter posts by tag.
+#  By default, show all recent posts.
+#  Filtering example: `tags_include = ["hugo", "academic"]`
+tags_include = []
+tags_exclude = []
+
+# Number of posts to list.
+count = 5
+
+# List format.
+#   0 = Simple
+#   1 = Detailed
+#   2 = Stream
+list_format = 2
+#+end_src
+
+* DRAFT projects                                                   :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: projects
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget projects
+:EXPORT_HUGO_WEIGHT: 50
+:EXPORT_TITLE: Projects
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+
+# Content.
+# Display content from the following folder.
+# For example, `folder = "project"` displays content from `content/project/`.
+folder = "project"
+
+# View.
+# Customize how projects are displayed.
+# Legend: 0 = list, 1 = cards, 2 = showcase.
+view = 1
+
+# Widget layout
+# Legend: 0 = two columns (default), 1 = single column
+widget_layout = 0
+
+# For Showcase view, flip alternate rows?
+flip_alt_rows = false
+
+# Filter toolbar.
+
+# Default filter index (e.g. 0 corresponds to the first `[[filter]]` instance below).
+filter_default = 0
+
+# Add or remove as many filters (`[[filter]]` instances) as you like.
+# To show all items, set `tag` to "*".
+# To filter by a specific tag, set `tag` to an existing tag name.
+# To remove toolbar, delete/comment all instances of `[[filter]]` below.
+[[filter]]
+  name = "All"
+  tag = "*"
+
+[[filter]]
+  name = "Deep Learning"
+  tag = "deep_learning"
+
+[[filter]]
+  name = "Other"
+  tag = "Demo"
+#+end_src
+
+* DRAFT publications
+:PROPERTIES:
+:EXPORT_FILE_NAME: publications
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget pages
+:EXPORT_HUGO_WEIGHT: 20
+:EXPORT_TITLE: Publications
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+
+[content]
+  # Page type to display. E.g. post, talk, or publication.
+  page_type = "publication"
+
+  # Choose how much pages you would like to display (0 = all pages)
+  count = 5
+
+  # Choose how many pages you would like to offset by
+  offset = 0
+
+  # Page order. Descending (desc) or ascending (asc) date.
+  order = "desc"
+
+  # Filter posts by a taxonomy term.
+  [content.filters]
+    tag = ""
+    category = ""
+    publication_type = ""
+    exclude_featured = false
+
+[design]
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   4 = Citation (publication only)
+  view = 2
+
+[design.background]
+  # Apply a background color, gradient, or image.
+  #   Uncomment (by removing `#`) an option to apply it.
+  #   Choose a light or dark text color by setting `text_color_light`.
+  #   Any HTML color name or Hex value is valid.
+
+  # Background color.
+  # color = "navy"
+
+  # Background gradient.
+  # gradient_start = "DeepSkyBlue"
+  # gradient_end = "SkyBlue"
+
+  # Background image.
+  # image = "background.jpg"  # Name of image in `static/img/`.
+  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+
+  # Text color (true=light or false=dark).
+  # text_color_light = true
+
+[advanced]
+ # Custom CSS.
+ css_style = ""
+
+ # CSS class.
+ css_class = ""
+#+end_src
+
+# {{% alert note %}}
+# Quickly discover relevant content by [filtering publications]({{< ref "/publication/_index.md" >}}).
+# {{% /alert %}}
+
+* featured_publications
+:PROPERTIES:
+:EXPORT_FILE_NAME: featured_publications
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget featured :headless true
+:EXPORT_HUGO_WEIGHT: 10
+:EXPORT_TITLE: Featured Publications
+:END:
+
+#+begin_src toml :front_matter_extra t
+# A Featured Publications section created with the Featured Content widget.
+# This section displays publications from `content/publication/` which have
+# `featured = true` in their front matter.
+
+# Activate this widget? true/false
+active = true
+
+[content]
+  # Page type to display. E.g. post, talk, or publication.
+  page_type = "publication"
+
+  # Choose how much pages you would like to display (0 = all pages)
+  count = 0
+
+  # Page order. Descending (desc) or ascending (asc) date.
+  order = "desc"
+
+  # Filter posts by a taxonomy term.
+  [content.filters]
+    tag = ""
+    category = ""
+    publication_type = ""
+
+[design]
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   4 = Citation (publication only)
+  view = 1
+
+[design.background]
+  # Apply a background color, gradient, or image.
+  #   Uncomment (by removing `#`) an option to apply it.
+  #   Choose a light or dark text color by setting `text_color_light`.
+  #   Any HTML color name or Hex value is valid.
+
+  # Background color.
+  # color = "navy"
+
+  # Background gradient.
+  # gradient_start = "DeepSkyBlue"
+  # gradient_end = "SkyBlue"
+
+  # Background image.
+  # image = "background.jpg"  # Name of image in `static/img/`.
+  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+
+  # Text color (true=light or false=dark).
+  # text_color_light = true
+
+[advanced]
+ # Custom CSS.
+ css_style = ""
+
+ # CSS class.
+ css_class = ""
+#+end_src
+
+* DRAFT search                                                     :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: search
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget search
+:EXPORT_HUGO_WEIGHT: 66
+:EXPORT_TITLE: Search
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = false
+#+end_src
+
+* DRAFT feature/skill                                              :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: skills
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget featurette
+:EXPORT_HUGO_WEIGHT: 60
+:EXPORT_TITLE: Skills
+:END:
+
+#+begin_src toml :front_matter_extra t
+  # Activate this widget? true/false
+  active = true
+
+  # Showcase personal skills or business features.
+  #
+  # Add/remove as many `[[feature]]` blocks below as you like.
+  #
+  # Available icon packs and icons:
+  # * fas - Font Awesome standard icons (see https://fontawesome.com/icons)
+  # * fab - Font Awesome brand icons (see https://fontawesome.com/icons)
+  # * ai - academic icons (see https://jpswalsh.github.io/academicons/)
+
+  [[feature]]
+    icon = "r-project"
+    icon_pack = "fab"
+    name = "R"
+    description = "90%"
+
+  [[feature]]
+    icon = "chart-line"
+    icon_pack = "fas"
+    name = "Statistics"
+    description = "90%"
+
+  # [[feature]]
+  #   icon = "dna"
+  #   icon_pack = "fas"
+  #   name = "Biostatistics"
+  #   description = "85%"
+
+  [[feature]]
+    icon = "baseball-ball"
+    icon_pack = "fas"
+    name = "Tennis"
+    description = "20%"
+
+  [[feature]]
+    icon = "emacs"
+    icon_pack = "afi"
+    name = "Emacs"
+    description = "30%"
+
+  [[feature]]
+    icon = "matlab"
+    icon_pack = "afi"
+    name = "Matlab"
+    description = "85%"
+#+end_src
+
+* tags
+:PROPERTIES:
+:EXPORT_FILE_NAME: tags
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget tag_cloud :headless true
+:EXPORT_HUGO_WEIGHT: 65
+:EXPORT_TITLE: Popular Topics
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = false
+#+end_src
+
+* DRAFT talks                                                     :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: talks
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget talks
+:EXPORT_HUGO_WEIGHT: 30
+:EXPORT_TITLE: Recent & Upcoming Talks
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+
+# Number of talks to list.
+count = 10
+
+# List format.
+#   0 = Simple
+#   1 = Detailed
+#   2 = Stream
+list_format = 2
+
+# Exclude talks that are shown in the Selected Talks widget?
+exclude_selected = false
+#+end_src
+
+* DRAFT talks_selected                                             :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: talks_selected
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget talks_selected
+:EXPORT_HUGO_WEIGHT: 29
+:EXPORT_TITLE: Selected Talks
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+#+end_src
+
+* DRAFT past___teaching__experience                                :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: old_teaching
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget custom
+:EXPORT_HUGO_WEIGHT: 60
+:EXPORT_TITLE: Old_Teaching
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+
+# Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
+#+end_src
+
+This is an example of using the *custom* widget to create your own homepage section.
+
+I am a teaching instructor for the following courses at University X:
+
+- CS101: An intro to computer science
+- CS102: An intro to computer science
+- CS103: An intro to computer science
+- CS104: An intro to computer science
+- CS105: An intro to computer science
+- CS106: An intro to computer science
+- CS107: An intro to computer science
+
+* teaching
+:PROPERTIES:
+:EXPORT_FILE_NAME: teaching
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget portfolio :headless true
+:EXPORT_HUGO_WEIGHT: 50
+:EXPORT_TITLE: Teaching
+:END:
+
+#+begin_src toml :front_matter_extra t
+  # Activate this widget? true/false
+  active = true
+
+  [content]
+  # Page type to display. E.g. project.
+  page_type = "teaching"
+
+  # Filter toolbar (optional).
+  # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
+  # To show all items, set `tag` to "*".
+  # To filter by a specific tag, set `tag` to an existing tag name.
+  # To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
+
+  # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
+  filter_default = 0
+
+  [[content.filter_button]]
+  name = "All"
+  tag = "*"
+
+  [[content.filter_button]]
+  name = "Current"
+  tag = "current"
+
+  [design]
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns = "2"
+
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   5 = Showcase
+  view = 1
+
+  # For Showcase view, flip alternate rows?
+  flip_alt_rows = false
+
+  [design.background]
+  # Apply a background color, gradient, or image.
+  #   Uncomment (by removing `#`) an option to apply it.
+  #   Choose a light or dark text color by setting `text_color_light`.
+  #   Any HTML color name or Hex value is valid.
+
+  # Background color.
+  # color = "navy"
+
+  # Background gradient.
+  # gradient_start = "DeepSkyBlue"
+  # gradient_end = "SkyBlue"
+
+  # Background image.
+  # image = "background.jpg"  # Name of image in `static/img/`.
+  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+
+  # Text color (true=light or false=dark).
+  # text_color_light = true
+
+  [advanced]
+  # Custom CSS.
+  css_style = ""
+
+  # CSS class.
+  css_class = ""
+  [[filter]]
+  name = "All"
+  tag = "*"
+
+  [[filter]]
+  name = "Current"
+  tag = "current"
+#+end_src

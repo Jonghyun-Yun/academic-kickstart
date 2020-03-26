@@ -70,6 +70,18 @@
 cp ./img/portrait.jpg ~/website/static/img/portrait.jpg
 #+END_SRC
 
+#+begin_src sh
+cp ./img/avatar2015.jpg ~/website/content/authors/admin/avatar.jpg
+#+end_src
+
+#+RESULTS:
+
+#+begin_src sh
+cp ./img/avatar2017.jpg ~/website/content/authors/admin/avatar.jpg
+#+end_src
+
+#+RESULTS:
+
 * Jonghyun Yun
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index
@@ -88,7 +100,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Indenpendent scholar
+role:
 
 # Organizations/Affiliations
 # organizations:

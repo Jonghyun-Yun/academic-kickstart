@@ -1,0 +1,168 @@
+#+TITLE: Jonghyun Yun
+#+AUTHOR:
+#+EMAIL: "jonghyun" dot "yun" at-sign "gmail" dot "com"
+
+#+OPTIONS: ':nil -:nil ^:{} num:t toc:t
+#+CREATOR: Emacs 26.1 (Org mode 9.1.14 + ox-hugo
+
+#+HUGO_BASE_DIR: ~/website
+#+HUGO_AUTO_SET_LASTMOD: t
+#+HUGO_DATE_FORMAT: %Y-%m-%dT%T%z
+#+HUGO_FRONT_MATTER_FORMAT: yaml
+#+HUGO_LEVEL_OFFSET: 4
+
+#+HUGO_SECTION: talk
+#+HUGO_BUNDLE:
+
+#+BIBLIOGRAPHY:
+#+HUGO_EXPORT_RMARKDOWN:
+
+#+SEQ_TODO: TODO DRAFT DONE
+
+#+STARTUP: indent logdone
+
+# https://scripter.co/latex-in-html/
+#+macro: latex @@html:<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>@@
+
+#+OPTIONS: toc:nil num:nil H:4 ^:nil pri:t
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:nil html-preamble:t
+#+OPTIONS: html-scripts:t html-style:t html5-fancy:t
+#+HTML_MATHJAX: align: left tagside: right
+#+HTML_MATHJAX: indent: 5em scale: 85
+# MATHJAX font: MathJax TeX (default) Asana-Math Neo-Euler Latin-Modern Gyre-Pagella Gyre-Termes
+# #+OPTIONS: tex:dvipng # use LaTeX to generate images for equations
+
+#+LATEX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [9pt]
+#+LATEX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{geometry}\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=0.7in,rmargin=0.7in}
+#+LATEX_HEADER: \usepackage[stretch=10,babel=true]{microtype}\usepackage{lmodern}
+#+LATEX_HEADER: \setlength\parindent{0pt}\linespread{0.95}
+#+LATEX_HEADER: \usepackage{unicode-math}
+
+#+PROPERTY: header-args:R :session *org-R* :exports both :results output :noweb yes :eval never-export
+
+#+SETUPFILE: ~/setup/theme-readtheorg-side-remote.setup
+
+# #+HTML_LINK_HOME: http://wweb.uta.edu/faculty/yunj/index.html
+# #+HTML_LINK_UP: http://wweb.uta.edu/faculty/yunj/index.html
+
+#+HTML_HEAD:  <!-- Global site tag (gtag.js) - Google Analytics -->
+#+HTML_HEAD:<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128966866-1"></script>
+#+HTML_HEAD:<script>
+#+HTML_HEAD:  window.dataLayer = window.dataLayer || [];
+#+HTML_HEAD:  function gtag(){dataLayer.push(arguments);}
+#+HTML_HEAD:  gtag('js', new Date());
+#+HTML_HEAD:
+#+HTML_HEAD:  gtag('config', 'UA-128966866-1');
+#+HTML_HEAD:</script>
+
+#+MACRO: phone x29045
+#+MACRO: doclink [[https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/$1][$2]]
+
+# insert hyper links at the beginning or ending of TOC
+# #+HTML: <script>$( "#text-table-of-contents ul:first" ).append( '<li><a href = "https://elearn.uta.edu">Blackboard</a><li>' )</script>
+
+# #+HTML_HEAD:<script type="text/javascript" src="../styles/readtheorg/js/readtheorg-title.js"></script>
+# #+HTML_HEAD:<link rel="stylesheet" href="../styles/responsive-tables.css">
+
+* index
+:PROPERTIES:
+:EXPORT_TITLE: Recent & Upcoming Talks
+:EXPORT_FILE_NAME: _index
+:END:
+#+begin_src yaml :front_matter_extra t
+title: Recent & Upcoming Talks
+
+# View.
+#   1 = List
+#   2 = Compact
+#   3 = Card
+view: 2
+
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+#+end_src
+
+* Example Talk
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: example
+:EXPORT_FILE_NAME: index
+:END:
+#+begin_src yaml :front_matter_extra t
+title: Example Talk
+event: Academic Theme Conference
+event_url: https://example.org
+
+location: Source Themes HQ
+address:
+  street: 450 Serra Mall
+  city: Stanford
+  region: CA
+  postcode: '94305'
+  country: United States
+
+summary: An example talk using Academic's Markdown slides feature.
+abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam."
+
+# Talk start and end times.
+#   End time can optionally be hidden by prefixing the line with `#`.
+date: "2030-06-01T13:00:00Z"
+date_end: "2030-06-01T15:00:00Z"
+all_day: false
+
+# Schedule page publish date (NOT talk date).
+publishDate: "2017-01-01T00:00:00Z"
+
+authors: []
+tags: []
+
+# Is this a featured talk? (true/false)
+featured: false
+
+image:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+  focal_point: Right
+
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/georgecushen
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+
+# Markdown Slides (optional).
+#   Associate this talk with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+slides: example
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects:
+- internal-project
+
+# Enable math on this page?
+math: true
+#+end_src
+
+{{% alert note %}}
+Click on the **Slides** button above to view the built-in slides feature.
+{{% /alert %}}
+
+Slides can be added in a few ways:
+
+- **Create** slides using Academic's [*Slides*](https://sourcethemes.com/academic/docs/managing-content/#create-slides) feature and link using `slides` parameter in the front matter of the talk file
+- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
+- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
+
+Further talk details can easily be added to this page using *Markdown* and $\rm \LaTeX$ math code.

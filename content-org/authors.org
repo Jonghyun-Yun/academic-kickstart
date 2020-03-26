@@ -109,7 +109,8 @@ role:
   # url: "https://www.uta.edu/math"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include high-dimensinal data analysis, statistical computing and Next-generation sequencing data.
+# bio: My research interests include high-dimensinal data analysis, statistical computing and Next-generation sequencing data.
+bio: Statistician and data scientist
 
 # List your academic interests.
 interests :
@@ -160,7 +161,7 @@ social:
   link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "jonghyun.yun@gmail.com"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.

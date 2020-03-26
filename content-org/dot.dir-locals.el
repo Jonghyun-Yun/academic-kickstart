@@ -9,7 +9,7 @@
               (org-hugo-use-code-for-kbd . t)
               (org-hugo-export-with-toc . t)
               (org-hugo-export-with-section-numbers . t)
-              (org-hugo-export-creator-string . "Emacs 26.1 (Org mode 9.1.14 + ox-hugo")
+              (org-hugo-export-creator-string . "Emacs 26.3 (Org mode 9.2.5 + ox-hugo")
               ;; (org-hugo-date-format . "%Y-%m-%d")
               ;; (org-hugo-auto-export-on-save . t)
               )))

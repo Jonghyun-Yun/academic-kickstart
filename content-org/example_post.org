@@ -1,0 +1,206 @@
+#+AUTHOR: Jonghyun Yun
+#+EMAIL: "jonghyun" dot "yun" at-sign "gmail" dot "com"
+
+#+OPTIONS: ':nil -:nil ^:{} num:t toc:t
+
+#+HUGO_BASE_DIR: ~/website
+#+HUGO_AUTO_SET_LASTMOD: t
+#+HUGO_DATE_FORMAT: %Y-%m-%dT%T%z
+#+HUGO_FRONT_MATTER_FORMAT: yaml
+#+HUGO_LEVEL_OFFSET: 4
+
+#+HUGO_SECTION: post
+#+HUGO_BUNDLE: 
+
+#+BIBLIOGRAPHY:
+#+HUGO_EXPORT_RMARKDOWN:
+
+#+SEQ_TODO: TODO DRAFT DONE
+
+#+STARTUP: indent logdone
+
+# https://scripter.co/latex-in-html/
+#+macro: latex @@html:<span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>@@
+
+#+OPTIONS: toc:nil num:nil H:4 ^:nil pri:t
+#+OPTIONS: html-link-use-abs-url:nil html-postamble:nil html-preamble:t
+#+OPTIONS: html-scripts:t html-style:t html5-fancy:t
+#+HTML_MATHJAX: align: left tagside: right
+#+HTML_MATHJAX: indent: 5em scale: 85
+# MATHJAX font: MathJax TeX (default) Asana-Math Neo-Euler Latin-Modern Gyre-Pagella Gyre-Termes
+# #+OPTIONS: tex:dvipng # use LaTeX to generate images for equations
+
+#+LATEX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [9pt]
+#+LATEX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{geometry}\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=0.7in,rmargin=0.7in}
+#+LATEX_HEADER: \usepackage[stretch=10,babel=true]{microtype}\usepackage{lmodern}
+#+LATEX_HEADER: \setlength\parindent{0pt}\linespread{0.95}
+#+LATEX_HEADER: \usepackage{unicode-math}
+
+#+PROPERTY: header-args:R :session *org-R* :exports both :results output :noweb yes :eval never-export
+
+#+SETUPFILE: ~/setup/theme-readtheorg.setup
+
+# #+HTML_LINK_HOME: http://wweb.uta.edu/faculty/yunj/index.html
+# #+HTML_LINK_UP: http://wweb.uta.edu/faculty/yunj/index.html
+
+#+HTML_HEAD:  <!-- Global site tag (gtag.js) - Google Analytics -->
+#+HTML_HEAD:<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128966866-1"></script>
+#+HTML_HEAD:<script>
+#+HTML_HEAD:  window.dataLayer = window.dataLayer || [];
+#+HTML_HEAD:  function gtag(){dataLayer.push(arguments);}
+#+HTML_HEAD:  gtag('js', new Date());
+#+HTML_HEAD:
+#+HTML_HEAD:  gtag('config', 'UA-128966866-1');
+#+HTML_HEAD:</script>
+
+#+MACRO: phone x29045
+#+MACRO: doclink [[https://elearn.uta.edu/bbcswebdav/courses/2178-SELECTED-TOPICS-IN-MATH-90569-001/doc/$1][$2]]
+
+# insert hyper links at the beginning or ending of TOC
+# #+HTML: <script>$( "#text-table-of-contents ul:first" ).append( '<li><a href = "https://elearn.uta.edu">Blackboard</a><li>' )</script>
+
+# #+HTML_HEAD:<script type="text/javascript" src="../styles/readtheorg/js/readtheorg-title.js"></script>
+# #+HTML_HEAD:<link rel="stylesheet" href="../styles/responsive-tables.css">
+
+* example post1
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: example_post1
+:END:
+#+begin_src yaml :front_matter_extra t
+title: Writing technical content in Academic
+date: 2019-07-12
+math: true
+diagram: true
+image:
+  placement: 3
+  caption: 'Image credit: [**John Moeses Bauan**](https://unsplash.com/photos/OGZtQF8iC0g)'
+#+end_src
+
+Academic is designed to give technical content creators a seamless experience.
+You can focus on the content and Academic handles the rest.
+
+**Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.**
+
+On this page, you'll find some examples of the types of technical content that can be rendered with Academic.
+
+** Examples
+
+*** Code
+
+Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the `highlight` option in your `config/_default/params.toml` file.
+
+#+begin_example
+```python
+import pandas as pd
+data = pd.read_csv("data.csv")
+data.head()
+```
+#+end_example
+
+renders as
+
+#+begin_src python
+    import pandas as pd
+    data = pd.read_csv("data.csv")
+    data.head()
+#+end_src
+
+*** Math
+
+Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the `math` option in your `config/_default/params.toml` file.
+
+To render *inline* or *block* math, wrap your LaTeX math with `$...$` or `$$...$$`, respectively.
+
+Example **math block**:
+
+#+begin_example
+```tex
+$$\gamma_{n} = \frac{ 
+\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
+\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
+{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
+```
+#+end_example
+
+renders as
+
+$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
+
+Example **inline math** `$\nabla F(\mathbf{x}_{n})$` renders as $\nabla F(\mathbf{x}_{n})$.
+
+Example **multi-line math** using the `\\` math linebreak:
+
+#+begin_example
+```tex
+$$f(k;p_0^*) = \begin{cases} p_0^* & \text{if }k=1, \\
+1-p_0^* & \text {if }k=0.\end{cases}$$
+```
+#+end_example
+
+renders as
+
+$$f(k;p_0^*) = \begin{cases} p_0^* & \text{if }k=1, \\
+1-p_0^* & \text {if }k=0.\end{cases}$$
+
+*** Diagrams
+
+Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the `diagram` option in your `config/_default/params.toml` file or by adding `diagram: true` to your page front matter.
+
+An example **flowchart**:
+
+#+begin_example
+    ```mermaid
+    graph TD
+    A[Hard] -->|Text| B(Round)
+    B --> C{Decision}
+    C -->|One| D[Result 1]
+    C -->|Two| E[Result 2]
+    ```
+#+end_example
+
+renders as
+
+#+begin_src mermaid
+graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+#+end_src
+
+An example **sequence diagram**:
+
+#+begin_example
+    ```mermaid
+    sequenceDiagram
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+    ```
+#+end_example
+
+renders as
+
+#+begin_src mermaid
+sequenceDiagram
+Alice->>John: Hello John, how are you?
+loop Healthcheck
+    John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
+#+end_src
+
+- [ ] a
+- [X] b
+- [X] c 

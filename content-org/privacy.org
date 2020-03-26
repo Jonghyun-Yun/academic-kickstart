@@ -1,6 +1,6 @@
-#+TITLE: Courses
-#+AUTHOR: Jonghyun Yun
-#+EMAIL: "j" dot "yun" at-sign "uta" dot "edu"
+#+TITLE: Jonghyun Yun
+#+AUTHOR:
+#+EMAIL: "jonghyun" dot "yun" at-sign "gmail" dot "com"
 
 #+OPTIONS: ':nil -:nil ^:{} num:t toc:t
 #+CREATOR: Emacs 26.1 (Org mode 9.1.14 + ox-hugo
@@ -8,7 +8,8 @@
 #+HUGO_BASE_DIR: ~/website
 #+HUGO_AUTO_SET_LASTMOD: t
 #+HUGO_DATE_FORMAT: %Y-%m-%dT%T%z
-#+HUGO_FRONT_MATTER_FORMAT: yaml
+#+HUGO_FRONT_MATTER_FORMAT: toml
+#+HUGO_LEVEL_OFFSET: 4
 
 #+HUGO_SECTION: /
 #+HUGO_BUNDLE:
@@ -65,15 +66,36 @@
 # #+HTML_HEAD:<script type="text/javascript" src="../styles/readtheorg/js/readtheorg-title.js"></script>
 # #+HTML_HEAD:<link rel="stylesheet" href="../styles/responsive-tables.css">
 
-* course
+* privacy
 :PROPERTIES:
-:EXPORT_TITLE: Courses
-:EXPORT_HUGO_SECTION: course
-:EXPORT_FILE_NAME: _index
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :layout docs
+:EXPORT_FILE_NAME: privacy
+:EXPORT_TITLE: Privacy Policy
 :END:
 
 #+begin_src yaml :front_matter_extra t
+draft: true
+share: false
+commentable: false
+editable: false
+
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+#+end_src
+
+* Term
+:PROPERTIES:
+:EXPORT_FILE_NAME: terms
+:EXPORT_TITLE: Terms
+:END:
+
+#+begin_src yaml :front_matter_extra t
+draft: true
+share: false
+commentable: false
+editable: false
+
 # Optional header image (relative to `static/img/` folder).
 header:
   caption: ""

@@ -72,6 +72,15 @@ cp ./img/portrait.jpg ~/website/static/img/portrait.jpg
 
 #+RESULTS:
 
+* index
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:END:
+#+begin_src toml :front_matter_extra t
+# Homepage
+type = "widget_page"
+headless = true  # Homepage is headless, other widget pages are not.
+#+end_src
 * about
 :PROPERTIES:
 :EXPORT_FILE_NAME: about
@@ -286,7 +295,7 @@ height = "300px"
 * DRAFT posts                                                      :noexport:
 :PROPERTIES:
 :EXPORT_FILE_NAME: posts
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget posts
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget pages :headless true
 :EXPORT_HUGO_WEIGHT: 40
 :EXPORT_TITLE: Recent Posts
 :END:
@@ -294,6 +303,67 @@ height = "300px"
 #+begin_src toml :front_matter_extra t
 # Activate this widget? true/false
 active = true
+
+# A Recent Blog Posts section created with the Pages widget.
+# This section displays recent blog posts from `content/post/`.
+
+subtitle = ""
+
+[content]
+  # Page type to display. E.g. post, talk, or publication.
+  page_type = "post"
+
+  # Choose how much pages you would like to display (0 = all pages)
+  count = 5
+
+  # Choose how many pages you would like to offset by
+  offset = 0
+
+  # Page order. Descending (desc) or ascending (asc) date.
+  order = "desc"
+
+  # Filter posts by a taxonomy term.
+  [content.filters]
+    tag = ""
+    category = ""
+    publication_type = ""
+    author = ""
+    exclude_featured = false
+
+[design]
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   4 = Citation (publication only)
+  view = 2
+
+[design.background]
+  # Apply a background color, gradient, or image.
+  #   Uncomment (by removing `#`) an option to apply it.
+  #   Choose a light or dark text color by setting `text_color_light`.
+  #   Any HTML color name or Hex value is valid.
+
+  # Background color.
+  # color = "navy"
+
+  # Background gradient.
+  # gradient_start = "DeepSkyBlue"
+  # gradient_end = "SkyBlue"
+
+  # Background image.
+  # image = "background.jpg"  # Name of image in `static/img/`.
+  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+
+  # Text color (true=light or false=dark).
+  # text_color_light = true
+
+[advanced]
+ # Custom CSS.
+ css_style = ""
+
+ # CSS class.
+ css_class = ""
 
 # This widget displays recent posts from `content/post/`.
 
@@ -316,7 +386,7 @@ list_format = 2
 * DRAFT projects                                                   :noexport:
 :PROPERTIES:
 :EXPORT_FILE_NAME: projects
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget projects
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget portfolio :headless true
 :EXPORT_HUGO_WEIGHT: 50
 :EXPORT_TITLE: Projects
 :END:
@@ -325,49 +395,80 @@ list_format = 2
 # Activate this widget? true/false
 active = true
 
-# Content.
-# Display content from the following folder.
-# For example, `folder = "project"` displays content from `content/project/`.
-folder = "project"
+# A Projects section created with the Portfolio widget.
+subtitle = ""
 
-# View.
-# Customize how projects are displayed.
-# Legend: 0 = list, 1 = cards, 2 = showcase.
-view = 1
+[content]
+  # Page type to display. E.g. project.
+  page_type = "project"
 
-# Widget layout
-# Legend: 0 = two columns (default), 1 = single column
-widget_layout = 0
+  # Filter toolbar (optional).
+  # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
+  # To show all items, set `tag` to "*".
+  # To filter by a specific tag, set `tag` to an existing tag name.
+  # To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
 
-# For Showcase view, flip alternate rows?
-flip_alt_rows = false
+  # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
+  filter_default = 0
 
-# Filter toolbar.
+  [[content.filter_button]]
+    name = "All"
+    tag = "*"
 
-# Default filter index (e.g. 0 corresponds to the first `[[filter]]` instance below).
-filter_default = 0
+  [[content.filter_button]]
+    name = "Deep Learning"
+    tag = "Deep Learning"
 
-# Add or remove as many filters (`[[filter]]` instances) as you like.
-# To show all items, set `tag` to "*".
-# To filter by a specific tag, set `tag` to an existing tag name.
-# To remove toolbar, delete/comment all instances of `[[filter]]` below.
-[[filter]]
-  name = "All"
-  tag = "*"
+  [[content.filter_button]]
+    name = "Other"
+    tag = "Demo"
 
-[[filter]]
-  name = "Deep Learning"
-  tag = "deep_learning"
+[design]
+  # Choose how many columns the section has. Valid values: 1 or 2.
+  columns = "2"
 
-[[filter]]
-  name = "Other"
-  tag = "Demo"
+  # Toggle between the various page layout types.
+  #   1 = List
+  #   2 = Compact
+  #   3 = Card
+  #   5 = Showcase
+  view = 3
+
+  # For Showcase view, flip alternate rows?
+  flip_alt_rows = false
+
+[design.background]
+  # Apply a background color, gradient, or image.
+  #   Uncomment (by removing `#`) an option to apply it.
+  #   Choose a light or dark text color by setting `text_color_light`.
+  #   Any HTML color name or Hex value is valid.
+
+  # Background color.
+  # color = "navy"
+
+  # Background gradient.
+  # gradient_start = "DeepSkyBlue"
+  # gradient_end = "SkyBlue"
+
+  # Background image.
+  # image = "background.jpg"  # Name of image in `static/img/`.
+  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+
+  # Text color (true=light or false=dark).
+  # text_color_light = true
+
+[advanced]
+ # Custom CSS.
+ css_style = ""
+
+ # CSS class.
+ css_class = ""
 #+end_src
 
-* DRAFT publications
+* DRAFT publications                                               :noexport:
 :PROPERTIES:
 :EXPORT_FILE_NAME: publications
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget pages
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget pages :headless true
 :EXPORT_HUGO_WEIGHT: 20
 :EXPORT_TITLE: Publications
 :END:
@@ -375,6 +476,10 @@ filter_default = 0
 #+begin_src toml :front_matter_extra t
 # Activate this widget? true/false
 active = true
+
+# A Recent Publications section created with the Pages widget.
+# This section displays recent blog posts from `content/publication/`.
+subtitle = ""
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
@@ -394,6 +499,7 @@ active = true
     tag = ""
     category = ""
     publication_type = ""
+    author = ""
     exclude_featured = false
 
 [design]
@@ -445,12 +551,14 @@ active = true
 :END:
 
 #+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = true
+
 # A Featured Publications section created with the Featured Content widget.
 # This section displays publications from `content/publication/` which have
 # `featured = true` in their front matter.
 
-# Activate this widget? true/false
-active = true
+subtitle = ""
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
@@ -462,11 +570,15 @@ active = true
   # Page order. Descending (desc) or ascending (asc) date.
   order = "desc"
 
+  # Show a "See all pages" link underneath the featured content?
+  link_to_archive = false
+
   # Filter posts by a taxonomy term.
   [content.filters]
     tag = ""
     category = ""
     publication_type = ""
+    author = ""
 
 [design]
   # Toggle between the various page layout types.
@@ -474,7 +586,7 @@ active = true
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view = 1
+  view = 3
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -586,6 +698,21 @@ active = false
 #+begin_src toml :front_matter_extra t
 # Activate this widget? true/false
 active = false
+
+# Tag Cloud widget.
+subtitle = ""
+
+[content]
+  # Choose the taxonomy from `config.toml` to display (e.g. tags, categories)
+  taxonomy = "tags"
+
+  # Choose how many tags you would like to display (0 = all tags)
+  count = 20
+
+[design]
+  # Minimum and maximum font sizes (1.0 = 100%).
+  font_size_min = 0.7
+  font_size_max = 2.0
 #+end_src
 
 * DRAFT talks                                                     :noexport:
@@ -734,3 +861,63 @@ I am a teaching instructor for the following courses at University X:
   name = "Current"
   tag = "current"
 #+end_src
+* DRAFT people                                                     :noexport:
+:PROPERTIES:
+:EXPORT_FILE_NAME: people
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :widget people :headless true
+:EXPORT_HUGO_WEIGHT: 68
+:EXPORT_TITLE: Meet the Team
+:END:
+
+#+begin_src toml :front_matter_extra t
+# Activate this widget? true/false
+active = false
+
+# A "Meet the Team" section created with the People widget.
+# This section displays people from `content/authors/` which belong to the `user_groups` below.
+subtitle = ""
+
+[content]
+  # Choose which groups/teams of users to display.
+  #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
+  user_groups = ["Principal Investigators",
+                 "Researchers",
+                 "Grad Students",
+                 "Administration",
+                 "Visitors",
+                 "Alumni"]
+
+[design]
+  # Show user's social networking links? (true/false)
+  show_social = false
+
+  # Show user's interests? (true/false)
+  show_interests = true
+
+[design.background]
+  # Apply a background color, gradient, or image.
+  #   Uncomment (by removing `#`) an option to apply it.
+  #   Choose a light or dark text color by setting `text_color_light`.
+  #   Any HTML color name or Hex value is valid.
+
+  # Background color.
+  # color = "navy"
+
+  # Background gradient.
+  # gradient_start = "DeepSkyBlue"
+  # gradient_end = "SkyBlue"
+
+  # Background image.
+  # image = "background.jpg"  # Name of image in `static/img/`.
+  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+
+  # Text color (true=light or false=dark).
+  # text_color_light = true
+
+[advanced]
+ # Custom CSS.
+ css_style = ""
+
+ # CSS class.
+ css_class = ""
+#+end_sr

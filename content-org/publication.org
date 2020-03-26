@@ -1,6 +1,6 @@
 #+TITLE: Publication
 #+AUTHOR: Jonghyun Yun
-#+EMAIL: "j" dot "yun" at-sign "uta" dot "edu"
+#+EMAIL: "jonghyun" dot "yun" at-sign "gmail" dot "com"
 
 #+OPTIONS: ':nil -:nil ^:{} num:t toc:t
 #+CREATOR: Emacs 26.1 (Org mode 9.1.14 + ox-hugo

@@ -1,6 +1,6 @@
 ---
 title: "Jonghyun Yun"
-lastmod: 2020-03-26T00:31:00-05:00
+lastmod: 2020-04-01T11:56:27-05:00
 draft: false
 # Display name
 name: Jonghyun Yun
@@ -32,6 +32,7 @@ interests :
   - Bayesian inference
   - State space models
   - Next-generation sequencing data
+  - Smart infrastructure
 
 # List your qualifications (such as academic degrees).
 education:
@@ -78,9 +79,9 @@ email: "jonghyun.yun@gmail.com"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-user_groups:
-  - Researchers
-  - VisitorsH
+# user_groups:
+# - Researchers
+# - Visitors
 ---
 
 He completed his PhD in the Department of Statistics at University of Illinois at Urbana-Champaign under the guidance of [Dr. Yuguo Chen](https://publish.illinois.edu/yuguo/). Prior to joining UTA, he was an Assistant Professor in the Department of Mathematical Sciences and a core faculty in the Border Biomedical Research Center at the University of Texas at El Paso, from 2015 to 2016. He was a postdoctoral researcher at UT Southwestern Medical Center under the guidance of Drs. [Guanghua Xiao](https://qbrc.swmed.edu/labs/xiaolab/) and [Yang Xie](https://qbrc.swmed.edu/labs/xielab/) from 2012 to 2015.

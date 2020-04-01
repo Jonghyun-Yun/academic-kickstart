@@ -119,6 +119,7 @@ interests :
   - Bayesian inference
   - State space models
   - Next-generation sequencing data
+  - Smart infrastructure
 
 # List your qualifications (such as academic degrees).
 education:

@@ -208,6 +208,7 @@ Bob-->>John: Jolly good!
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: example_post2
+:EXPORT_HUGO_EXPORT_RMARKDOWN: t
 :END:
 #+begin_src yaml :front_matter_extra t
 title: blogdown test
@@ -216,10 +217,7 @@ math: true
 diagram: true
 #+end_src
 
-#+begin_src R :results graphics :file hist.png
+#+begin_src R
 x = rnorm(100)
 hist(x)
 #+end_src
-
-#+RESULTS:
-[[file:hist.png]]

@@ -23,7 +23,7 @@ names(md_files) <- Rmd_files
 
 ## knit it when:
 ##   1) the correspondent md file does not exist yet
-##   2) the Rmd file was updated after the last time md file had been generated 
+##   2) the Rmd file was updated after the last time md file had been generated
 needs_knitted <- !file.exists(md_files) | utils::file_test("-ot", md_files, Rmd_files)
 
 message("skip: \n    ", paste(Rmd_files[!needs_knitted], collapse = "\n    "))
@@ -35,9 +35,9 @@ for (rmd in Rmd_files[needs_knitted]) {
   knitr::opts_chunk$set(
    fig.path = glue::glue("{path_base_name}_files/figure-html/")
   )
-  
+
   #set.seed(1984)
   knitr::knit(input = rmd, output = md_files[rmd], encoding = "UTF-8")
 }
 
-blogdown::hugo_build(local = local)
+blogdown::hugo_build(local = T)

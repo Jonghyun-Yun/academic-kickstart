@@ -118,7 +118,7 @@ interests :
   - High-dimensional data analysis
   - Bayesian inference
   - State space models
-  - Next-generation sequencing data
+  - Next-generation sequencing
   - Smart infrastructure
 
 # List your qualifications (such as academic degrees).

@@ -1,6 +1,6 @@
 ---
 title: "Jonghyun Yun"
-lastmod: 2020-04-01T11:56:27-05:00
+lastmod: 2020-04-01T13:37:14-05:00
 draft: false
 # Display name
 name: Jonghyun Yun
@@ -31,7 +31,7 @@ interests :
   - High-dimensional data analysis
   - Bayesian inference
   - State space models
-  - Next-generation sequencing data
+  - Next-generation sequencing
   - Smart infrastructure
 
 # List your qualifications (such as academic degrees).

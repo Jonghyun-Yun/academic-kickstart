@@ -67,7 +67,7 @@
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: example_post1
-:EXPORT_HUGO_EXPORT_RMARKDOWN: t
+:EXPORT_HUGO_EXPORT_RMARKDOWN:
 :END:
 #+begin_src yaml :front_matter_extra t
 title: Writing technical content in Academic
@@ -208,7 +208,6 @@ Bob-->>John: Jolly good!
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: example_post2
-:EXPORT_HUGO_EXPORT_RMARKDOWN: t
 :END:
 #+begin_src yaml :front_matter_extra t
 title: blogdown test
@@ -217,7 +216,10 @@ math: true
 diagram: true
 #+end_src
 
-#+begin_src R
+#+begin_src R :results graphics :file hist.png
 x = rnorm(100)
 hist(x)
 #+end_src
+
+#+RESULTS:
+[[file:hist.png]]

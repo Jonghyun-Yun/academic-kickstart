@@ -28,9 +28,3 @@ HUGO_VERSION = "0.68.3"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
-
-[[redirects]]
-  from = "http://jyun.rbind.io/*"
-  to = "https://jyun.rbind.io/:splat"
-  status = 301
-  force = true

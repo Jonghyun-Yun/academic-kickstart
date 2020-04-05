@@ -1,6 +1,6 @@
 +++
 title = "MATH 5312: Mathematical statistics I, Fall 2017"
-lastmod = 2020-04-05T03:59:54-05:00
+lastmod = 2020-04-05T04:05:16-05:00
 tags = ["math5312", "mathematical_statistics", "2017-2018"]
 categories = ["teaching"]
 draft = false

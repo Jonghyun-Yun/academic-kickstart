@@ -381,39 +381,41 @@ cp ./img/data-mining384.png ~/website/content/teaching/math6312-sp19/featured.pn
 #+RESULTS:
 
 #+begin_src toml :front_matter_extra t
-  # Example: `tags = ["machine-learning", "deep-learning"]`
-  # tags = ["Deep Learning"]
+# Example: `tags = ["machine-learning", "deep-learning"]`
+# tags = ["Deep Learning"]
 
-  # Optional external URL for project (replaces project detail page).
-  url = "math6312-sp19.netlify.app"
+# Optional external URL for project (replaces project detail page).
+# url = ""
 
-  # Slides (optional).
-  #   Associate this project with Markdown slides.
-  #   Simply enter your slide deck's filename without extension.
-  #   E.g. `slides = "example-slides"` references
-  #   `content/slides/example-slides.md`.
-  #   Otherwise, set `slides = ""`.
-  # slides = "example-slides"
+external_link = "https://math6312-sp19.netlify.app"
 
-  # # Links (optional).
-  # url_pdf = ""
-  # url_slides = ""
-  # url_video = ""
-  # url_code = ""
+# Slides (optional).
+#   Associate this project with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references
+#   `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+# slides = "example-slides"
 
-  # Custom links (optional).
-  #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-  # url_custom = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
+# # Links (optional).
+# url_pdf = ""
+# url_slides = ""
+# url_video = ""
+# url_code = ""
 
-  # Featured image
-  # To use, add an image named `featured.jpg/png` to your project's folder.
-  [image]
-    # Caption (optional)
-    # caption = "Photo by rawpixel on Unsplash"
+# Custom links (optional).
+#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
+# url_custom = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
 
-    # Focal point (optional)
-    # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-    focal_point = "Smart"
+# Featured image
+# To use, add an image named `featured.jpg/png` to your project's folder.
+[image]
+  # Caption (optional)
+  # caption = "Photo by rawpixel on Unsplash"
+
+  # Focal point (optional)
+  # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  focal_point = "Smart"
  #+end_src
 * MATH 5305: Statistical Methods, Fall 2019 :math5305:statistical___methods:2019_2020:current:noexport:
 :PROPERTIES:

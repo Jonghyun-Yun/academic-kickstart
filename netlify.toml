@@ -33,6 +33,4 @@ HUGO_ENABLEGITINFO = "true"
   from = "http://jyun.rbind.io/*"
   to = "https://jyun.rbind.io/:splat"
   status = 301
-  force = false
-  query = {path = ":path"}
-  conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
+  force = true

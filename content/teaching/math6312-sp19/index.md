@@ -1,6 +1,6 @@
 +++
 title = "MATH 6312: Data Mining, Spring 2019"
-lastmod = 2020-03-25T22:43:34-05:00
+lastmod = 2020-04-05T03:59:59-05:00
 tags = ["math6312", "data mining", "2018-2019"]
 categories = ["teaching"]
 draft = false
@@ -8,7 +8,7 @@ draft = false
 # tags = ["Deep Learning"]
 
 # Optional external URL for project (replaces project detail page).
-url = "/course/math6312-sp19/"
+url = "math6312-sp19.netlify.app"
 
 # Slides (optional).
 #   Associate this project with Markdown slides.

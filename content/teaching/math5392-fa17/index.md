@@ -1,6 +1,6 @@
 +++
 title = "MATH 5392: Selected topics in mathematics, Fall 2017"
-lastmod = 2020-03-25T22:43:33-05:00
+lastmod = 2020-04-05T03:59:55-05:00
 tags = ["math5392", "data_mining", "2017-2018"]
 categories = ["teaching"]
 draft = false

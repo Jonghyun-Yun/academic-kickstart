@@ -211,7 +211,6 @@ Bob-->>John: Jolly good!
 :EXPORT_HUGO_EXPORT_RMARKDOWN: t
 :END:
 #+begin_src yaml :front_matter_extra t
-title: blogdown test
 date: 2019-07-12
 math: true
 diagram: true

@@ -374,12 +374,18 @@ cp ./img/math6312-sp19.png ~/website/content/teaching/math6312-sp19/featured.png
 
 #+RESULTS:
 
+#+BEGIN_SRC shell :exports none :eval yes
+cp ./img/data-mining384.png ~/website/content/teaching/math6312-sp19/featured.png
+#+END_SRC
+
+#+RESULTS:
+
 #+begin_src toml :front_matter_extra t
   # Example: `tags = ["machine-learning", "deep-learning"]`
   # tags = ["Deep Learning"]
 
   # Optional external URL for project (replaces project detail page).
-  url = "/course/math6312-sp19/"
+  url = "math6312-sp19.netlify.app"
 
   # Slides (optional).
   #   Associate this project with Markdown slides.

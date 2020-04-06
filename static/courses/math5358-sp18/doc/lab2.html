@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lab 2 - R basics</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Lecture
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lecture1.pdf">Lecture 1</a>
+    </li>
+    <li>
+      <a href="lecture2.pdf">Lecture 2</a>
+    </li>
+    <li>
+      <a href="lecture3.pdf">Lecture 3</a>
+    </li>
+    <li>
+      <a href="lecture4.pdf">Lecture 4</a>
+    </li>
+    <li>
+      <a href="lecture5.pdf">Lecture 5</a>
+    </li>
+    <li>
+      <a href="lecture6.pdf">Lecture 6</a>
+    </li>
+    <li>
+      <a href="lecture7.pdf">Lecture 7</a>
+    </li>
+    <li>
+      <a href="lecture8.pdf">Lecture 8</a>
+    </li>
+    <li>
+      <a href="lecture9.pdf">Lecture 9</a>
+    </li>
+    <li>
+      <a href="lecture10.pdf">Lecture 10</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Lab
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="lab1.pdf">Lab 1</a>
+    </li>
+    <li>
+      <a href="lab2.html">Lab 2</a>
+    </li>
+    <li>
+      <a href="lab3.html">Lab 3</a>
+    </li>
+    <li>
+      <a href="lab4.html">Lab 4</a>
+    </li>
+    <li>
+      <a href="lab5.html">Lab 5</a>
+    </li>
+    <li>
+      <a href="lab6.html">Lab 6</a>
+    </li>
+    <li>
+      <a href="lab7.html">Lab 7</a>
+    </li>
+    <li>
+      <a href="lab8.html">Lab 8</a>
+    </li>
+    <li>
+      <a href="lab9.html">Lab 9</a>
+    </li>
+    <li>
+      <a href="lab10.html">Lab 10</a>
+    </li>
+    <li>
+      <a href="lab11.html">Lab 11</a>
+    </li>
+    <li>
+      <a href="lab12.html">Lab 12</a>
+    </li>
+    <li>
+      <a href="lab13.html">Lab 13</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Homework
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="hw1.html">HW 1</a>
+    </li>
+    <li>
+      <a href="hw2.html">HW 2</a>
+    </li>
+    <li>
+      <a href="hw3.html">HW 3</a>
+    </li>
+    <li>
+      <a href="hw4.html">HW 4</a>
+    </li>
+    <li>
+      <a href="hw5.html">HW 5</a>
+    </li>
+    <li>
+      <a href="hw6.html">HW 6</a>
+    </li>
+    <li>
+      <a href="hw7.html">HW 7</a>
+    </li>
+    <li>
+      <a href="hw8.html">HW 8</a>
+    </li>
+    <li>
+      <a href="hw9.html">HW 9</a>
+    </li>
+    <li>
+      <a href="finalhw.html">Final HW</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Solution
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="sol-hw1.html">HW 1</a>
+    </li>
+    <li>
+      <a href="sol-hw2.html">HW 2</a>
+    </li>
+    <li>
+      <a href="sol-hw3.html">HW 3</a>
+    </li>
+    <li>
+      <a href="sol-hw4.html">HW 4</a>
+    </li>
+    <li>
+      <a href="sol-hw5.html">HW 5</a>
+    </li>
+    <li>
+      <a href="sol-hw6.html">HW 6</a>
+    </li>
+    <li>
+      <a href="sol-hw7.html">HW 7</a>
+    </li>
+    <li>
+      <a href="sol-hw8.html">HW 8</a>
+    </li>
+    <li>
+      <a href="sol-hw9.html">HW 9</a>
+    </li>
+    <li>
+      <a href="sol-finalhw.html">Final HW</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="../math5358-sp18.html">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://wweb.uta.edu/faculty/yunj/index.html">
+    <span class="glyphicon glyphicon-home"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lab 2 - R basics</h1>
+
+</div>
+
+
+<div id="r-as-a-calculator" class="section level1">
+<h1>R as a calculator</h1>
+<pre class="r"><code>2 + 2 # add numbers</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>2 * pi # multiply by a constant</code></pre>
+<pre><code>## [1] 6.283185</code></pre>
+<pre class="r"><code>7 + runif(1) # add a Uniform(0,1) random number</code></pre>
+<pre><code>## [1] 7.572594</code></pre>
+<pre class="r"><code>pnorm(1.96,0,1) # standard normal cdf</code></pre>
+<pre><code>## [1] 0.9750021</code></pre>
+<pre class="r"><code>3^4 # powers</code></pre>
+<pre><code>## [1] 81</code></pre>
+<pre class="r"><code>sqrt(4^2) # functions</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>log(exp(1))</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>log(100, base = 10)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>rnorm(5) # generate 5 random numbers from N(0,1)</code></pre>
+<pre><code>## [1] -0.7679783 -0.6682764  0.2426219  0.1345748 -1.4206845</code></pre>
+</div>
+<div id="assigning-values-to-r-objects" class="section level1">
+<h1>Assigning values to R objects</h1>
+<p>A key action in R is to store values in the form of R objects, and to examine the value of R objects.</p>
+<pre class="r"><code>val = 3
+val</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>print(val)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code># assign value to two objects
+a = b = 3
+a</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>b</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>Val = 7 # case-sensitive!
+print(c(val, Val))</code></pre>
+<pre><code>## [1] 3 7</code></pre>
+<p>We can work with (and store) sequences and repetitions</p>
+<pre class="r"><code>mySeq = 1:6
+mySeq</code></pre>
+<pre><code>## [1] 1 2 3 4 5 6</code></pre>
+<pre class="r"><code>myOtherSeq = seq(1.1, 11.1, by = 2)
+myOtherSeq</code></pre>
+<pre><code>## [1]  1.1  3.1  5.1  7.1  9.1 11.1</code></pre>
+<pre class="r"><code>length(myOtherSeq)</code></pre>
+<pre><code>## [1] 6</code></pre>
+<pre class="r"><code>fours = rep(4, 6)
+fours</code></pre>
+<pre><code>## [1] 4 4 4 4 4 4</code></pre>
+<pre class="r"><code># This is a comment: here is an example of non-npnorm(-1.96,0,1) -umeric data
+depts = c(&#39;espm&#39;, &#39;pmb&#39;, &#39;stats&#39;)
+depts</code></pre>
+<pre><code>## [1] &quot;espm&quot;  &quot;pmb&quot;   &quot;stats&quot;</code></pre>
+<p>If we don’t assign the output of a command to an object, we haven’t saved it for later use. R gives us a lot of flexibility (within certain rules) for assigning to (parts of) objects from (parts of) other objects.</p>
+</div>
+<div id="how-to-be-lazy" class="section level1">
+<h1>How to be <a href="http://dilbert.com/strips/comic/2005-05-29/">lazy</a></h1>
+<p>If you’re starting to type something you’ve typed before, or the long name of an R object or function, STOP! You likely don’t need to type all of that.</p>
+<ul>
+<li>Tab completion</li>
+<li>Command history
+<ul>
+<li>up/down arrows</li>
+<li>Ctrl-{up arrow} or Command-{up arrow}</li>
+</ul></li>
+<li>R Studio: select a line or block for execution</li>
+<li>Put your code in a file and use <code>source()</code>. For example: <code>source('MyScript.R')</code></li>
+</ul>
+</div>
+<div id="vectors-in-r" class="section level1">
+<h1>Vectors in R</h1>
+<p>The most basic form of an R object is a vector. In fact, individual (scalar) values are vectors of length one.</p>
+<p>We can concatenate values into a vector with <code>c()</code>.</p>
+<pre class="r"><code># numeric vector
+nums = c(1.1, 3, -5.7)
+devs = rnorm(5)
+devs</code></pre>
+<pre><code>## [1]  0.712069279  0.283053683 -0.711390624  0.003061056 -0.519083628</code></pre>
+<pre class="r"><code># logical vector
+bools = c(TRUE, FALSE, TRUE)
+bools</code></pre>
+<pre><code>## [1]  TRUE FALSE  TRUE</code></pre>
+</div>
+<div id="working-with-indices-and-subsets" class="section level1">
+<h1>Working with indices and subsets</h1>
+<pre class="r"><code>vals = seq(2, 12, by = 2)
+vals</code></pre>
+<pre><code>## [1]  2  4  6  8 10 12</code></pre>
+<pre class="r"><code>vals[3]</code></pre>
+<pre><code>## [1] 6</code></pre>
+<pre class="r"><code>vals[3:5]</code></pre>
+<pre><code>## [1]  6  8 10</code></pre>
+<pre class="r"><code>vals[c(1, 3, 6)]</code></pre>
+<pre><code>## [1]  2  6 12</code></pre>
+<pre class="r"><code>vals[-c(1, 3, 6)]</code></pre>
+<pre><code>## [1]  4  8 10</code></pre>
+<pre class="r"><code>vals[c(rep(TRUE, 3), rep(FALSE, 2), TRUE)]</code></pre>
+<pre><code>## [1]  2  4  6 12</code></pre>
+<pre class="r"><code># list values &gt;= 5
+vals[vals &gt;= 5]</code></pre>
+<pre><code>## [1]  6  8 10 12</code></pre>
+<pre class="r"><code># list index whose value = 4
+which(vals ==  4)</code></pre>
+<pre><code>## [1] 2</code></pre>
+</div>
+<div id="vectorized-calculations-and-comparisons" class="section level1">
+<h1>Vectorized calculations and comparisons</h1>
+<p>At the core of R is the idea of doing calculations on entire vectors.</p>
+<pre class="r"><code>vec1 = sample(1:5, 10, replace = TRUE)
+vec2 = sample(1:5, 10, replace = TRUE)
+vec1</code></pre>
+<pre><code>##  [1] 4 4 2 3 2 3 2 5 4 4</code></pre>
+<pre class="r"><code>vec2</code></pre>
+<pre><code>##  [1] 5 4 5 4 5 1 2 4 5 1</code></pre>
+<pre class="r"><code>vec1 + vec2</code></pre>
+<pre><code>##  [1] 9 8 7 7 7 4 4 9 9 5</code></pre>
+<pre class="r"><code>vec1^vec2</code></pre>
+<pre><code>##  [1] 1024  256   32   81   32    3    4  625 1024    4</code></pre>
+<pre class="r"><code>vec1 &gt;= vec2</code></pre>
+<pre><code>##  [1] FALSE  TRUE FALSE FALSE FALSE  TRUE  TRUE  TRUE FALSE  TRUE</code></pre>
+<pre class="r"><code>vec1 &lt;= 3</code></pre>
+<pre><code>##  [1] FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE</code></pre>
+<pre class="r"><code># using &#39;or&#39;
+vec1 &lt;= 0 | vec1 &gt;= 3</code></pre>
+<pre><code>##  [1]  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE  TRUE  TRUE</code></pre>
+<pre class="r"><code># using &#39;and&#39;
+vec1 &lt;= 0 &amp; vec1 &gt;= vec2</code></pre>
+<pre><code>##  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
+<pre class="r"><code>vec1 == vec2</code></pre>
+<pre><code>##  [1] FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE</code></pre>
+<pre class="r"><code>vec1 != vec2</code></pre>
+<pre><code>##  [1]  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE</code></pre>
+<pre class="r"><code># careful:
+vec1 = vec2
+identical(vec1, vec2)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>An important related concept is that of recycling</p>
+<pre class="r"><code>vec3 = sample(1:5, 5, replace = TRUE)
+vec4 = sample(1:5, 3, replace = TRUE)
+vec1</code></pre>
+<pre><code>##  [1] 5 4 5 4 5 1 2 4 5 1</code></pre>
+<pre class="r"><code>vec3</code></pre>
+<pre><code>## [1] 3 5 4 1 1</code></pre>
+<pre class="r"><code>vec4</code></pre>
+<pre><code>## [1] 2 1 1</code></pre>
+<pre class="r"><code>vec1 + vec3</code></pre>
+<pre><code>##  [1] 8 9 9 5 6 4 7 8 6 2</code></pre>
+<pre class="r"><code>vec1 + vec4</code></pre>
+<pre><code>## Warning in vec1 + vec4: longer object length is not a multiple of shorter
+## object length</code></pre>
+<pre><code>##  [1] 7 5 6 6 6 2 4 5 6 3</code></pre>
+<p><strong>Question</strong>: Tell me what’s going on. What choices were made by the R developers?</p>
+</div>
+<div id="r-is-a-functional-language" class="section level1">
+<h1>R is a functional language</h1>
+<ul>
+<li>Operations are carried out with functions. Functions take objects as inputs and return objects as outputs.</li>
+<li>An analysis can be considered a pipeline of function calls, with output from a function used later in a subsequent operation as input to another function.</li>
+<li>We can embed function calls:</li>
+</ul>
+<pre class="r"><code>set.seed(1) # set a random seed, so your random numbers won&#39;t be different when you generate them next time.
+hist(rnorm(1000))</code></pre>
+<p><img src="lab2_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="getting-help-about-a-function" class="section level1">
+<h1>Getting help about a function</h1>
+<p>To get information about a function you know exists, use <code>help</code> or <code>?</code>, e.g., <code>?lm</code>. For information on a general topic, use <code>apropos</code> or <code>??</code></p>
+</div>
+<div id="basic-kinds-of-r-objects" class="section level1">
+<h1>Basic kinds of R objects</h1>
+<p>Vectors are not the only kinds of R objects.</p>
+<div id="vectors" class="section level2">
+<h2>Vectors</h2>
+<p>Vectors of various types (numeric (i.e., decimal/floating point/double), integer, boolean, character), all items must be of the same type</p>
+</div>
+<div id="matrices" class="section level2">
+<h2>Matrices</h2>
+<p>Matrices of various types, all items must be of the same type</p>
+<pre class="r"><code>mat = matrix(c(1,0,5,2,1,6,3,4,0),3,3)
+t(mat) %*% mat</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   26   32    3
+## [2,]   32   41   10
+## [3,]    3   10   25</code></pre>
+<pre class="r"><code>dim(mat)</code></pre>
+<pre><code>## [1] 3 3</code></pre>
+<pre class="r"><code># * is element-wise product
+t(mat) * mat</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    0   15
+## [2,]    0    1   24
+## [3,]   15   24    0</code></pre>
+</div>
+<div id="some-linear-algera" class="section level2">
+<h2>Some linear algera</h2>
+<pre class="r"><code># vector without declaration of column/row vector
+z = c(1,2,3)
+
+# column vector 3 by 1
+x = matrix(c(1,2,3),3,1)
+x</code></pre>
+<pre><code>##      [,1]
+## [1,]    1
+## [2,]    2
+## [3,]    3</code></pre>
+<pre class="r"><code># transpose
+t(x)</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3</code></pre>
+<pre class="r"><code># row vector 1 by 3
+y = matrix(c(3,2,1),1,3)
+y</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    3    2    1</code></pre>
+<pre class="r"><code># sum
+c(y %*% rep(1,length(y)))</code></pre>
+<pre><code>## [1] 6</code></pre>
+<pre class="r"><code>sum(y)</code></pre>
+<pre><code>## [1] 6</code></pre>
+<pre class="r"><code># L-2 norm of a vector
+norm(x,&quot;f&quot;)</code></pre>
+<pre><code>## [1] 3.741657</code></pre>
+<pre class="r"><code># inner product
+t(x) %*% x</code></pre>
+<pre><code>##      [,1]
+## [1,]   14</code></pre>
+<pre class="r"><code>z %*% z</code></pre>
+<pre><code>##      [,1]
+## [1,]   14</code></pre>
+<pre class="r"><code># outer product
+x %*% t(x)</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    2    4    6
+## [3,]    3    6    9</code></pre>
+<pre class="r"><code>z %o% z</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    2    4    6
+## [3,]    3    6    9</code></pre>
+<pre class="r"><code># recycling mat
+mat</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    0    1    4
+## [3,]    5    6    0</code></pre>
+<pre class="r"><code># diagonal of matrix
+diag(mat)</code></pre>
+<pre><code>## [1] 1 1 0</code></pre>
+<pre class="r"><code># determinant of matrix
+det(mat)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code># trace of matrix
+sum(diag(mat))</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code># positive definite symmetric matrix A
+A = t(mat) %*% mat
+A</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   26   32    3
+## [2,]   32   41   10
+## [3,]    3   10   25</code></pre>
+<pre class="r"><code># inverse
+solve(A)</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]  925 -770  197
+## [2,] -770  641 -164
+## [3,]  197 -164   42</code></pre>
+<pre class="r"><code>solve(A) %*% A</code></pre>
+<pre><code>##               [,1]         [,2]         [,3]
+## [1,]  1.000000e+00 9.094947e-13 0.000000e+00
+## [2,]  2.472689e-12 1.000000e+00 9.094947e-13
+## [3,] -2.273737e-13 1.136868e-13 1.000000e+00</code></pre>
+<pre class="r"><code>A %*% solve(A)</code></pre>
+<pre><code>##              [,1]         [,2]         [,3]
+## [1,] 1.000000e+00 2.387424e-12 6.821210e-13
+## [2,] 1.193712e-12 1.000000e+00 1.136868e-13
+## [3,] 9.094947e-13 0.000000e+00 1.000000e+00</code></pre>
+<p><strong>Question</strong>: Why <code>solve(A) %*% A</code> does not produce the identity matrix?</p>
+<pre class="r"><code># eigenvalues and eigenvector
+myeigen = eigen(A)
+
+# spectral decomposition
+D = diag(myeigen$values)
+D</code></pre>
+<pre><code>##          [,1]    [,2]         [,3]
+## [1,] 68.53918  0.0000 0.0000000000
+## [2,]  0.00000 23.4602 0.0000000000
+## [3,]  0.00000  0.0000 0.0006219127</code></pre>
+<pre class="r"><code>C = myeigen$vectors
+C %*% D %*% t(C)</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]   26   32    3
+## [2,]   32   41   10
+## [3,]    3   10   25</code></pre>
+<pre class="r"><code># see if A = CDC&#39;
+C %*% D %*% t(C) == A</code></pre>
+<pre><code>##       [,1]  [,2]  [,3]
+## [1,]  TRUE FALSE FALSE
+## [2,] FALSE FALSE FALSE
+## [3,] FALSE FALSE FALSE</code></pre>
+<pre class="r"><code># square root of A
+C %*% sqrt(D) %*% t(C)</code></pre>
+<pre><code>##            [,1]     [,2]       [,3]
+## [1,]  3.2935597 3.889999 -0.1427347
+## [2,]  3.8899989 4.971968  1.0711855
+## [3,] -0.1427347 1.071185  4.8818222</code></pre>
+<pre class="r"><code># it is not sqrt(A)
+sqrt(A)</code></pre>
+<pre><code>##          [,1]     [,2]     [,3]
+## [1,] 5.099020 5.656854 1.732051
+## [2,] 5.656854 6.403124 3.162278
+## [3,] 1.732051 3.162278 5.000000</code></pre>
+</div>
+<div id="more-linear-algebra" class="section level2">
+<h2>More linear algebra</h2>
+<pre class="r"><code>X = t(C %*% sqrt(D) %*% matrix(rnorm(100*3),3,100))
+head(X) # first few rows of X</code></pre>
+<pre><code>##            [,1]       [,2]       [,3]
+## [1,]  4.1726600  6.8973855  7.2325596
+## [2,]  0.9207647  1.3503394  0.6979599
+## [3,]  6.4135178  5.8469261 -7.4524216
+## [4,]  5.6127043  6.5676240 -0.7165509
+## [5,] -6.1555741 -9.8891219 -9.6958554
+## [6,] -0.1344931 -0.8963754 -3.0779498</code></pre>
+<pre class="r"><code>cov(X) # sample covariance matirx</code></pre>
+<pre><code>##           [,1]      [,2]      [,3]
+## [1,] 28.126542 34.567516  2.986385
+## [2,] 34.567516 44.062289  9.848508
+## [3,]  2.986385  9.848508 24.522348</code></pre>
+<pre class="r"><code>mysvd &lt;- svd(X)
+mysvd$d</code></pre>
+<pre><code>## [1] 85.6217244 48.0160946  0.2709681</code></pre>
+<pre class="r"><code>D = diag(mysvd$d[1:2])
+X_recon = mysvd$u[,1:2] %*% D %*% t(mysvd$v[,1:2]) # reconstruct X using 2-dim basis
+cov(X_recon)</code></pre>
+<pre><code>##           [,1]      [,2]      [,3]
+## [1,] 28.125483 34.567697  2.986006
+## [2,] 34.567697 44.062721  9.848675
+## [3,]  2.986006  9.848675 24.522234</code></pre>
+</div>
+<div id="lists" class="section level2">
+<h2>Lists</h2>
+<p>Collections of disparate or complicated objects</p>
+<pre class="r"><code>myList = list(stuff = 3, mat = matrix(1:4, nrow = 2),
+   moreStuff = c(&quot;china&quot;, &quot;japan&quot;), list(5, &quot;bear&quot;))
+myList</code></pre>
+<pre><code>## $stuff
+## [1] 3
+## 
+## $mat
+##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4
+## 
+## $moreStuff
+## [1] &quot;china&quot; &quot;japan&quot;
+## 
+## [[4]]
+## [[4]][[1]]
+## [1] 5
+## 
+## [[4]][[2]]
+## [1] &quot;bear&quot;</code></pre>
+<pre class="r"><code>myList[[1]] # result is not (usually) a list (unless you have nested lists)</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>identical(myList[[1]], myList$stuff)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>myList$moreStuff[2]</code></pre>
+<pre><code>## [1] &quot;japan&quot;</code></pre>
+<pre class="r"><code>myList[[4]][[2]]</code></pre>
+<pre><code>## [1] &quot;bear&quot;</code></pre>
+<pre class="r"><code>myList[1:3] # subset of a list is a list</code></pre>
+<pre><code>## $stuff
+## [1] 3
+## 
+## $mat
+##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4
+## 
+## $moreStuff
+## [1] &quot;china&quot; &quot;japan&quot;</code></pre>
+<pre class="r"><code>myList$newOne = &#39;more weird stuff&#39;
+names(myList)</code></pre>
+<pre><code>## [1] &quot;stuff&quot;     &quot;mat&quot;       &quot;moreStuff&quot; &quot;&quot;          &quot;newOne&quot;</code></pre>
+<p>Lists can be used as vectors of complicated objects. E.g., suppose you have a linear regression for each value of a stratifying variable. You could have a list of regression fits. Each regression fit will itself be a list, so you’ll have a list of lists.</p>
+</div>
+<div id="r-data-frame" class="section level2">
+<h2>R data frame</h2>
+<p>A data frame is used for storing tabular data. It is a list of vectors of equal length. Some R functions work properly only on the data frame.</p>
+<pre class="r"><code>df = data.frame(X) # turning a matrix into a data frame
+colnames(df) = c(&quot;y&quot;,&quot;x1&quot;,&quot;x2&quot;) # assigning variable names (column names)
+head(df)</code></pre>
+<pre><code>##            y         x1         x2
+## 1  4.1726600  6.8973855  7.2325596
+## 2  0.9207647  1.3503394  0.6979599
+## 3  6.4135178  5.8469261 -7.4524216
+## 4  5.6127043  6.5676240 -0.7165509
+## 5 -6.1555741 -9.8891219 -9.6958554
+## 6 -0.1344931 -0.8963754 -3.0779498</code></pre>
+<pre class="r"><code>head(df$x1) # access variable by name</code></pre>
+<pre><code>## [1]  6.8973855  1.3503394  5.8469261  6.5676240 -9.8891219 -0.8963754</code></pre>
+<pre class="r"><code>df$group = sample(1:2,100,T) # randomly assign into two groups
+aggregate(df[,-4], list(df$group), mean) # group means</code></pre>
+<pre><code>##   Group.1         y        x1          x2
+## 1       1 0.3325595 0.5332983  0.52105084
+## 2       2 0.5760188 0.6835068 -0.04646233</code></pre>
+<pre class="r"><code>aggregate(df[,-4], list(df$group), var) # group variances</code></pre>
+<pre><code>##   Group.1        y       x1       x2
+## 1       1 33.12008 55.81088 28.62922
+## 2       2 20.94507 26.65728 18.48151</code></pre>
+<p>A data frame can contain variables in different types.</p>
+<pre class="r"><code>age = c(32,34,23)
+sex = c(&quot;M&quot;,&quot;F&quot;,&quot;M&quot;)
+healthy = c(TRUE, FALSE, FALSE)
+
+dat = data.frame(age,sex,healthy)
+class(dat)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>dat</code></pre>
+<pre><code>##   age sex healthy
+## 1  32   M    TRUE
+## 2  34   F   FALSE
+## 3  23   M   FALSE</code></pre>
+</div>
+</div>
+<div id="r-for-programming" class="section level1">
+<h1>R for programming</h1>
+<div id="for-loop" class="section level2">
+<h2>For-loop</h2>
+<p>The for-loop iterates commands over a set of indexes. The below is to calculate the sum and product of <code>x</code>. The <code>tot</code> and <code>prd</code> should be properly pre-defined before the for-loop below.</p>
+<pre class="r"><code>x = rnorm(100)
+tot = 0
+prd = 1
+for (i in 1:length(x)){
+  tot = tot + x[i]
+  prd = prd * x[i]
+}
+tot</code></pre>
+<pre><code>## [1] -2.012583</code></pre>
+<pre class="r"><code>prd</code></pre>
+<pre><code>## [1] -7.533576e-26</code></pre>
+<p>The R for-loop can be iterated over any set of R objects.</p>
+<pre class="r"><code>for (j in c(1,2,-1,sqrt(2))){
+  print(j)
+  }</code></pre>
+<pre><code>## [1] 1
+## [1] 2
+## [1] -1
+## [1] 1.414214</code></pre>
+<pre class="r"><code>for (j in c(&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;)){
+  print(j)
+  }</code></pre>
+<pre><code>## [1] &quot;apple&quot;
+## [1] &quot;banana&quot;
+## [1] &quot;orange&quot;</code></pre>
+</div>
+<div id="function" class="section level2">
+<h2>Function</h2>
+<p>An R function takes R objects as inputs, and return an R object (vector, matrix, plot, list, etc). Let’s see a simple example.</p>
+<pre class="r"><code>square = function(x){
+  y = x * x
+  return(y)
+}
+square(2)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p>In the above, local variables <code>x</code> and <code>y</code> are declared inside a function, and they can be accessed only inside that function.</p>
+<pre class="r"><code>identical(y, 4)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p>In the meanwhile, global variables are declared outside any function, and they can be accessed (used) out/inside any function. However, using global variables inside a function may be a bad programming practice since global variables can be changed easily by any function or R console.</p>
+<pre class="r"><code>g.var = 20
+div20 = function(x){
+out = x / g.var
+return(out)
+}
+div20(20)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>g.var = 10
+div20(20)</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p>To void this issue, a local <code>g.var</code> variable is defined in the function <code>div20()</code>. Observe that global and local variables have the same name, but different values.</p>
+<pre class="r"><code>div20 = function(x){
+g.var = 20
+out = x / g.var
+print(g.var)
+return(out)
+}
+div20(20)</code></pre>
+<pre><code>## [1] 20</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>g.var</code></pre>
+<pre><code>## [1] 10</code></pre>
+<p>You can also return a vector output from a function.</p>
+<pre class="r"><code>myfun1 = function(x,y) {
+  prod = x * y
+  sum = x + y
+    return(c(prod,sum))
+}
+myfun1(2,3)</code></pre>
+<pre><code>## [1] 6 5</code></pre>
+<p>An R function can return a list object. This is very useful when you have different types of variables as output.</p>
+<pre class="r"><code>myfun2 = function(x,y) {
+  prod = x * y
+  sum = x + y
+  out = list(prod,sum)
+  names(out) = c(&quot;prod&quot;,&quot;sum&quot;)
+  return(out)
+}
+ans = myfun2(2,3)
+ans</code></pre>
+<pre><code>## $prod
+## [1] 6
+## 
+## $sum
+## [1] 5</code></pre>
+</div>
+</div>
+<div id="advanced-r" class="section level1">
+<h1>Advanced R</h1>
+<div id="r-data-table" class="section level2">
+<h2>R data table</h2>
+<p>Roughly speaking, <code>data.table</code> is <code>data.frame</code> with extra features. <code>data.frame</code> is part of base R, and <code>data.table</code> is a package that extends <code>data.frame</code>. Two of its most notable features are speed and cleaner syntax. However, that syntax is different from the standard R syntax for <code>data.frame</code>. You will enjoy great performance of <code>data.table</code> after the relatively steep learning curve.</p>
+<pre class="r"><code>dat = data.table(age, sex, healthy)
+class(dat)</code></pre>
+<pre><code>## [1] &quot;data.table&quot; &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>dat</code></pre>
+<pre><code>##    age sex healthy
+## 1:  32   M    TRUE
+## 2:  34   F   FALSE
+## 3:  23   M   FALSE</code></pre>
+<p>The data manipulation using <code>data.table</code> has a general form: <code>DT[i, j, by]</code>, which means “Take <code>DT</code>, subset rows using <code>i</code>, then calculate <code>j</code> grouped by <code>by</code>”</p>
+<pre class="r"><code>diamondsDT &lt;- data.table(ggplot2::diamonds)
+diamondsDT</code></pre>
+<pre><code>##        carat       cut color clarity depth table price    x    y    z
+##     1:  0.23     Ideal     E     SI2  61.5    55   326 3.95 3.98 2.43
+##     2:  0.21   Premium     E     SI1  59.8    61   326 3.89 3.84 2.31
+##     3:  0.23      Good     E     VS1  56.9    65   327 4.05 4.07 2.31
+##     4:  0.29   Premium     I     VS2  62.4    58   334 4.20 4.23 2.63
+##     5:  0.31      Good     J     SI2  63.3    58   335 4.34 4.35 2.75
+##    ---                                                               
+## 53936:  0.72     Ideal     D     SI1  60.8    57  2757 5.75 5.76 3.50
+## 53937:  0.72      Good     D     SI1  63.1    55  2757 5.69 5.75 3.61
+## 53938:  0.70 Very Good     D     SI1  62.8    60  2757 5.66 5.68 3.56
+## 53939:  0.86   Premium     H     SI2  61.0    58  2757 6.15 6.12 3.74
+## 53940:  0.75     Ideal     D     SI2  62.2    55  2757 5.83 5.87 3.64</code></pre>
+<pre class="r"><code>diamondsDT[
+  cut != &quot;Fair&quot;, # subset of rows with no Fair cut
+  .(AvgPrice = mean(price), # Returns the mean and median of column price and # of cases as data.table
+    MedianPrice = as.numeric(median(price)),
+    Count = .N
+  ),
+  by = cut # for every group in cut
+][
+  order(-Count) # chaining
+]</code></pre>
+<pre><code>##          cut AvgPrice MedianPrice Count
+## 1:     Ideal 3457.542      1810.0 21551
+## 2:   Premium 4584.258      3185.0 13791
+## 3: Very Good 3981.760      2648.0 12082
+## 4:      Good 3928.864      3050.5  4906</code></pre>
+</div>
+</div>
+<div id="pipes-to-chain-multiple-operations" class="section level1">
+<h1>Pipes to chain multiple operations</h1>
+<p>Pipes are a powerful tool for clearly expressing a sequence of multiple operations. The pipe, <code>%&gt;%</code>, comes from the <code>magrittr</code> package. Packages in the <code>tidyverse</code> load <code>%&gt;%</code> for you automatically, so you don’t usually load <code>magrittr</code> explicitly.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ tibble  1.4.2     ✔ purrr   0.2.5
+## ✔ tidyr   0.8.1     ✔ dplyr   0.7.5
+## ✔ readr   1.1.1     ✔ stringr 1.3.1
+## ✔ tibble  1.4.2     ✔ forcats 0.3.0</code></pre>
+<pre><code>## ── Conflicts ───────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::between()   masks data.table::between()
+## ✖ dplyr::filter()    masks stats::filter()
+## ✖ dplyr::first()     masks data.table::first()
+## ✖ dplyr::lag()       masks stats::lag()
+## ✖ dplyr::last()      masks data.table::last()
+## ✖ purrr::transpose() masks data.table::transpose()</code></pre>
+<ul>
+<li>nesting: The below is code to generate 100 standard normal random numbers, arrange them into 50 by 2 matrix, and plot the matrix.</li>
+</ul>
+<pre class="r"><code>plot(matrix(rnorm(100), ncol=2))</code></pre>
+<p><img src="lab2_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<ul>
+<li>chaining: The code below produces the same results as the above.</li>
+</ul>
+<pre class="r"><code>rnorm(100) %&gt;%
+  matrix(ncol = 2) %&gt;%
+  plot</code></pre>
+<p><img src="lab2_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Some people prefer chaining to nesting because the functions applied can be read from left to right rather than from inside out.</p>
+<div id="data.frame-vs-data.table" class="section level2">
+<h2><code>data.frame</code> vs <code>data.table</code></h2>
+<p><code>dplyr</code> is a grammar of data manipulation (say, you are tidying your data), providing a consistent set of verbs that help you solve the most common data manipulation challenges. The package comes with <code>tidyverse</code>, so again you don’t need to load it explicitly.</p>
+<pre class="r"><code>library(data.table)
+library(tidyverse)
+
+diamondsDT &lt;- data.table(ggplot2::diamonds)
+diamondsDF &lt;- tbl_df(ggplot2::diamonds)
+
+diamondsDT</code></pre>
+<pre><code>##        carat       cut color clarity depth table price    x    y    z
+##     1:  0.23     Ideal     E     SI2  61.5    55   326 3.95 3.98 2.43
+##     2:  0.21   Premium     E     SI1  59.8    61   326 3.89 3.84 2.31
+##     3:  0.23      Good     E     VS1  56.9    65   327 4.05 4.07 2.31
+##     4:  0.29   Premium     I     VS2  62.4    58   334 4.20 4.23 2.63
+##     5:  0.31      Good     J     SI2  63.3    58   335 4.34 4.35 2.75
+##    ---                                                               
+## 53936:  0.72     Ideal     D     SI1  60.8    57  2757 5.75 5.76 3.50
+## 53937:  0.72      Good     D     SI1  63.1    55  2757 5.69 5.75 3.61
+## 53938:  0.70 Very Good     D     SI1  62.8    60  2757 5.66 5.68 3.56
+## 53939:  0.86   Premium     H     SI2  61.0    58  2757 6.15 6.12 3.74
+## 53940:  0.75     Ideal     D     SI2  62.2    55  2757 5.83 5.87 3.64</code></pre>
+<pre class="r"><code>diamondsDF</code></pre>
+<pre><code>## # A tibble: 53,940 x 10
+##    carat cut       color clarity depth table price     x     y     z
+##    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+##  2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+##  3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+##  4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+##  5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+##  6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+##  7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+##  8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+##  9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+## 10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
+## # ... with 53,930 more rows</code></pre>
+<pre class="r"><code>diamondsDT[
+  cut != &quot;Fair&quot;,
+  .(AvgPrice = mean(price),
+    MedianPrice = as.numeric(median(price)),
+    Count = .N
+  ),
+  by = cut
+][
+  order(-Count)
+]</code></pre>
+<pre><code>##          cut AvgPrice MedianPrice Count
+## 1:     Ideal 3457.542      1810.0 21551
+## 2:   Premium 4584.258      3185.0 13791
+## 3: Very Good 3981.760      2648.0 12082
+## 4:      Good 3928.864      3050.5  4906</code></pre>
+<pre class="r"><code>diamondsDF %&gt;%
+  filter(cut != &quot;Fair&quot;) %&gt;%
+  group_by(cut) %&gt;%
+  summarize(
+    AvgPrice = mean(price),
+    MedianPrice = as.numeric(median(price)),
+    Count = n()
+  ) %&gt;%
+  arrange(desc(Count))</code></pre>
+<pre><code>## # A tibble: 4 x 4
+##   cut       AvgPrice MedianPrice Count
+##   &lt;ord&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;int&gt;
+## 1 Ideal        3458.       1810  21551
+## 2 Premium      4584.       3185  13791
+## 3 Very Good    3982.       2648  12082
+## 4 Good         3929.       3050.  4906</code></pre>
+<p>In general, <code>data.table</code> is faster and more memory efficient then <code>dplyr</code>. However, you may not notice the speed difference unless you are a very large data set. <code>dplyr</code> has more accessible syntax (easy to write/read). <code>data.table</code> is a comprehensive, efficient, self-contained package. It has its own DSL, it has a very fast file reader, etc. The DSL is succint as well: you can do a lot even in a single line of code. And I believe it is currently the fastest data open source manipulation tool for data that fit in memory (see the benchmark at Rdatatable/data.table, although since then all three packages have implemented some very substantial performance improvements), and toward that goal, it provides functionality that is occasionally incredibly useful (like in-place modification of tables). data.table is also memory-efficient, and works well on very large data sets. data.table is written in C for the most part. It truly is quite an amazing piece of software. It feels exhilaratingly fast.</p>
+<p>Conversely, dplyr emphasizes the virtues of function composition and data layer abstraction. Because of composition, it is happy to be complemented by functions provided by other packages (Hadley himself has written readr and tidyr for file reading and long/wide operations, for example). Because of built-in abstraction, dplyr allows you to munge data from several DBs using the same syntax; in this respect it has some similarity to Python’s Blaze project. Finally, dplyr’s code is made more efficient by the use of C++.</p>
+</div>
+</div>
+<div id="do-and-dont" class="section level1">
+<h1>Do and Don’t</h1>
+<div id="read-a-file-in-a-local-directory" class="section level2">
+<h2>Read a file in a local directory</h2>
+<ul>
+<li>Avoid using an absolute path for files.</li>
+</ul>
+<div id="dont" class="section level3">
+<h3>Don’t</h3>
+<pre class="r"><code>df = fread(&quot;/path/to/local/directory/data/filename.extension&quot;)</code></pre>
+</div>
+<div id="do" class="section level3">
+<h3>Do</h3>
+<pre class="r"><code>setwd(&quot;/path/to/local/directory/&quot;)
+df = fread(&quot;data/filename.extension&quot;)</code></pre>
+</div>
+</div>
+<div id="accessing-variables-in-list-or-data.frame" class="section level2">
+<h2>Accessing variables in list() or data.frame()</h2>
+<ul>
+<li>Avoid using <code>attach()</code>. There are some possibilities for creating errors when using <code>attach()</code>.</li>
+</ul>
+<div id="dont-1" class="section level3">
+<h3>Don’t</h3>
+<pre class="r"><code>data(iris)
+attach(iris)
+plot(Sepal.Length, Sepal.Width)</code></pre>
+<p><img src="lab2_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<pre class="r"><code>detach(iris)</code></pre>
+</div>
+<div id="do-1" class="section level3">
+<h3>Do</h3>
+<pre class="r"><code>data(iris)
+plot(iris$Sepal.Length, iris$Sepal.Width)</code></pre>
+<p><img src="lab2_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<pre class="r"><code>data(iris)
+with(iris, plot(Sepal.Length, Sepal.Width))</code></pre>
+<p><img src="lab2_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<pre class="r"><code>data(iris)
+iris %&gt;% with(plot(Sepal.Length, Sepal.Width))</code></pre>
+<p><img src="lab2_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+</div>
+<div id="bad-use-of-attach" class="section level3">
+<h3>Bad use of <code>attach()</code></h3>
+<pre class="r"><code>x = c(0,0,0)
+df = data.frame(x = c(1,1,1))
+x</code></pre>
+<pre><code>## [1] 0 0 0</code></pre>
+<pre class="r"><code>df$x</code></pre>
+<pre><code>## [1] 1 1 1</code></pre>
+<pre class="r"><code>attach(df)</code></pre>
+<pre><code>## The following object is masked _by_ .GlobalEnv:
+## 
+##     x</code></pre>
+<pre class="r"><code>x</code></pre>
+<pre><code>## [1] 0 0 0</code></pre>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

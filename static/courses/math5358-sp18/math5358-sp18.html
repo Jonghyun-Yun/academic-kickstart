@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<!-- 2020-04-06 Mon 00:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MATH 5358: Regression analysis</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jonghyun Yun" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/lib/css/material-light-theme.css"/>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/lib/css/material-light-htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/lib/css/code-block.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://jyun.netlify.com/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://jyun.netlify.com/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/readtheorg/css/readtheorg-title.css"/>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/readtheorg/css/readtheorg-side.css"/>
+<script type="text/javascript" src="../styles/readtheorg/js/readtheorg-title.js"></script>
+<link rel="stylesheet" href="../styles/responsive-tables.css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="math5358-sp18.html"> UP </a>
+ |
+ <a accesskey="H" href="math5358-sp18.html"> HOME </a>
+</div><div id="content">
+<h1 class="title">MATH 5358: Regression analysis
+<br />
+<span class="subtitle">Spring 2018</span>
+</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc78fef6">Announcement</a></li>
+<li><a href="#org40c5f84">About this course</a></li>
+<li><a href="#org2509b64">Course Syllabus</a></li>
+<li><a href="#orgd1bed7f">Course Schedule</a></li>
+<li><a href="#orgf5791c2">Resources</a>
+<ul>
+<li><a href="#org1b81750">R software</a></li>
+<li><a href="#org7fbf570">R packages</a></li>
+<li><a href="#org12c025a">Version control</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<script>$( "#text-table-of-contents ul:first" ).append( '<li><a href = "https://elearn.uta.edu">Blackboard</a><li>' )</script>
+
+<p></p><br><p></p>
+
+<div id="outline-container-orgc78fef6" class="outline-2">
+<h2 id="orgc78fef6">Announcement</h2>
+<div class="outline-text-2" id="text-orgc78fef6">
+<div class="important">
+<p>
+Please attend the lecture on Monday 4/9. I will let you choose a final project.
+</p>
+
+</div>
+
+<div class="important">
+<p>
+The midterm exam II has been posted.
+</p>
+
+</div>
+
+<div class="important">
+<p>
+Upon installing the R, please download <a href="./misc/.Rprofile">.Rprofile</a> and put it in your <kbd>HOME</kbd> directory.
+</p>
+
+</div>
+
+<div class="important">
+<p>
+Prior to Lab 3, please install <a href="https://www.tug.org/texlive/">TeX Live</a> for Windows or <a href="http://www.tug.org/mactex/">MacTeX</a> for OS X.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org40c5f84" class="outline-2">
+<h2 id="org40c5f84">About this course</h2>
+<div class="outline-text-2" id="text-org40c5f84">
+<p>
+Welcome to the Regression Analysis course! This course introduces regression
+models, which relates an outcome to a set of predictors of interest. These
+models are the most important statistical technique that a data scientist needs
+to master.
+</p>
+
+<p>
+You will learn the theory behind regression models and, through real-world
+examples, learn to fit, diagnose, and utilize regression models to examine the
+relationship between predictors and a continuous or discrete outcome, using the
+statistical software R. You will learn modern approaches on model selection and
+novel uses of regression models.
+</p>
+
+<p>
+Before beginning the class make sure that you have the following:
+</p>
+
+<ul class="org-ul">
+<li>A basic understanding of linear algebra and calculus.</li>
+<li>A basic understanding of statistical inference.</li>
+<li>Basic knowledge of the R programming language. This is not required, but a big plus.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2509b64" class="outline-2">
+<h2 id="org2509b64">Course Syllabus</h2>
+<div class="outline-text-2" id="text-org2509b64">
+<ul class="org-ul">
+<li><a href="math5358-syllabus.html">HTML version</a></li>
+<li><a href="math5358-syllabus.pdf">PDF version</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd1bed7f" class="outline-2">
+<h2 id="orgd1bed7f">Course Schedule</h2>
+<div class="outline-text-2" id="text-orgd1bed7f">
+<div class="note">
+<p>
+The instructor reserves the right to adjust this schedule in any way that serves the educational needs of the students enrolled in this course.
+</p>
+
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" overflow-x="scroll" font-size="55%">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Week</th>
+<th scope="col" class="org-right">Date</th>
+<th scope="col" class="org-left">Topics</th>
+<th scope="col" class="org-left">Reading</th>
+<th scope="col" class="org-left">Notes</th>
+</tr align="right">
+</thead>
+<tbody>
+<tr>
+<td class="org-right">Week1</td>
+<td class="org-right">1/17</td>
+<td class="org-left">Introduction</td>
+<td class="org-left">MAR 1.1-3</td>
+<td class="org-left"><a href="./doc/lecture1.pdf">Lecture 1</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week2</td>
+<td class="org-right">1/22</td>
+<td class="org-left">R tutorial</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./doc/lab1.pdf">Lab 1</a>, <a href="./doc/lab2.html">Lab 2</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week2</td>
+<td class="org-right">1/24</td>
+<td class="org-left">R markdown</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./doc/lab3.html">Lab 3</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week3</td>
+<td class="org-right">1/29</td>
+<td class="org-left">Simple linear regression</td>
+<td class="org-left">MAR 2.1</td>
+<td class="org-left"><a href="./doc/lecture2.pdf">Lecture 2</a>, <a href="./doc/hw1.html">HW 1</a> - Due</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week3</td>
+<td class="org-right">1/31</td>
+<td class="org-left">Inference for regression, Analysis of variance</td>
+<td class="org-left">MAR 2.2-5, 7</td>
+<td class="org-left"><a href="./doc/lab4.html">Lab 4</a>, <a href="./doc/lab5.html">Lab 5</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week4</td>
+<td class="org-right">2/5</td>
+<td class="org-left">Dummy variable regression</td>
+<td class="org-left">MAR 2.6</td>
+<td class="org-left"><a href="./doc/lecture3.pdf">Lecture 3</a>, <a href="./doc/hw2.html">HW 2</a> - Due 2/12</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week4</td>
+<td class="org-right">2/7</td>
+<td class="org-left">Regression diagnostics</td>
+<td class="org-left">MAR 3.1-3.2.5</td>
+<td class="org-left"><a href="./doc/lab6.html">Lab 6</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week5</td>
+<td class="org-right">2/12</td>
+<td class="org-left">Transformation of variables</td>
+<td class="org-left">MAR 3.2.6-3.3.3</td>
+<td class="org-left"><a href="./doc/hw3.html">HW 3</a> - Due 2/19</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week5</td>
+<td class="org-right">2/14</td>
+<td class="org-left">Transformation of variables, weighted least squares</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./doc/lecture4.pdf">Lecture 4</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week6</td>
+<td class="org-right">2/19</td>
+<td class="org-left">Weighted least squares</td>
+<td class="org-left">MAR 4</td>
+<td class="org-left"><a href="./doc/lab7.html">Lab 7</a>, <a href="./doc/hw4.html">HW 4</a> - Due 2/26</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week6</td>
+<td class="org-right">2/21</td>
+<td class="org-left">Weighted least squares / Polynomial regression</td>
+<td class="org-left">MAR 5.1</td>
+<td class="org-left"><a href="./doc/lecture5.pdf">Lecture 5</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week7</td>
+<td class="org-right">2/26</td>
+<td class="org-left">Multiple linear regression</td>
+<td class="org-left">MAR 5.2</td>
+<td class="org-left"><a href="./doc/lab8.html">Lab 8</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week7</td>
+<td class="org-right">2/28</td>
+<td class="org-left"><b>Midterm 1</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./exam/sol-midterm1.pdf">Midterm I</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week8</td>
+<td class="org-right">3/5</td>
+<td class="org-left">Multiple linear regression</td>
+<td class="org-left">MAR 5.2</td>
+<td class="org-left"><a href="./doc/hw5.html">HW 5</a> - Due 3/19</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week8</td>
+<td class="org-right">3/7</td>
+<td class="org-left">Analysis of covariance</td>
+<td class="org-left">MAR 5.3</td>
+<td class="org-left">&#xa0;</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week9</td>
+<td class="org-right">3/12</td>
+<td class="org-left">Spring vacation</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week9</td>
+<td class="org-right">3/14</td>
+<td class="org-left">Spring vacation</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week10</td>
+<td class="org-right">3/19</td>
+<td class="org-left">Regression diagnostics for multiple regression</td>
+<td class="org-left">MAR 6.1</td>
+<td class="org-left"><a href="./doc/lecture6.pdf">Lecture 6</a>, <a href="./doc/hw6.html">HW 6</a> - Due 3/26</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week10</td>
+<td class="org-right">3/21</td>
+<td class="org-left">Transformations</td>
+<td class="org-left">MAR 6.2-6</td>
+<td class="org-left"><a href="./doc/lab9.html">Lab 9</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week11</td>
+<td class="org-right">3/26</td>
+<td class="org-left">Multicollinearity</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./doc/hw7.html">HW 7</a> - Due 4/2</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week11</td>
+<td class="org-right">3/28</td>
+<td class="org-left">Variable selection</td>
+<td class="org-left">MAR 7.1-2</td>
+<td class="org-left"><a href="./doc/lecture7.pdf">Lecture 7</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week12</td>
+<td class="org-right">4/2</td>
+<td class="org-left">Assessing the predictive ability of regression models</td>
+<td class="org-left">MAR 7.3-4</td>
+<td class="org-left"><a href="./doc/lab10.html">Lab 10</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week12</td>
+<td class="org-right">4/4</td>
+<td class="org-left"><b>Midterm 2</b></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./exam/midterm2.html">Midterm II</a> <a href="./exam/sol-midterm2.html">(SOLN)</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week13</td>
+<td class="org-right">4/9</td>
+<td class="org-left">Logistic function and odds</td>
+<td class="org-left">MAR 8.1</td>
+<td class="org-left"><a href="./doc/hw8.html">HW 8</a> - Due 4/16</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week13</td>
+<td class="org-right">4/11</td>
+<td class="org-left">Logistic regression with a single predictor</td>
+<td class="org-left">MAR 8.2</td>
+<td class="org-left"><a href="./doc/lecture8.pdf">Lecture 8</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week14</td>
+<td class="org-right">4/16</td>
+<td class="org-left">Binary logistic regression</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./doc/hw9.html">HW 9</a> - Due 4/23</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week14</td>
+<td class="org-right">4/18</td>
+<td class="org-left">Binary logistic regression</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./doc/lab11.html">Lab 11</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week15</td>
+<td class="org-right">4/23</td>
+<td class="org-left">Correlated error</td>
+<td class="org-left">MAR 9.1</td>
+<td class="org-left"><a href="./doc/lecture9.pdf">Lecture 9</a>, <a href="./doc/finalhw.html">Final HW</a> - Due 5/4</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week15</td>
+<td class="org-right">4/25</td>
+<td class="org-left">Autocorrelation</td>
+<td class="org-left">MAR 9.2</td>
+<td class="org-left"><a href="./doc/lab12.html">Lab 12</a></td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week16</td>
+<td class="org-right">4/30</td>
+<td class="org-left">Presenatation - Fianl project</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr align="right">
+
+<tr>
+<td class="org-right">Week16</td>
+<td class="org-right">5/2</td>
+<td class="org-left">Presenatation - Fianl project</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./exam/final-project.html">Final project</a></td>
+</tr align="right">
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgf5791c2" class="outline-2">
+<h2 id="orgf5791c2">Resources</h2>
+<div class="outline-text-2" id="text-orgf5791c2">
+</div>
+<div id="outline-container-org1b81750" class="outline-3">
+<h3 id="org1b81750">R software</h3>
+<div class="outline-text-3" id="text-org1b81750">
+<ul class="org-ul">
+<li><a href="https://mran.microsoft.com/open">Microsoft R Open</a>
+<ul class="org-ul">
+<li><a href="https://mran.microsoft.com/documents/rro/installation">Instructions</a></li>
+<li><p>
+<a href="https://cran.r-project.org/bin/macosx/tools/">OS X: installing compilers for R &ge; 3.4.0</a>
+</p>
+<ul class="org-ul">
+<li><a href="http://coudert.name/software/gfortran-6.1-ElCapitan.dmg">Install gfortran-6.1 for OS X El Capitan (10.11)</a></li>
+<li>Install Homebrew</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh"><span class="org-comment-delimiter"># </span><span class="org-comment">Paste that at a Terminal prompt.</span>
+/usr/bin/ruby -e <span class="org-string">"$(</span><span class="org-sh-quoted-exec">curl</span><span class="org-string"> -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span>
+</pre>
+</div>
+<ul class="org-ul">
+<li>Install clang4 and openssl</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-sh">brew install llvm openssl
+<span class="org-builtin">cd</span> /usr/local/clang4
+sudo ln -s ../Cellar/llvm/5.0.1/bin
+</pre>
+</div></li>
+</ul></li>
+<li><a href="https://www.rstudio.com/">R Studio</a></li>
+<li><a href="http://rmarkdown.rstudio.com/">R Markdown</a></li>
+<li><a href="http://www.cookbook-r.com/Graphs/">Cookbook for R graphs</a></li>
+<li><a href="https://www.datacamp.com/courses/introduction-to-r">Introduction to R</a></li>
+<li><a href="http://www.rcpp.org/">Rcpp for Seamless R and C++ Integration</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7fbf570" class="outline-3">
+<h3 id="org7fbf570">R packages</h3>
+<div class="outline-text-3" id="text-org7fbf570">
+<ul class="org-ul">
+<li><a href="https://www.rstudio.com/resources/cheatsheets/">Cheat sheets: R markdown, ggplot2, etc.</a></li>
+<li><a href="https://s3.amazonaws.com/assets.datacamp.com/img/blog/data+table+cheat+sheet.pdf">Cheat sheet for data.table</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org12c025a" class="outline-3">
+<h3 id="org12c025a">Version control</h3>
+<div class="outline-text-3" id="text-org12c025a">
+<ul class="org-ul">
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://github.com/">GitHub</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

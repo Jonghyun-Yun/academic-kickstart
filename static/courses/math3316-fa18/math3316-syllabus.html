@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<!-- 2020-04-06 Mon 00:41 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MATH 3316: Statistical Inference</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128966866-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-128966866-2');
+</script>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/lib/css/material-light-theme.css"/>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/lib/css/material-light-htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/lib/css/code-block.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://jyun.netlify.com/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://jyun.netlify.com/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/readtheorg/css/readtheorg-title.css"/>
+<link rel="stylesheet" type="text/css" href="https://jyun.netlify.com/org-html-themes/styles/readtheorg/css/readtheorg-side.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "left",
+        displayIndent: "5em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="math3316-fa18.html"> UP </a>
+ |
+ <a accesskey="H" href="math3316-fa18.html"> HOME </a>
+</div><div id="content">
+<h1 class="title">MATH 3316: Statistical Inference
+<br />
+<span class="subtitle">Fall 2018</span>
+</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgedccf4a">Course Information</a>
+<ul>
+<li><a href="#orge4b7523">Course Content</a></li>
+<li><a href="#orga244e6c">Student Learning Outcomes</a></li>
+<li><a href="#org1a3bf8f">Important dates</a></li>
+</ul>
+</li>
+<li><a href="#org23cdde9">Grading</a>
+<ul>
+<li><a href="#orgbcd6f6e">Grade Distribution</a></li>
+<li><a href="#orgeb82d13">Quiz</a></li>
+<li><a href="#orgc4f52ba">Homework</a>
+<ul>
+<li><a href="#orgc80d7ab">Grading Rubric</a></li>
+</ul>
+</li>
+<li><a href="#orga1440a4">Exam</a></li>
+</ul>
+</li>
+<li><a href="#org7dc3548">Lecture Attendance</a></li>
+<li><a href="#org3b82c8f">Drop Policy</a></li>
+<li><a href="#orgf901000">Disability Accommodations</a></li>
+<li><a href="#org18d07d0">Non-Discrimination Policy</a></li>
+<li><a href="#org961fcac">Title IX Policy</a></li>
+<li><a href="#orgc9299c1">Academic Integrity</a></li>
+<li><a href="#org8815c39">Electronic Communication</a></li>
+<li><a href="#org0dd7b77">Campus Carry</a></li>
+<li><a href="#orgdc18022">Student Feedback Survey</a></li>
+<li><a href="#orgf57a8c2">Final Review Week</a></li>
+<li><a href="#org777d708">Emergency Exit Procedures</a></li>
+<li><a href="#org52b9d7d">Student Support Services</a></li>
+<li><a href="#orgea54705">Emergency Phone Numbers</a></li>
+<li><a href="#org2749925">Active Shooter/Threat Resources</a></li>
+</ul>
+</div>
+</div>
+<p></p><br><p></p>
+
+<div id="outline-container-orgedccf4a" class="outline-2">
+<h2 id="orgedccf4a">Course Information</h2>
+<div class="outline-text-2" id="text-orgedccf4a">
+<ul class="org-ul">
+<li>Instructor: Jonghyun Yun</li>
+<li>Office Telephone Number: (817) 272-9045</li>
+<li>Email Address: "j" dot "yun" at-sign "uta" dot "edu"</li>
+<li>Course Webpage: <a href="https://jyun.rbind.io/courses/math3316-fa18/math3316-fa18.html">https://jyun.rbind.io/courses/math3316-fa18/math3316-fa18.html</a></li>
+<li>Office Hours: SEIR 218 (as of Sep 26th), Tu/Th 4:30-5:30 pm or by appointment</li>
+<li>Section Information: MATH 3316: Statistical Inference</li>
+<li>Time and Place of Class Meetings: Tu/Th 5:30-6:50 pm, PKH 103</li>
+<li>Prerequisite: consent of the instructor.</li>
+<li>Required Textbooks
+<ul class="org-ul">
+<li>[IPS] Moore, D. S., McCabe, G. P., and Craig B. A. (2017). Introduction to the Practice of Statistics, 9th Edition. W. H. Freeman and Company. ISBN-10: 1-319-01338-4; ISBN-13: 978-1-319-01338</li>
+<li>Other Recommended Textbooks and Resources
+<ul class="org-ul">
+<li>[PSES] Walpole, R. E., et al. (2010). Probability and Statistics for Engineers and Scientists, 9th Edition. Pearson.</li>
+<li>[OIS] Diez, D. M., Barr, C. D., and Çetinkaya-Rundel, M. (2015). OpenIntro Statistics, 3rd Edition. <a href="https://www.openintro.org/stat/textbook.php">https://www.openintro.org/stat/textbook.php</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-orge4b7523" class="outline-3">
+<h3 id="orge4b7523">Course Content</h3>
+<div class="outline-text-3" id="text-orge4b7523">
+<p>
+A comprehensive study of basic statistical methods. Topics include descriptive statistics, numeracy, report writing, basic probability, experimental design and analysis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga244e6c" class="outline-3">
+<h3 id="orga244e6c">Student Learning Outcomes</h3>
+<div class="outline-text-3" id="text-orga244e6c">
+<p>
+Upon successful completion of the requirements for this course, students should have the knowledge and skills to
+</p>
+
+<ol class="org-ol">
+<li>Recognize the importance of data collection, identify limitations in data collection methods and other sources of statistical bias, and determine their implications and how they affect the scope of inference.</li>
+<li>Use statistical software (R) to summarize data numerically and visually, and to perform data analysis.</li>
+<li>Have a conceptual understanding of the unified nature of statistical inference.</li>
+<li>Apply estimation and testing methods to analyze single variables or the relationship between two variables in order to understand natural phenomena and make data-based decisions.</li>
+<li>Model numerical response variables using a single explanatory variable or multiple explanatory variables in order to investigate relationships between variables.</li>
+<li>Interpret results correctly, effectively, and in context without relying on statistical jargon.</li>
+<li>Critique data-based claims and evaluate data-based decisions.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org1a3bf8f" class="outline-3">
+<h3 id="org1a3bf8f">Important dates</h3>
+<div class="outline-text-3" id="text-org1a3bf8f">
+<ul class="org-ul">
+<li>09/07: Census date</li>
+<li>09/11: Quiz I</li>
+<li>09/25: Exam I</li>
+<li>10/09: Quiz II</li>
+<li>10/23: Exam II</li>
+<li>11/02: Last day to drop classes; submit requests to advisor prior to 4:00 pm</li>
+<li>11/13: Quiz III</li>
+<li>11/22-23:	Thanksgiving holidays</li>
+<li>12/06: Final exam</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org23cdde9" class="outline-2">
+<h2 id="org23cdde9">Grading</h2>
+<div class="outline-text-2" id="text-org23cdde9">
+<p>
+The final grade is based on a scale no stricter than the following:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-center" />
+
+<col  class="org-center" />
+
+<col  class="org-center" />
+
+<col  class="org-center" />
+
+<col  class="org-center" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-center">A</th>
+<th scope="col" class="org-center">B</th>
+<th scope="col" class="org-center">C</th>
+<th scope="col" class="org-center">D</th>
+<th scope="col" class="org-center">F</th>
+</tr align="right">
+</thead>
+<tbody>
+<tr>
+<td class="org-center">100-90</td>
+<td class="org-center">89-80</td>
+<td class="org-center">79-70</td>
+<td class="org-center">69-60</td>
+<td class="org-center">below 60</td>
+</tr align="right">
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-orgbcd6f6e" class="outline-3">
+<h3 id="orgbcd6f6e">Grade Distribution</h3>
+<div class="outline-text-3" id="text-orgbcd6f6e">
+<ul class="org-ul">
+<li>15% Quizzes</li>
+<li>15% Homework assignments</li>
+<li>20% Exam I</li>
+<li>20% Exam II</li>
+<li>30% Final exam</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgeb82d13" class="outline-3">
+<h3 id="orgeb82d13">Quiz</h3>
+<div class="outline-text-3" id="text-orgeb82d13">
+<p>
+There will be three quizzes. Students shall get 100% for quiz if they earn no less than 90% of quiz. Suppose your total is \(x\) points out of 100, then your final score for homework will be calculated as
+\[
+100 \times \min \left( \frac{x}{0.9 \times 100}, 1 \right).
+\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4f52ba" class="outline-3">
+<h3 id="orgc4f52ba">Homework</h3>
+<div class="outline-text-3" id="text-orgc4f52ba">
+<p>
+The homework problems will be assigned weekly on the course webpage.
+Late coursework will not be accepted without a university approved excuse. It is imperative that you show all your work; simply stating an answer will result in no credit for the problem. There will be 9 homework assignments (20 points each) and a final homework assignment (30 points). One lowest homework score will be dropped, but you cannot drop the final homework.
+</p>
+</div>
+<div id="outline-container-orgc80d7ab" class="outline-4">
+<h4 id="orgc80d7ab">Grading Rubric</h4>
+<div class="outline-text-4" id="text-orgc80d7ab">
+<p>
+Each problem is worth 4 points.
+</p>
+<ul class="org-ul">
+<li>4 points: Thorough and complete analysis, correct calculations;</li>
+<li>3 points:  Reasonable analysis, minor mistakes;</li>
+<li>2 points: Unsupported analysis; incomplete work;</li>
+<li>1 point: Invalid analysis; incorrect calculations;</li>
+<li>0 point: No response.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga1440a4" class="outline-3">
+<h3 id="orga1440a4">Exam</h3>
+<div class="outline-text-3" id="text-orga1440a4">
+<p>
+There will be three exams. Exams will be closed book, closed note, and open calculators. Calculators may not be shared on exams. Cell phone calculators are not permitted on exams. A single page (on US letter size paper) hand-written cheat-sheet is permitted for each exam. The final exam will be cumulative and its schedule is determined by the university.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7dc3548" class="outline-2">
+<h2 id="org7dc3548">Lecture Attendance</h2>
+<div class="outline-text-2" id="text-org7dc3548">
+<p>
+At the University of Texas at Arlington, taking attendance is not required. Rather, each
+faculty member is free to develop his or her own methods of evaluating students' academic performance,
+which includes establishing course-specific policies on attendance. As the instructor of this section, I strongly
+encourage you to attend all lectures. You are responsible for any and all announcements made in class. You are
+also responsible for any material missed during class.
+</p>
+</div>
+</div>
+<div id="outline-container-org3b82c8f" class="outline-2">
+<h2 id="org3b82c8f">Drop Policy</h2>
+<div class="outline-text-2" id="text-org3b82c8f">
+<p>
+Students may drop or swap (adding and dropping a class concurrently) classes through self-service in MyMav from the beginning of the registration period through the late registration period. After the late registration period, students must see their academic advisor to drop a class or withdraw. Undeclared students must see an advisor in the University Advising Center. Drops can continue through a point two-thirds of the way through the term or session. It is the student's responsibility to officially withdraw if they do not plan to attend after registering. Students will not be automatically dropped for non-attendance. Repayment of certain types of financial aid administered through the University may be required as the result of dropping classes or withdrawing. For more information, contact the Office of Financial Aid and Scholarships (<a href="http://wweb.uta.edu/aao/fao/">http://wweb.uta.edu/aao/fao/</a>).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf901000" class="outline-2">
+<h2 id="orgf901000">Disability Accommodations</h2>
+<div class="outline-text-2" id="text-orgf901000">
+<p>
+UT Arlington is on record as being committed to both the spirit and letter of all federal equal opportunity legislation, including The Americans with Disabilities Act (ADA), The Americans with Disabilities Amendments Act (ADAAA), and Section 504 of the Rehabilitation Act. All instructors at UT Arlington are required by law to provide “reasonable accommodations” to students with disabilities, so as not to discriminate on the basis of disability. Students are responsible for providing the instructor with official notification in the form of a letter certified by the Office for Students with Disabilities (OSD).  Only those students who have officially documented a need for an accommodation will have their request honored. Students experiencing a range of conditions (Physical, Learning, Chronic Health, Mental Health, and Sensory) that may cause diminished academic performance or other barriers to learning may seek services and/or accommodations by contacting: The Office for Students with Disabilities, (OSD)  <a href="http://www.uta.edu/disability">http://www.uta.edu/disability</a> or calling 817-272-3364. Information regarding diagnostic criteria and policies for obtaining disability-based academic accommodations can be found at <a href="http://www.uta.edu/disability">http://www.uta.edu/disability</a>.
+</p>
+
+<p>
+Counseling and Psychological Services (CAPS) <a href="http://www.uta.edu/caps/">http://www.uta.edu/caps/</a> or calling 817-272-3671 is also available to all students to help increase their understanding of personal issues, address mental and behavioral health problems and make positive changes in their lives.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org18d07d0" class="outline-2">
+<h2 id="org18d07d0">Non-Discrimination Policy</h2>
+<div class="outline-text-2" id="text-org18d07d0">
+<p>
+The University of Texas at Arlington does not discriminate on the basis of race, color, national origin, religion, age, gender, sexual orientation, disabilities, genetic information, and/or veteran status in its educational programs or activities it operates. For more information, visit <a href="http://uta.edu/eos">http://uta.edu/eos</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org961fcac" class="outline-2">
+<h2 id="org961fcac">Title IX Policy</h2>
+<div class="outline-text-2" id="text-org961fcac">
+<p>
+The University of Texas at Arlington ("University") is committed to maintaining a learning and working environment that is free from discrimination based on sex in accordance with Title IX of the Higher Education Amendments of 1972 (Title IX), which prohibits discrimination on the basis of sex in educational programs or activities; Title VII of the Civil Rights Act of 1964 (Title VII), which prohibits sex discrimination in employment; and the Campus Sexual Violence Elimination Act (SaVE Act). Sexual misconduct is a form of sex discrimination and will not be tolerated. For information regarding Title IX, visit <a href="http://www.uta.edu/titleIX">http://www.uta.edu/titleIX</a> or contact Ms. Jean Hood, Vice President and Title IX Coordinator at (817) 272-7091 or <a href="mailto:jmhood@uta.edu">jmhood@uta.edu</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9299c1" class="outline-2">
+<h2 id="orgc9299c1">Academic Integrity</h2>
+<div class="outline-text-2" id="text-orgc9299c1">
+<p>
+Students enrolled in this course are expected to adhere to the UT Arlington Honor Code:
+</p>
+<blockquote>
+<p>
+I pledge, on my honor, to uphold UT Arlington’s tradition of academic integrity, a tradition that
+values hard work and honest effort in the pursuit of academic excellence.
+</p>
+
+<p>
+I promise that I will submit only work that I personally create or contribute to group
+collaborations, and I will appropriately reference any work from other sources. I will follow the
+highest standards of integrity and uphold the spirit of the Honor Code.
+</p>
+</blockquote>
+<p>
+UT Arlington faculty members may employ the Honor Code as they see fit in their courses, including (but not
+limited to) having students acknowledge the honor code as part of an examination or requiring students to
+incorporate the honor code into any work submitted. Per UT System Regents' Rule 50101, §2.2, suspected
+violations of university's standards for academic integrity (including the Honor Code) will be referred to the
+Office of Student Conduct. Violators will be disciplined in accordance with University policy, which may
+result in the student's suspension or expulsion from the University.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8815c39" class="outline-2">
+<h2 id="org8815c39">Electronic Communication</h2>
+<div class="outline-text-2" id="text-org8815c39">
+<p>
+UT Arlington has adopted MavMail as its official means to communicate with
+students about important deadlines and events, as well as to transact university-related business regarding
+financial aid, tuition, grades, graduation, etc. All students are assigned a MavMail account and are responsible
+for checking the inbox regularly. There is no additional charge to students for using this account, which
+remains active even after graduation. Information about activating and using MavMail is available at
+<a href="http://www.uta.edu/oit/cs/email/mavmail.php">http://www.uta.edu/oit/cs/email/mavmail.php</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-org0dd7b77" class="outline-2">
+<h2 id="org0dd7b77">Campus Carry</h2>
+<div class="outline-text-2" id="text-org0dd7b77">
+<p>
+Effective August 1, 2016, the Campus Carry law (Senate Bill 11) allows those licensed individuals to carry a concealed handgun in buildings on public university campuses, except in locations the University establishes as prohibited. Under the new law, openly carrying handguns is not allowed on college campuses. For more information, visit <a href="http://www.uta.edu/news/info/campus-carry/">http://www.uta.edu/news/info/campus-carry/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgdc18022" class="outline-2">
+<h2 id="orgdc18022">Student Feedback Survey</h2>
+<div class="outline-text-2" id="text-orgdc18022">
+<p>
+At the end of each term, students enrolled in classes categorized as “lecture,”
+“seminar,” or “laboratory” shall be directed to complete an online Student Feedback Survey (SFS).
+Instructions on how to access the SFS for this course will be sent directly to each student through MavMail
+approximately 10 days before the end of the term. Each student’s feedback enters the SFS database
+anonymously and is aggregated with that of other students enrolled in the course. UT Arlington’s effort to
+solicit, gather, tabulate, and publish student feedback is required by state law; students are strongly urged to
+participate. For more information, visit <a href="http://www.uta.edu/sfs">http://www.uta.edu/sfs</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf57a8c2" class="outline-2">
+<h2 id="orgf57a8c2">Final Review Week</h2>
+<div class="outline-text-2" id="text-orgf57a8c2">
+<p>
+A period of five class days prior to the first day of final examinations in the long
+sessions shall be designated as Final Review Week. The purpose of this week is to allow students sufficient
+time to prepare for final examinations. During this week, there shall be no scheduled activities such as required
+field trips or performances; and no instructor shall assign any themes, research problems or exercises of similar
+scope that have a completion date during or following this week unless specified in the class syllabus. During
+Final Review Week, an instructor shall not give any examinations constituting 10% or more of the final grade,
+except makeup tests and laboratory examinations. In addition, no instructor shall give any portion of the final
+examination during Final Review Week. During this week, classes are held as scheduled. In addition,
+instructors are not required to limit content to topics that have been previously covered; they may introduce
+new concepts as appropriate.
+</p>
+</div>
+</div>
+<div id="outline-container-org777d708" class="outline-2">
+<h2 id="org777d708">Emergency Exit Procedures</h2>
+<div class="outline-text-2" id="text-org777d708">
+<p>
+Should we experience an emergency event that requires us to vacate the building, students should exit the room and take an immediate right or left, and walk toward the corner of the building.  When exiting the building during an emergency, one should never take an elevator but should use the stairwells. Faculty members and instructional staff will assist students in selecting the safest route for evacuation and will make arrangements to assist individuals with disabilities. (<a href="https://www.uta.edu/policy/procedure/7-6">https://www.uta.edu/policy/procedure/7-6</a>).
+</p>
+
+<p>
+Students are encouraged to subscribe to the MavAlert system that will send information in case of an emergency to their cell phones or email accounts. Anyone can subscribe at <a href="https://mavalert.uta.edu/">https://mavalert.uta.edu/</a> or <a href="https://mavalert.uta.edu/register.php">https://mavalert.uta.edu/register.php</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org52b9d7d" class="outline-2">
+<h2 id="org52b9d7d">Student Support Services</h2>
+<div class="outline-text-2" id="text-org52b9d7d">
+<p>
+UT Arlington provides a variety of resources and programs designed to help
+students develop academic skills, deal with personal situations, and better understand concepts and information
+related to their courses. Resources include tutoring, major-based learning centers, developmental education,
+advising and mentoring, personal counseling, and federally funded programs. For individualized referrals,
+students may visit the reception desk at University College (Ransom Hall), call the Maverick Resource Hotline
+at (817) 272-6107, send a message to <a href="mailto:resources@uta.edu">resources@uta.edu</a>, or view the information at <a href="http://www.uta.edu/resources">http://www.uta.edu/resources</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgea54705" class="outline-2">
+<h2 id="orgea54705">Emergency Phone Numbers</h2>
+<div class="outline-text-2" id="text-orgea54705">
+<p>
+In case of an on-campus emergency, call the UT Arlington Police Department at 817-272-3003 (non-campus phone), 2-3003 (campus phone). You may also dial 911. Non-emergency number 817-272-3381
+</p>
+</div>
+</div>
+<div id="outline-container-org2749925" class="outline-2">
+<h2 id="org2749925">Active Shooter/Threat Resources</h2>
+<div class="outline-text-2" id="text-org2749925">
+<p>
+The safety and security of our campus is the responsibility of everyone in our community. Each of us has an obligation to be prepared to appropriately respond to threats to our campus, such as an active aggressor. The information for active threat and other emergency situations can be found through the links below:
+</p>
+<ul class="org-ul">
+<li><a href="http://police.uta.edu/activeshooter">http://police.uta.edu/activeshooter</a></li>
+<li><a href="http://police.uta.edu/em">http://police.uta.edu/em</a></li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

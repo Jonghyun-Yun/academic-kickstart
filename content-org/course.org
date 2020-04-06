@@ -65,10 +65,10 @@
 # #+HTML_HEAD:<script type="text/javascript" src="../styles/readtheorg/js/readtheorg-title.js"></script>
 # #+HTML_HEAD:<link rel="stylesheet" href="../styles/responsive-tables.css">
 
-* course
+* courses
 :PROPERTIES:
 :EXPORT_TITLE: Courses
-:EXPORT_HUGO_SECTION: course
+:EXPORT_HUGO_SECTION: courses
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :layout docs
 :END:

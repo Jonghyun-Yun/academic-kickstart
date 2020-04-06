@@ -271,47 +271,71 @@ cp ./img/math5358-sp18.png ~/website/content/teaching/math5358-sp18/featured.png
 :END:
 
 #+BEGIN_SRC shell :exports none :eval yes
+convert ./img/line-chart.png -resize 384x384   ./img/line-chart384.png
 rm ~/website/content/teaching/math5358-sp18/featured.png
-cp ./img/math5358-sp18.png ~/website/content/teaching/math5358-sp18/featured.png
+cp ./img/line-chart384.png ~/website/content/teaching/math5358-sp18/featured.png
 #+END_SRC
 
 #+RESULTS:
 
 #+begin_src toml :front_matter_extra t
-  # Example: `tags = ["machine-learning", "deep-learning"]`
-  # tags = ["Deep Learning"]
+summary = "Master the most important statistical technique that a data scientist needs."
 
-  # Optional external URL for project (replaces project detail page).
-  external_link = "https://elearn.uta.edu/bbcswebdav/courses/2182-REGRESSION-ANALYSIS-30192-001/MATH5358/math5358-sp18.html"
+# Example: `tags = ["machine-learning", "deep-learning"]`
+# tags = ["Deep Learning"]
 
-  # Slides (optional).
-  #   Associate this project with Markdown slides.
-  #   Simply enter your slide deck's filename without extension.
-  #   E.g. `slides = "example-slides"` references
-  #   `content/slides/example-slides.md`.
-  #   Otherwise, set `slides = ""`.
-  # slides = "example-slides"
+# Optional external URL for project (replaces project detail page).
+# external_link = "https://elearn.uta.edu/bbcswebdav/courses/2182-REGRESSION-ANALYSIS-30192-001/MATH5358/math5358-sp18.html"
+external_link = "courses/math5358-sp18/math5358-sp18.html"
 
-  # # Links (optional).
-  # url_pdf = ""
-  # url_slides = ""
-  # url_video = ""
-  # url_code = ""
+# Slides (optional).
+#   Associate this project with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references
+#   `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+# slides = "example-slides"
 
-  # Custom links (optional).
-  #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-  # url_custom = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
+# # Links (optional).
+# url_pdf = ""
+# url_slides = ""
+# url_video = ""
+# url_code = ""
 
-  # Featured image
-  # To use, add an image named `featured.jpg/png` to your project's folder.
-  [image]
-    # Caption (optional)
-    # caption = "Photo by rawpixel on Unsplash"
+# Custom links (optional).
+#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
+# url_custom = [{icon_pack = "fab", icon="twitter", name="Follow", url = "https://twitter.com/georgecushen"}]
 
-    # Focal point (optional)
-    # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-    focal_point = "Smart"
+# Featured image
+# To use, add an image named `featured.jpg/png` to your project's folder.
+[image]
+  # Caption (optional)
+  # caption = "Photo by rawpixel on Unsplash"
+
+  # Focal point (optional)
+  # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  focal_point = "Smart"
  #+end_src
+
+Welcome to the Regression Analysis course!
+
+This course introduces regression
+models, which relates an outcome to a set of predictors of interest. These
+models are the most important statistical technique that a data scientist needs
+to master.
+
+You will learn the theory behind regression models and, through real-world
+examples, learn to fit, diagnose, and utilize regression models to examine the
+relationship between predictors and a continuous or discrete outcome, using the
+statistical software R. You will learn modern approaches on model selection and
+novel uses of regression models.
+
+Before beginning the class make sure that you have the following:
+
+- A basic understanding of linear algebra and calculus.
+- A basic understanding of statistical inference.
+- Basic knowledge of the R programming language. This is not required, but a big plus.
+
 
 * MATH 3316: Statistical Inference, Fall 2018 :math3316:statistical___inference:2018_2019:
 :PROPERTIES:
@@ -319,19 +343,28 @@ cp ./img/math5358-sp18.png ~/website/content/teaching/math5358-sp18/featured.png
 :EXPORT_FILE_NAME: index
 :END:
 
+#+begin_src sh :exports none :eval yes
+cp ~/Downloads/analytics.png ./img/
+convert ./img/analytics.png -resize 384x384   ./img/analytics384.png
+#+end_src
+
+#+RESULTS:
+
 #+BEGIN_SRC shell :exports none :eval yes
 rm ~/website/content/teaching/math3316-fa18/featured.png
-cp ./img/math3316-fa18.png ~/website/content/teaching/math3316-fa18/featured.png
+cp ./img/analytics384.png ~/website/content/teaching/math3316-fa18/featured.png
 #+END_SRC
 
 #+RESULTS:
 
 #+begin_src toml :front_matter_extra t
+summary = "With statistical inference, we try to translate data into new knowledge."
+
   # Example: `tags = ["machine-learning", "deep-learning"]`
   # tags = ["Deep Learning"]
 
   # Optional external URL for project (replaces project detail page).
-  external_link = "https://elearn.uta.edu/bbcswebdav/courses/2188-STATISTICAL-INFERENCE-82274-001/MATH3316/math3316-fa18.html"
+  external_link = "/courses/math3316-fa18/math3316-fa18.html"
 
   # Slides (optional).
   #   Associate this project with Markdown slides.
@@ -387,7 +420,7 @@ cp ./img/data-mining384.png ~/website/content/teaching/math6312-sp19/featured.pn
 # Optional external URL for project (replaces project detail page).
 # url = ""
 
-external_link = "https://math6312-sp19.netlify.app"
+external_link = "https://math6312-sp19.netlify.com"
 
 # Slides (optional).
 #   Associate this project with Markdown slides.

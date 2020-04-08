@@ -1,31 +1,30 @@
 +++
-title = "Featured Publications"
+title = "Recent Posts"
 lastmod = 2020-04-08T02:12:41-05:00
 draft = false
-weight = 10
-widget = "featured"
+weight = 40
+widget = "pages"
 headless = true
 # Activate this widget? true/false
 active = true
 
-# A Featured Publications section created with the Featured Content widget.
-# This section displays publications from `content/publication/` which have
-# `featured = true` in their front matter.
+# A Recent Blog Posts section created with the Pages widget.
+# This section displays recent blog posts from `content/post/`.
 
 subtitle = ""
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
-  page_type = "publication"
+  page_type = "post"
 
   # Choose how much pages you would like to display (0 = all pages)
-  count = 0
+  count = 3
+
+  # Choose how many pages you would like to offset by
+  offset = 0
 
   # Page order. Descending (desc) or ascending (asc) date.
   order = "desc"
-
-  # Show a "See all pages" link underneath the featured content?
-  link_to_archive = false
 
   # Filter posts by a taxonomy term.
   [content.filters]
@@ -33,6 +32,7 @@ subtitle = ""
     category = ""
     publication_type = ""
     author = ""
+    exclude_featured = false
 
 [design]
   # Toggle between the various page layout types.
@@ -40,7 +40,7 @@ subtitle = ""
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view = 3
+  view = 2
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -68,4 +68,21 @@ subtitle = ""
 
  # CSS class.
  css_class = ""
+
+# This widget displays recent posts from `content/post/`.
+
+# Filter posts by tag.
+#  By default, show all recent posts.
+#  Filtering example: `tags_include = ["hugo", "academic"]`
+tags_include = []
+tags_exclude = []
+
+# Number of posts to list.
+count = 5
+
+# List format.
+#   0 = Simple
+#   1 = Detailed
+#   2 = Stream
+list_format = 2
 +++

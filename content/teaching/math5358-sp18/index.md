@@ -1,6 +1,6 @@
 +++
 title = "MATH 5358: Regression analysis, Spring 2018"
-lastmod = 2020-04-06T00:38:18-05:00
+lastmod = 2020-04-08T02:33:50-05:00
 tags = ["math5358", "regression_analysis", "2017-2018"]
 categories = ["teaching"]
 draft = false

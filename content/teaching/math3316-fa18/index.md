@@ -1,6 +1,6 @@
 +++
 title = "MATH 3316: Statistical Inference, Fall 2018"
-lastmod = 2020-04-06T00:38:19-05:00
+lastmod = 2020-04-08T02:33:50-05:00
 tags = ["math3316", "statistical_inference", "2018-2019"]
 categories = ["teaching"]
 draft = false

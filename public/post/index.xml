@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | Jonghyun Yun</title>
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 10 Apr 2020 03:51:25 -0500</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Posts</title>
+      <link>/post/</link>
+    </image>
+    
+    <item>
+      <title>example post2</title>
+      <link>/post/example_post2/</link>
+      <pubDate>Fri, 10 Apr 2020 03:51:25 -0500</pubDate>
+      <guid>/post/example_post2/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;x &lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#00a000&#34;&gt;rnorm&lt;/span&gt;(&lt;span style=&#34;color:#666&#34;&gt;100&lt;/span&gt;)
+&lt;span style=&#34;color:#00a000&#34;&gt;hist&lt;/span&gt;(x)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Creating short stylish cover letters using Org-mode</title>
+      <link>/post/cover_letter/</link>
+      <pubDate>Fri, 10 Apr 2020 02:06:16 -0500</pubDate>
+      <guid>/post/cover_letter/</guid>
+      <description>&lt;div class=&#34;important&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+&lt;p&gt;important stuffs&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a2f;font-weight:bold&#34;&gt;void&lt;/span&gt; ConfigureServices(IServiceCollection services)
+{
+    services.&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;//snip
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;See the minimal configuration of &lt;code&gt;koma-letter-exporter&lt;/code&gt; in &lt;a href=&#34;https://orgmode.org/worg/exporters/koma-letter-export.html&#34;&gt;https://orgmode.org/worg/exporters/koma-letter-export.html&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;koma-script-letter-exporter&#34;&gt;KOMA-Script letter exporter&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span style=&#34;color:#080;font-style:italic&#34;&gt;;; https://orgmode.org/manual/LaTeX-specific-export-settings.html&lt;/span&gt;
+(&lt;span style=&#34;color:#b8860b&#34;&gt;add-to-list&lt;/span&gt; &lt;span style=&#34;color:#b8860b&#34;&gt;&amp;#39;org-latex-packages-alist&lt;/span&gt;
+             &lt;span style=&#34;color:#666&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;AUTO&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;babel&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#800&#34;&gt;t&lt;/span&gt; (&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;pdflatex&amp;#34;&lt;/span&gt;)))
+(&lt;span style=&#34;color:#b8860b&#34;&gt;add-to-list&lt;/span&gt; &lt;span style=&#34;color:#b8860b&#34;&gt;&amp;#39;org-latex-packages-alist&lt;/span&gt;
+             &lt;span style=&#34;color:#666&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;AUTO&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;polyglossia&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#800&#34;&gt;t&lt;/span&gt; (&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;xelatex&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;lualatex&amp;#34;&lt;/span&gt;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt; &lt;span style=&#34;color:#080;font-style:italic&#34;&gt;;; KOMA-SCript letter&lt;/span&gt;
+  (&lt;span style=&#34;color:#b8860b&#34;&gt;eval-after-load&lt;/span&gt; &lt;span style=&#34;color:#b8860b&#34;&gt;&amp;#39;ox&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#a2f&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color:#b8860b&#34;&gt;&amp;#39;ox-koma-letter&lt;/span&gt;))
+  (&lt;span style=&#34;color:#b8860b&#34;&gt;eval-after-load&lt;/span&gt; &lt;span style=&#34;color:#b8860b&#34;&gt;&amp;#39;ox-koma-letter&lt;/span&gt;
+    &lt;span style=&#34;color:#666&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#a2f&#34;&gt;progn&lt;/span&gt;
+       (&lt;span style=&#34;color:#b8860b&#34;&gt;add-to-list&lt;/span&gt; &lt;span style=&#34;color:#b8860b&#34;&gt;&amp;#39;org-latex-classes&lt;/span&gt;
+                    &lt;span style=&#34;color:#666&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;my-koma-letter&amp;#34;&lt;/span&gt;
+                      &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;\\documentclass\{scrlttr2\}
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;\\usepackage[hidelinks,unicode]{hyperref}
+&lt;/span&gt;&lt;span style=&#34;color:#b44&#34;&gt;[NO-DEFAULT-PACKAGES]&amp;#34;&lt;/span&gt;))
+
+       (&lt;span style=&#34;color:#a2f&#34;&gt;setq&lt;/span&gt; &lt;span style=&#34;color:#b8860b&#34;&gt;org-koma-letter-default-class&lt;/span&gt; &lt;span style=&#34;color:#b44&#34;&gt;&amp;#34;my-koma-letter&amp;#34;&lt;/span&gt;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;x&lt;span style=&#34;color:#666&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#666&#34;&gt;10&lt;/span&gt;;
+x &lt;span style=&#34;color:#666&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#666&#34;&gt;20&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;[1] 30
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;cover-letter-example&#34;&gt;Cover letter example&lt;/h5&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/post/cover_letter/ramsay_hu6f2eba4ebc9abbebba7e40a33d853384_192381_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;/post/cover_letter/ramsay_hu6f2eba4ebc9abbebba7e40a33d853384_192381_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;827&#34; height=&#34;1169&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/post/cover_letter/ramsay_rkoma_hu3d89916cae263b715ee6542ac3ad5b7d_188956_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;/post/cover_letter/ramsay_rkoma_hu3d89916cae263b715ee6542ac3ad5b7d_188956_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;827&#34; height=&#34;1169&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;
+&lt;a href=&#34;ramsay.org&#34;&gt;download the KOMA letter example&lt;/a&gt;
+
+&lt;a href=&#34;ramsay.pdf&#34;&gt;download the example PDF letter&lt;/a&gt;
+
+&lt;a href=&#34;SSCL.lco&#34;&gt;download the Short Stylish Cover Letter LCO file&lt;/a&gt;
+Academic is designed to give technical content creators a seamless experience.
+You can focus on the content and Academic handles the rest.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

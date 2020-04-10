@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>math3316 | Jonghyun Yun</title>
+    <link>/tags/math3316/</link>
+      <atom:link href="/tags/math3316/index.xml" rel="self" type="application/rss+xml" />
+    <description>math3316</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 08 Apr 2020 02:33:50 -0500</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>math3316</title>
+      <link>/tags/math3316/</link>
+    </image>
+    
+    <item>
+      <title>MATH 3316: Statistical Inference, Fall 2018</title>
+      <link>/teaching/math3316-fa18/</link>
+      <pubDate>Wed, 08 Apr 2020 02:33:50 -0500</pubDate>
+      <guid>/teaching/math3316-fa18/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

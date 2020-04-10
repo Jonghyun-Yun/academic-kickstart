@@ -12,7 +12,7 @@
 theme = "minimal"
 
 # Enable users to switch between day and night mode?
-day_night = true
+day_night = false
 
 # Override the theme's font set (optional).
 #   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
@@ -52,9 +52,9 @@ description = ""
 
 # Enable source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
-highlight = true
-highlight_languages = ["r", "lisp", "markdown", "yaml", "toml", "bash", "shell", "python"]
-# highlight_style = "github"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+highlight = false
+highlight_languages = ["r", "lisp", "emacs-lisp", "markdown", "yaml", "toml", "bash", "shell", "python"]
+highlight_style = "solarized-light"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
 
 # Enable LaTeX math rendering? true/false
 #   If false, you can enable math on a per page basis as needed.
@@ -71,7 +71,7 @@ privacy_pack = false
 
 # Enable visitors to edit pages?
 #   `repo` defines the repository URL. `editable` defines which page types can be edited.
-edit_page = {repo_url = "https://github.com/gcushen/hugo-academic", content_dir = "", repo_branch = "master", editable = {docs = true, page = false, post = false}}
+edit_page = {repo_url = "https://github.com/jonghyun-yun/hugo-academic", content_dir = "", repo_branch = "master", editable = {docs = true, page = false, post = false}}
 
 ############################
 ## Contact details
@@ -161,7 +161,7 @@ abstract_length = 135
 
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_js  = []
+plugins_js  = ["readtheorg"]
 
 # Avatars.
 # An avatar is an image that appears next to a user's name.
@@ -232,14 +232,14 @@ plugins_js  = []
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine = 1
+  engine = 2
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
   [search.algolia]
-    app_id = ""
-    api_key = ""
-    index_name = ""
+    app_id = "3OCEXUOAW9"
+    api_key = "5d8bf031f4519ede0167256526770d7a"
+    index_name = "jyun.rbind.io"
     show_logo = false
 
 ############################

@@ -5,6 +5,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url(readthorg.css);
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -9123,3 +9124,9 @@ div.mermaid {
   width: 100%;
   text-align: center;
   margin-bottom: 1rem; }
+
+pre {
+  background-color: #f8f8f8; }
+
+code {
+  background-color: #f8f8f8; }

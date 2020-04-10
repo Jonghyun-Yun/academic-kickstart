@@ -1,6 +1,6 @@
 ---
 title: "Jonghyun Yun"
-lastmod: 2020-04-01T13:37:14-05:00
+lastmod: 2020-04-08T20:03:02-05:00
 draft: false
 # Display name
 name: Jonghyun Yun
@@ -13,7 +13,7 @@ authors:
 superuser: true
 
 # Role/position
-role:
+role: Statistical data scientist
 
 # Organizations/Affiliations
 # organizations:
@@ -23,7 +23,7 @@ role:
 
 # Short bio (displayed in user profile at end of posts)
 # bio: My research interests include high-dimensinal data analysis, statistical computing and Next-generation sequencing data.
-bio: Statistician and data scientist
+bio: Statistical data scientist
 
 # List your academic interests.
 interests :
@@ -33,6 +33,7 @@ interests :
   - State space models
   - Next-generation sequencing
   - Smart infrastructure
+  - Item reponse theory
 
 # List your qualifications (such as academic degrees).
 education:

@@ -1,2 +1,0 @@
-# Redirects from what the browser requests to what we serve
-http://jyun.rbind.io/*    https://jyun.rbind.io/:splat  301!

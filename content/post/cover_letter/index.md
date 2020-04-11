@@ -1,7 +1,7 @@
 ---
 title: "Creating short stylish cover letters using Org-mode"
 author: ["Jonghyun Yun"]
-lastmod: 2020-04-10T16:31:54-05:00
+lastmod: 2020-04-10T17:00:38-05:00
 tags: ["cover letter", "Org-mode", "emacs"]
 draft: false
 math: true
@@ -10,14 +10,14 @@ image:
   placement: 3
 ---
 
-This stylish cover letter includes a custom large header and footer. The original latex
+This stylish cover letter includes a custom large header and footer. The original LaTeX
 template can be found in
 <https://www.latextemplates.com/template/short-stylish-cover-letter>.
 Unfortunately
 these header and foorter do not leave much space for text. To squeeze everything into one page, you may want to play with margins.
 See <http://texdoc.net/texmf-dist/doc/latex/koma-script/scrguien.pdf>.
 
-I use latex much less than I did 10 years ago. Even for scientific articles, I create a draft using the Org-mode and export it to latex when the project is mature. I also write a simple letter using the Org-mode, and export it to a PDF file.
+I use LaTeX much less than I did 10 years ago. Even for scientific articles, I create a draft using the Org-mode and export it to LaTeX when the project is mature. I also write a simple letter using the Org-mode, and export it to a PDF file.
 
 
 ##### KOMA-Script letter exporter {#koma-script-letter-exporter}
@@ -56,8 +56,9 @@ The KOMA-Script exporter can be enabled by putting the below in a emacs config f
 
 Placement of elements is defined in letter class option (LCO) file. The Short
 Stylish Cover Letter LCO ([SSCL LCO](SSCL.lco)) is customized for large header and footer based on
-UScommercial9 LCO, and the file should be placed in the search path of <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>.
-Now, we can open [the cover letter example](ramsay.org) and press `C-c C-e k o` to the pdf export.
+UScommercial9 LCO, and the file should be placed in the search path of LaTeX.
+Now, I can open [Pink letter](ramsay.org) and press `C-c C-e k o` to the pdf export.
+Pink Letter are fan-given names for a letter purportedly written by Ramsay Bolton in George R. R. Martin's _A Song of Ice and Fire_.
 
 A signature image can be placed right after closing. With no signature image, the line with
 `#+LATEX_HEADER_EXTRA: \setplength{sigbeforevskip}{0cm}` should be commented to have proper spacing between closing and signature.
@@ -69,6 +70,6 @@ install.package(komaletter)
 system.file("rmarkdown", "templates", "pdf", "resources", "maintainersDelight.lco", package="komaletter")
 ```
 
-Now with this LCO, the example letter should be exported with the personal information in a big header with no footer.
+Now with this LCO, the letter should be exported with the personal information in a big header with no footer.
 
 {{< figure src="ramsay_rkoma.png" >}}

@@ -1,7 +1,7 @@
 ---
 title: "To use Chroma code highlighting with the Hugo Academic theme"
 author: ["Jonghyun Yun"]
-lastmod: 2020-04-10T16:31:55-05:00
+lastmod: 2020-04-10T17:00:39-05:00
 draft: false
 math: true
 diagram: true

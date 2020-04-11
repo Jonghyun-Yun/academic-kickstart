@@ -1,6 +1,6 @@
 +++
 title = "Featured Publications"
-lastmod = 2020-04-08T02:12:41-05:00
+lastmod = 2020-04-10T20:21:08-05:00
 draft = false
 weight = 10
 widget = "featured"

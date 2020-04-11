@@ -1,7 +1,7 @@
 ---
 title: "Creating short stylish cover letters using Org-mode"
 author: ["Jonghyun Yun"]
-lastmod: 2020-04-10T17:00:38-05:00
+lastmod: 2020-04-11T01:03:14-05:00
 tags: ["cover letter", "Org-mode", "emacs"]
 draft: false
 math: true

@@ -1,7 +1,7 @@
 +++
 title = "Publications"
 author = ["Jonghyun Yun"]
-lastmod = 2020-03-25T22:43:26-05:00
+lastmod = 2020-12-02T07:20:47-06:00
 draft = false
 # List format.
 #   0 = Simple

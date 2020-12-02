@@ -1,13 +1,13 @@
 +++
-title = "Augmented particle filters"
+title = "Stochastic approximation Hamiltonian Monte Carlo"
 author = ["Jonghyun Yun"]
-lastmod = 2020-12-02T07:20:48-06:00
+lastmod = 2020-12-02T07:20:49-06:00
 draft = false
-date = 2017-05-03
+date = 2020-08-25
 featured = true
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["J Yun", "F Yang" , "Y Chen"]
+authors = ["J Yun", "M, Shin" , "I H Jin", "F Liang"]
 
 # Publication type.
 # Legend:
@@ -21,11 +21,11 @@ authors = ["J Yun", "F Yang" , "Y Chen"]
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = "Journal of the American Statistical Association"
-publication_short = "JASA"
+publication = "Journal of Statistical Computation and Simulation"
+publication_short = "JSCS"
 
 # Abstract and optional shortened version.
-abstract = "Particle filters have been widely used for online filtering problems in state–space models (SSMs). The current available proposal distributions depend either only on the state dynamics, or only on the observation, or on both sources of information but are not available for general SSMs. In this article, we develop a new particle filtering algorithm, called the augmented particle filter (APF), for online filtering problems in SSMs. The APF combines two sets of particles from the observation equation and the state equation, and the state space is augmented to facilitate the weight computation. Theoretical justification of the APF is provided, and the connection between the APF and the optimal particle filter (OPF) in some special SSMs is investigated. The APF shares similar properties as the OPF, but the APF can be applied to a much wider range of models than the OPF. Simulation studies show that the APF performs similarly to or better than the OPF when the OPF is available, and the APF can perform better than other filtering algorithms in the literature when the OPF is not available."
+abstract = "Recently, the Hamilton Monte Carlo (HMC) has become widespread as one of the more reliable approaches to efficient sample generation processes. However, HMC is difficult to sample in a multimodal posterior distribution because the HMC chain cannot cross energy barrier between modes due to the energy conservation property. In this paper, we propose a Stochastic Approximate Hamilton Monte Carlo (SAHMC) algorithm for generating samples from multimodal density under the Hamiltonian Monte Carlo (HMC) framework. SAHMC can adaptively lower the energy barrier to move the Hamiltonian trajectory more frequently and more easily between modes. Our simulation studies show that the potential for SAHMC to explore a multimodal target distribution is more efficient than HMC-based implementations."
 
 # abstract_short = ""
 
@@ -45,7 +45,7 @@ projects = []
 tags = []
 
 # Links (optional).
-# url_pdf = "https://www.tandfonline.com/doi/pdf/10.1080/01621459.2015.1135803?needAccess=true"
+url_pdf = ""
 # url_preprint = ""
 # url_code = "#"
 # url_dataset = "#"
@@ -60,7 +60,7 @@ tags = []
 # url_custom = [{name = "", url = ""}]
 
 # Digital Object Identifier (DOI)
-doi = "10.1080/01621459.2015.1135803"
+doi = "10.1080/00949655.2020.1797031"
 
 # Does this page contain LaTeX math? (true/false)
 math = true

@@ -1,7 +1,7 @@
 +++
 title = "Stochastic approximation Hamiltonian Monte Carlo"
 author = ["Jonghyun Yun"]
-lastmod = 2020-12-02T07:20:49-06:00
+lastmod = 2020-12-02T07:42:36-06:00
 draft = false
 date = 2020-08-25
 featured = true

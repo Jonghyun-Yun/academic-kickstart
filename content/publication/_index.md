@@ -1,7 +1,7 @@
 +++
 title = "Publications"
 author = ["Jonghyun Yun"]
-lastmod = 2020-12-02T07:20:47-06:00
+lastmod = 2020-12-02T07:42:35-06:00
 draft = false
 # List format.
 #   0 = Simple
@@ -9,7 +9,7 @@ draft = false
 #   2 = APA
 #   3 = MLA
 #   4 = Stream
-list_format = 3
+list_format = 0
 
 # Optional featured image (relative to `static/img/` folder).
 [header]

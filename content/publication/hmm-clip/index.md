@@ -1,7 +1,7 @@
 +++
 title = "Bayesian Hidden Markov Models to Identify RNA-Protein Interaction Sites in PAR-CLIP"
 author = ["Jonghyun Yun"]
-lastmod = 2020-12-02T07:20:49-06:00
+lastmod = 2020-12-02T07:42:36-06:00
 draft = false
 date = 2014-02-24
 featured = true

@@ -1,7 +1,7 @@
 +++
 title = "Image Analysis and Functional Data Clustering for Random Shape Aggregate Models"
 author = ["Jonghyun Yun"]
-lastmod = 2020-12-02T07:20:50-06:00
+lastmod = 2020-12-02T07:42:37-06:00
 draft = false
 date = 2020-10-31
 featured = true

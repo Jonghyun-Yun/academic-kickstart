@@ -1,13 +1,13 @@
 ---
 title: "Sync Overleaf projects using Emacs"
 author: ["Jonghyun Yun"]
-lastmod: 2021-04-09T06:05:55-05:00
+lastmod: 2021-04-09T06:16:12-05:00
 draft: false
 math: true
 diagram: true
 ---
 
-My [hack](post.md) to sync [Overleaf](https://www.overleaf.com/) projects stopped working after upgrading Emacs to 27.2. The previous hack was also a bit risky as it could push changes for another project I visit. So, I decide to write new lisp codes that can eliminate the chance of this unwanted update. Local and remote changes in [Overleaf](https://www.overleaf.com/) projects can be synced using `git`. In my normal workflow, I `pull` the remote changes from Overleaf upon first time opening the project in Emacs, and I `push` the local changes to Overleaf before closing the project. Sometimes I forget to `pull` or `push`, which can cost me labors to fix differences in local and remote. My goal is to make Emacs do the synchronization automatically, so that opening the project triggers `pull` and saving the project triggers `push`. This hack requires `find-file-in-project` and `magit` packages.
+My hack to sync [Overleaf](https://www.overleaf.com/) projects stopped working after upgrading Emacs to 27.2. The previous hack was also a bit risky as it could push changes for another project I visit. So, I decide to write new lisp codes that can eliminate the chance of this unwanted update. Local and remote changes in [Overleaf](https://www.overleaf.com/) projects can be synced using `git`. In my normal workflow, I `pull` the remote changes from Overleaf upon first time opening the project in Emacs, and I `push` the local changes to Overleaf before closing the project. Sometimes I forget to `pull` or `push`, which can cost me labors to fix differences in local and remote. My goal is to make Emacs do the synchronization automatically, so that opening the project triggers `pull` and saving the project triggers `push`. This hack requires `find-file-in-project` and `magit` packages.
 
 The below are functions `config.el` to sync Overleaf projects. They take `directory` as an argument, so that their execution would be limited for a target `directory`. It can prevent from accidentally updating another project's remote.
 

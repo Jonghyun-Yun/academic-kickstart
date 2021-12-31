@@ -1,6 +1,6 @@
 +++
 title = "Experience"
-lastmod = 2021-12-31T01:26:35-06:00
+lastmod = 2021-12-31T01:32:31-06:00
 draft = false
 weight = 8
 widget = "experience"
@@ -19,7 +19,7 @@ headless = true
   #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
   [[experience]]
-    title = "Data Scientistr"
+    title = "Data Scientist"
     company = "Institute of Statistical Data Intelligence "
     location = "Mansfield, TX"
     date_start = "2019-09-01"

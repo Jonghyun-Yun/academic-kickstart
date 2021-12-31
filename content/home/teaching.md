@@ -1,6 +1,6 @@
 +++
 title = "Teaching"
-lastmod = 2021-12-31T01:26:37-06:00
+lastmod = 2021-12-31T01:32:33-06:00
 draft = false
 weight = 50
 widget = "portfolio"

@@ -1,6 +1,6 @@
 ---
 title: "Jonghyun Yun"
-lastmod: 2020-05-01T01:24:54-05:00
+lastmod: 2021-12-31T01:26:29-06:00
 draft: false
 # Display name
 name: Jonghyun Yun
@@ -13,7 +13,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Statistical data scientist
+role: Data scientist
 
 # Organizations/Affiliations
 # organizations:
@@ -34,6 +34,7 @@ interests :
   - Next-generation sequencing
   - Smart infrastructure
   - Item response theory
+  - Process data models
 
 # List your qualifications (such as academic degrees).
 education:
@@ -56,7 +57,7 @@ education:
 social:
 - icon: home
   icon_pack: fas
-  link: https://jyun.rbind.io  
+  link: https://jyun.rbind.io
 - icon: envelope
   icon_pack: fas
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".

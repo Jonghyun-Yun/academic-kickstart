@@ -1,6 +1,6 @@
 ---
 title: "Jonghyun Yun"
-lastmod: 2022-01-10T14:45:12-06:00
+lastmod: 2022-01-10T14:46:31-06:00
 draft: false
 # Display name
 name: Jonghyun Yun
@@ -36,6 +36,7 @@ interests :
   - Smart infrastructure
   - Prediction modeling
   - Item response theory
+  - Causal inference
   - Process data models
 
 # List your qualifications (such as academic degrees).

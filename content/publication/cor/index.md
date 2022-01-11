@@ -1,13 +1,13 @@
 +++
-title = "Image Analysis and Functional Data Clustering for Random Shape Aggregate Models"
+title = "Spatial Analysis Leveraging Machine Learning and {{GIS}} of Socio-Geographic Factors Affecting Cost Overrun Occurrence in Roadway Projects"
 author = ["Jonghyun Yun"]
 lastmod = 2022-01-11T05:43:06-06:00
 draft = false
-date = 2020-10-31
+date = "2022-01"
    featured = true
 
    # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-   authors = ["J Yun", "S Knag" , "A D Tehrani", "S Ham"]
+   authors = ["J Yun", "K R Ryu" , "S Ham"]
 
    # Publication type.
    # Legend:
@@ -25,9 +25,13 @@ date = 2020-10-31
    publication_short = "Mathematics"
 
    # Abstract and optional shortened version.
-   abstract = "This study presents a random shape aggregate model by establishing a functional mixture model for images of aggregate shapes. The mesoscale simulation to consider heterogeneous properties concrete is the highly cost- and time-effective method to predict the mechanical behavior of the concrete. Due to the significance of the design of the mesoscale concrete model, the shape of the aggregate is the most important parameter to obtain a reliable simulation result. We propose image analysis and functional data clustering for random shape aggregate models (IFAM). This novel technique learns the morphological characteristics of aggregates using images of real aggregates as inputs. IFAM provides random aggregates across a broad range of heterogeneous shapes using samples drawn from the estimated functional mixture model as outputs. Our learning algorithm is fully automated and allows flexible learning of the complex characteristics. Therefore, unlike similar studies, IFAM does not require users to perform time-consuming tuning on their model to provide realistic aggregate morphology. Using comparative studies, we demonstrate the random aggregate structures constructed by IFAM achieve close similarities to real aggregates in an inhomogeneous concrete medium. Thanks to our fully data-driven method, users can choose their own libraries of real aggregates for the training of the model and generate random aggregates with high similarities to the target libraries."
+   abstract = "This study analyzes cost overrun occurrence (COO) in the context of socioeconomic conditions leveraging machine learning techniques and geographic information systems due to little information about the relationship between SE factors and cost overruns in transportation infrastructure improvement projects. We extract socio-geospatial features in multiple sources of data sets and establish a random forest model to discover their associations with COO. The developed models reveal highly significant features affecting COO, which include original amounts, original duration, management districts, number of lanes, population over 16-years-old, commuting behavior, industrial topography, and average temperature, indicating that socioeconomic conditions play an important role in actual project expenses. Our findings will assist practitioners and decision-makers to better forecast and reflect the likely impacts of socioeconomic conditions surrounding the project in their planning, budgeting, and operation and maintenance. The software for the statistical analysis can be found in github.com/jonghyun-yun/dico."
 
-   # abstract_short = ""
+   # abstract_short = "
+    Machine learning techniques and geographic information system (GIS) are used to predict cost overrun occurrence.
+    A random forest model allows to facilitate learning of complicated patterns of the features in roadway project.
+    Spatial patterns of socioeconomic features from diverse sources are analyzed.
+    The developed models reveal the possible impacts of socioeconomic conditions on cost overrun occurrence."
 
    # Is this a selected publication? (true/false)
    selected = true
@@ -60,7 +64,7 @@ date = 2020-10-31
    # url_custom = [{name = "", url = ""}]
 
    # Digital Object Identifier (DOI)
-   doi = "10.3390/math8111903"
+   doi = "10.1016/j.autcon.2021.104007"
 
    # Does this page contain LaTeX math? (true/false)
    math = true

@@ -1,6 +1,6 @@
 ---
 title: "Jonghyun Yun"
-lastmod: 2022-01-10T14:46:31-06:00
+lastmod: 2022-01-14T04:11:29-06:00
 draft: false
 # Display name
 name: Jonghyun Yun
@@ -23,21 +23,17 @@ role: Data scientist
 
 # Short bio (displayed in user profile at end of posts)
 # bio: My research interests include high-dimensinal data analysis, statistical computing and Next-generation sequencing data.
-bio: Statistical data scientist
+bio: Data scientist
 
 # List your academic interests.
 interests :
-  - Statistical computing
-  - High-dimensional data analysis
+  - Big data analysis
   - Bayesian inference
-  - State space models
-  - Time series
-  - Next-generation sequencing
-  - Smart infrastructure
-  - Prediction modeling
-  - Item response theory
+  - Machine learning
+  - Time series / sequential data
   - Causal inference
-  - Process data models
+  - Reinforcement learning
+  - Spark, Scala, SpaCy, TensorFlow
 
 # List your qualifications (such as academic degrees).
 education:
@@ -60,7 +56,7 @@ education:
 social:
 - icon: home
   icon_pack: fas
-  link: https://jyun.rbind.io
+  link: https://jyun.netlify.app/
 - icon: envelope
   icon_pack: fas
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
@@ -92,10 +88,12 @@ user_groups:
  - Instructors
 ---
 
-He completed his PhD in the Department of Statistics at University of Illinois
-at Urbana-Champaign under the guidance of [Dr. Yuguo Chen](https://publish.illinois.edu/yuguo/). Prior to joining UTA,
-he was an Assistant Professor in the Department of Mathematical Sciences and a
-core faculty in the Border Biomedical Research Center at the University of Texas
-at El Paso, from 2015 to 2016. He was a postdoctoral researcher at UT
+Jonghyun Yun is a data scientist in Institute of Statistical Data Science. He
+completed his PhD in the Department of Statistics at University of Illinois at
+Urbana-Champaign under the guidance of [Dr. Yuguo Chen](https://publish.illinois.edu/yuguo/). He was an Assistant
+Professor in the Department of Mathematics at UT Arlington. Prior to joining
+UTA, he was an Assistant Professor in the Department of Mathematical Sciences
+and a core faculty in the Border Biomedical Research Center at the University of
+Texas at El Paso, from 2015 to 2016. He was a postdoctoral researcher at UT
 Southwestern Medical Center under the guidance of Drs. [Guanghua Xiao](https://qbrc.swmed.edu/labs/xiaolab/) and [Yang
 Xie](https://qbrc.swmed.edu/labs/xielab/) from 2012 to 2015.

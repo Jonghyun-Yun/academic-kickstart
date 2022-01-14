@@ -1,7 +1,7 @@
 +++
-title = "Spatial Analysis Leveraging Machine Learning and {{GIS}} of Socio-Geographic Factors Affecting Cost Overrun Occurrence in Roadway Projects"
+title = "Spatial Analysis Leveraging Machine Learning and GIS of Socio-Geographic Factors Affecting Cost Overrun Occurrence in Roadway Projects"
 author = ["Jonghyun Yun"]
-lastmod = 2022-01-11T05:43:06-06:00
+lastmod = 2022-01-14T02:51:20-06:00
 draft = false
 date = "2022-01"
    featured = true
@@ -21,17 +21,16 @@ date = "2022-01"
    publication_types = ["2"]
 
    # Publication name and optional abbreviated version.
-   publication = "Mathematics"
-   publication_short = "Mathematics"
+   publication = "Automation in Construction"
+   publication_short = "Automation in Construction"
 
    # Abstract and optional shortened version.
    abstract = "This study analyzes cost overrun occurrence (COO) in the context of socioeconomic conditions leveraging machine learning techniques and geographic information systems due to little information about the relationship between SE factors and cost overruns in transportation infrastructure improvement projects. We extract socio-geospatial features in multiple sources of data sets and establish a random forest model to discover their associations with COO. The developed models reveal highly significant features affecting COO, which include original amounts, original duration, management districts, number of lanes, population over 16-years-old, commuting behavior, industrial topography, and average temperature, indicating that socioeconomic conditions play an important role in actual project expenses. Our findings will assist practitioners and decision-makers to better forecast and reflect the likely impacts of socioeconomic conditions surrounding the project in their planning, budgeting, and operation and maintenance. The software for the statistical analysis can be found in github.com/jonghyun-yun/dico."
 
-   # abstract_short = "
-    Machine learning techniques and geographic information system (GIS) are used to predict cost overrun occurrence.
-    A random forest model allows to facilitate learning of complicated patterns of the features in roadway project.
-    Spatial patterns of socioeconomic features from diverse sources are analyzed.
-    The developed models reveal the possible impacts of socioeconomic conditions on cost overrun occurrence."
+   # # abstract_short = "Machine learning techniques and geographic information system (GIS) are used to predict cost overrun occurrence.
+   # A random forest model allows to facilitate learning of complicated patterns of the features in roadway project.
+   # Spatial patterns of socioeconomic features from diverse sources are analyzed.
+   # The developed models reveal the possible impacts of socioeconomic conditions on cost overrun occurrence."
 
    # Is this a selected publication? (true/false)
    selected = true

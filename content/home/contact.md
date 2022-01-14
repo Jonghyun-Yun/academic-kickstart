@@ -1,6 +1,6 @@
 +++
 title = "Contact"
-lastmod = 2021-12-31T01:32:31-06:00
+lastmod = 2022-01-14T04:06:46-06:00
 draft = false
 weight = 70
 widget = "contact"

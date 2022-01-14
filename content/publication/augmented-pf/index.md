@@ -1,7 +1,7 @@
 +++
 title = "Augmented particle filters"
 author = ["Jonghyun Yun"]
-lastmod = 2022-01-11T05:43:05-06:00
+lastmod = 2022-01-14T02:51:19-06:00
 draft = false
 date = 2017-05-03
    featured = true

@@ -1,16 +1,19 @@
 +++
-title = "Teaching"
-lastmod = 2022-01-14T04:06:49-06:00
+title = "Projects"
+lastmod = 2022-01-14T04:06:48-06:00
 draft = false
 weight = 50
 widget = "portfolio"
 headless = true
-  # Activate this widget? true/false
-  active = true
+# Activate this widget? true/false
+active = true
 
-  [content]
+# A Projects section created with the Portfolio widget.
+subtitle = ""
+
+[content]
   # Page type to display. E.g. project.
-  page_type = "teaching"
+  page_type = "project"
 
   # Filter toolbar (optional).
   # Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
@@ -22,14 +25,18 @@ headless = true
   filter_default = 0
 
   [[content.filter_button]]
-  name = "All"
-  tag = "*"
+    name = "All"
+    tag = "*"
 
   [[content.filter_button]]
-  name = "Current"
-  tag = "current"
+    name = "Deep Learning"
+    tag = "Deep Learning"
 
-  [design]
+  [[content.filter_button]]
+    name = "Other"
+    tag = "Demo"
+
+[design]
   # Choose how many columns the section has. Valid values: 1 or 2.
   columns = "2"
 
@@ -43,7 +50,7 @@ headless = true
   # For Showcase view, flip alternate rows?
   flip_alt_rows = false
 
-  [design.background]
+[design.background]
   # Apply a background color, gradient, or image.
   #   Uncomment (by removing `#`) an option to apply it.
   #   Choose a light or dark text color by setting `text_color_light`.
@@ -63,17 +70,10 @@ headless = true
   # Text color (true=light or false=dark).
   # text_color_light = true
 
-  [advanced]
-  # Custom CSS.
-  css_style = ""
+[advanced]
+ # Custom CSS.
+ css_style = ""
 
-  # CSS class.
-  css_class = ""
-  [[filter]]
-  name = "All"
-  tag = "*"
-
-  [[filter]]
-  name = "Current"
-  tag = "current"
+ # CSS class.
+ css_class = ""
 +++

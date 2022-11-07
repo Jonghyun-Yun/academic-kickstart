@@ -1,6 +1,6 @@
 ---
 title: "Jonghyun Yun"
-lastmod: 2022-01-14T04:11:29-06:00
+lastmod: 2022-11-07T13:08:40-06:00
 draft: false
 # Display name
 name: Jonghyun Yun
@@ -29,11 +29,11 @@ bio: Data scientist
 interests :
   - Big data analysis
   - Bayesian inference
-  - Machine learning
   - Time series / sequential data
   - Causal inference
-  - Reinforcement learning
-  - Spark, Scala, SpaCy, TensorFlow
+  - NLP, ML, RL
+  - Python, R, C/C++
+  - Spark, Scala, PyTorch, TensorFlow
 
 # List your qualifications (such as academic degrees).
 education:

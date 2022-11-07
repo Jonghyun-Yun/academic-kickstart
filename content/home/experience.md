@@ -1,6 +1,6 @@
 +++
 title = "Experience"
-lastmod = 2022-01-14T04:06:47-06:00
+lastmod = 2022-11-07T12:12:57-06:00
 draft = false
 weight = 8
 widget = "experience"
@@ -19,11 +19,19 @@ headless = true
   #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
   [[experience]]
+    title = "Cybersecurity Data Scientist"
+    company = "American Airlines"
+    location = "Fort Worth, TX"
+    date_start = "2022-02-07"
+    description = """Developing loyalty fraud detection models to capture fraud at early stages of account takeover. Designing and deploy a system to create fraud incident reports and to leverage feedback from SME to reinforce the detection performance. The system has increased the fraud detection efficiency by 94.7%."""
+
+  [[experience]]
     title = "Data Scientist"
     company = "Institute of Statistical Data Intelligence "
     location = "Mansfield, TX"
     date_start = "2019-09-01"
     description = """ Developing and/or applying cutting edge ML for prediction modeling, Bayesian models, time series, causal inference, visualization, segmentation for big data. Applying NLP and survival model to analyze timestamped sequence of action data (log data). Developing network modeling frameworks to discover dynamic interaction b/w customers and merchandise. Parallel programming using C/C++ for complex Bayesian inference. Processing, cleansing and validating the integrity of data. Presenting analysis and visualization using R and python, and developing software packages."""
+
   [[experience]]
     title = "Assistant Professor"
     company = "UT Arlington"

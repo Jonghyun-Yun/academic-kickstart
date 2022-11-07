@@ -1,6 +1,6 @@
 +++
 title = "Strengths"
-lastmod = 2022-01-14T04:06:48-06:00
+lastmod = 2022-11-07T12:12:57-06:00
 draft = false
 weight = 7
 widget = "custom"
@@ -13,19 +13,24 @@ active = true
 -   Big-data analytic
 -   Machine learning
 -   Prediction modeling
--   Visualization / Dimension reduction
+-   Visualization
+-   Dimension reduction
 -   Hidden Markov model
+-   Reinforcement learning
 -   Time series
 -   Natural language processing
 -   Bayesian inference
 -   Monte Carlo method
 -   Causal inference
--   Biostatistics / Bioinformatics
+-   Cybersecurity
+-   Fraud detection
+-   Biostatistics and Bioinformatics
 -   Multiple hypothesis testing
+-   Anomaly detection
 -   Next-generation sequencing
 -   Smart infrastructure
 -   log-data analysis
--   R, Python, C/C++, MATLAB
+-   R, Python, Spark, Scala, C/C++, MATLAB
+-   PyTorch, Tensorflow
 -   SQL, Git, Shell script
--   Cloud/Parallel computing
--   SAS / SPSS
+-   Parallel/Distributed computing
